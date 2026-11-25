@@ -170,7 +170,7 @@ connecting an AI provider. AI Builder uses your own supported provider connectio
 ## Rule directory
 
 {count} rules, organized by their primary Gallery category. Open a rule's name
-for its README and download, or choose **Preview ↗** for the website.''']
+for its README and download, or choose **View** for the website.''']
     category_links = [f"[{c['emoji']} {c['label']}](#{c['id']})" for c in catalog["categories"]
                       if any(r["primaryCategory"] == c["id"] for r in catalog["rules"])]
     lines += [
@@ -198,7 +198,7 @@ for its README and download, or choose **Preview ↗** for the website.''']
             "| --- | --- | --- |",
         ]
         for rule in entries:
-            lines.append(f"| [{table_text(rule['title'])}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [Preview ↗]({SITE}{rule['page']}) |")
+            lines.append(f"| [{table_text(rule['title'])}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [View]({SITE}{rule['page']}) |")
     lines += ["", "## Updates and contributions", "", "The website is the source of truth for rule configurations and setup text. This repository mirrors the published catalog daily and supports manual synchronization. It uses only public website URLs, without access to the private website or app repositories.",
               "", "If you find a problem or want another rule, [open an issue](https://github.com/snowfallapps/rulr-rules/issues). Include the rule name, macOS and Rulr versions, expected result, and what happened. Remove private text, file paths, device identifiers, and credentials before sharing a custom rule.",
               "", "Pull requests with fixes or new examples are welcome. Mirrored files may be replaced by synchronization, so rule and documentation changes must also be incorporated into the website source. See [CONTRIBUTING.md](CONTRIBUTING.md).", "", "## License", "", "The examples, documentation, and sync script in this repository are available under the [MIT License](LICENSE). This does not license the Rulr app or its trademarks.", ""]
