@@ -67,9 +67,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="work-productivity"></a>
 
-### 💼 Work & Productivity
-
-[Browse Work & Productivity on rulr.app](https://www.rulr.app/rules/)
+### 💼 [Work & Productivity ↗](https://www.rulr.app/rules/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -98,9 +96,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="study-research"></a>
 
-### 📚 Study & Research
-
-[Browse Study & Research on rulr.app](https://www.rulr.app/rules/study-research/)
+### 📚 [Study & Research ↗](https://www.rulr.app/rules/study-research/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -125,9 +121,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="writing-communication"></a>
 
-### ✍️ Writing & Communication
-
-[Browse Writing & Communication on rulr.app](https://www.rulr.app/rules/writing-communication/)
+### ✍️ [Writing & Communication ↗](https://www.rulr.app/rules/writing-communication/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -144,9 +138,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="daily-life-personal"></a>
 
-### 🌱 Daily Life & Personal
-
-[Browse Daily Life & Personal on rulr.app](https://www.rulr.app/rules/daily-life-personal/)
+### 🌱 [Daily Life & Personal ↗](https://www.rulr.app/rules/daily-life-personal/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -168,9 +160,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="files-organization"></a>
 
-### 📁 Files & Organization
-
-[Browse Files & Organization on rulr.app](https://www.rulr.app/rules/files-organization/)
+### 📁 [Files & Organization ↗](https://www.rulr.app/rules/files-organization/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -194,9 +184,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="web-browsing"></a>
 
-### 🌐 Web & Browsing
-
-[Browse Web & Browsing on rulr.app](https://www.rulr.app/rules/web-browsing/)
+### 🌐 [Web & Browsing ↗](https://www.rulr.app/rules/web-browsing/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -214,9 +202,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="entertainment-media"></a>
 
-### 🎬 Entertainment & Media
-
-[Browse Entertainment & Media on rulr.app](https://www.rulr.app/rules/entertainment-media/)
+### 🎬 [Entertainment & Media ↗](https://www.rulr.app/rules/entertainment-media/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
