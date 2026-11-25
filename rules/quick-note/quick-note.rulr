@@ -1,0 +1,251 @@
+{
+  "id": "EDC46E44-0AB9-5EF6-8302-1D3E684EE532",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "32C4D44F-242A-5FCD-992A-0FFA752E6F4B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "What do you want to remember?"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Quick Note"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "BAD63184-8134-533A-8EAF-8362AB4462FD",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "• "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "BAD63184-8134-533A-8EAF-8362AB4462FD"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "32C4D44F-242A-5FCD-992A-0FFA752E6F4B"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": " — "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.current-date-time"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\n"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Quick Notes.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "A8B427D7-C9EA-53EF-B0DB-858907CF5B99",
+            "key": "action.file.write"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Saved to your notes file."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Quick Note"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "701C614E-A108-5BBB-94E5-A970400C8B92",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture and Save Note"
+      }
+    ],
+    "id": "9E652F7A-8512-53EA-B421-244F93FB3565",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";note"
+            }
+          }
+        },
+        "id": "1A6E5DA7-F692-54E7-8FD2-7A990551B877",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Quick Note"
+}

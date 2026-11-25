@@ -1,0 +1,105 @@
+{
+  "id": "F09E2464-615A-5207-997C-A7FD612B7B09",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "BD27025C-FF91-5D5C-B01D-7B403C57FC5B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "position": {
+                  "type": "dictionary",
+                  "value": {
+                    "coordinateMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "value": "window"
+                    },
+                    "window": {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.focused-window"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    },
+                    "x": {
+                      "type": "number",
+                      "value": 50
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 50
+                    }
+                  }
+                }
+              }
+            },
+            "id": "2B9D459C-90B1-5ABB-AAFB-B6A15F13C6C8",
+            "key": "action.system.move-mouse"
+          },
+          {
+            "configuration": {
+              "values": {
+                "direction": {
+                  "type": "string",
+                  "value": "down"
+                },
+                "distance": {
+                  "type": "number",
+                  "value": 600
+                }
+              }
+            },
+            "id": "ED5AE247-C933-5288-A3B2-265E7E76216A",
+            "key": "action.system.scroll-content"
+          }
+        ],
+        "kind": "action",
+        "title": "Move Pointer and Scroll"
+      }
+    ],
+    "id": "E1A94AA2-DDCC-5F63-A310-F3831B7511C5",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.Safari",
+                "name": "Safari"
+              }
+            }
+          }
+        },
+        "id": "B6F9A54E-7B91-541B-A3A4-9528D3EE022E",
+        "key": "trigger.application-window.app-activate"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Event Occurs"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Scroll an App Automatically"
+}

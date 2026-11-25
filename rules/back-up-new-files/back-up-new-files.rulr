@@ -1,0 +1,152 @@
+{
+  "id": "9C116CE1-E588-594F-8300-58BAE6FC2996",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "704E7ECA-0DF7-5A33-97F9-EF1B79F25AF9",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Documents/Project Backups"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "file": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "6FC2C92D-3124-5C02-B538-BB1164679A0E"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "B16E9725-E530-54AA-A406-C4BCBE916E4A"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "496EC4DF-D356-5078-8F1A-5DEB7FD869B9",
+                "key": "action.file.copy"
+              }
+            ],
+            "kind": "action",
+            "title": "Back Up Project File"
+          }
+        ],
+        "id": "BD066422-57AC-5672-A874-290FCDC1ED32",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "Project"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "6FC2C92D-3124-5C02-B538-BB1164679A0E"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "B16E9725-E530-54AA-A406-C4BCBE916E4A"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "6BB74E78-63B1-5D95-9899-302F4AD6773B",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Project File"
+      }
+    ],
+    "id": "B16E9725-E530-54AA-A406-C4BCBE916E4A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "6FC2C92D-3124-5C02-B538-BB1164679A0E",
+        "key": "trigger.input.folder-contents-changed"
+      },
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "renamed"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "B9F5F6D3-D47C-5A6D-9BA4-7A46B0CCCDBF",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Project Backup"
+}

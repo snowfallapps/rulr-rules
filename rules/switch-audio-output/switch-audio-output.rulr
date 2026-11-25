@@ -1,0 +1,47 @@
+{
+  "id": "758F6D0E-D598-5CB9-8F8D-48ACB8544B59",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "577C0354-A228-5FE1-987E-2C9D46F15BCC",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "7A3B82D7-A736-5BD4-97D7-FA2C3EAEE797",
+            "key": "action.system.switch-audio-output-device"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "33A7EB2B-2DFF-5B88-88D8-46B13887C272",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "98FBF652-3DAD-5631-9D2B-3BD518EB74DA",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Switch Audio Output"
+}

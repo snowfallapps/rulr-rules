@@ -1,0 +1,202 @@
+{
+  "id": "BB10DEFF-9D82-5734-85E9-88B81BD34842",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "F9354EB4-F45B-5024-B2A5-6F8E5EFC08E1",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Enter English letters (HELLO), or positions (8 5 12 12 15)."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Letters and Alphabet Positions"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "4EB8E831-FABA-5C82-B5F0-56C9A87B3B0B",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4EB8E831-FABA-5C82-B5F0-56C9A87B3B0B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "F9354EB4-F45B-5024-B2A5-6F8E5EFC08E1"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "on run argv\n    if (count argv) is 0 then error \"Enter letters or positions from 1 to 26.\"\n    set inputText to item 1 of argv as text\n    if inputText is \"\" then error \"Enter letters or positions from 1 to 26.\"\n    if (length of inputText) > 200 then error \"Use at most 200 characters per conversion.\"\n    set alphabet to \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n    set resultParts to {}\n    if (count words of inputText) is 0 then error \"Enter letters or positions from 1 to 26.\"\n    if character 1 of (word 1 of inputText) is in \"0123456789\" then\n        repeat with inputCharacter in characters of inputText\n            if (inputCharacter as text) is not in \"0123456789 \" then error \"Separate integer positions with spaces.\"\n        end repeat\n        repeat with token in words of inputText\n            try\n                set positionValue to token as integer\n            on error\n                error \"Use integer positions from 1 to 26.\"\n            end try\n            if positionValue < 1 or positionValue > 26 then error \"Each position must be between 1 and 26.\"\n            set end of resultParts to character positionValue of alphabet\n        end repeat\n        set AppleScript's text item delimiters to \"\"\n    else\n        ignoring case\n            repeat with letterValue in characters of inputText\n                if letterValue as text is not \" \" then\n                    set positionValue to offset of (letterValue as text) in alphabet\n                    if positionValue is 0 then error \"Use only English letters A to Z, with optional spaces.\"\n                    set end of resultParts to positionValue as text\n                end if\n            end repeat\n        end ignoring\n        set AppleScript's text item delimiters to \" \"\n    end if\n    set resultText to resultParts as text\n    set AppleScript's text item delimiters to \"\"\n    if resultText is \"\" then error \"The input did not contain anything to convert.\"\n    return resultText\nend run\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 60
+                }
+              }
+            },
+            "id": "F36652CA-73FF-5A77-BA93-DDFD6D27385B",
+            "key": "action.run-apple-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "F36652CA-73FF-5A77-BA93-DDFD6D27385B"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "F9354EB4-F45B-5024-B2A5-6F8E5EFC08E1"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.run-applescript.result"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                },
+                "withStickyWindow": {
+                  "type": "boolean",
+                  "value": false
+                }
+              }
+            },
+            "id": "35294409-F9BB-5DC1-8924-AC7E76589E49",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Ask, Convert, and Show Alphabet Positions"
+      }
+    ],
+    "id": "FC7C8D68-6777-5EA0-8625-693027B25414",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:37;modifiers:option;display:L"
+            }
+          }
+        },
+        "id": "C9AE392C-D011-5505-AC38-0DF62F73C999",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Letters and Alphabet Positions"
+}

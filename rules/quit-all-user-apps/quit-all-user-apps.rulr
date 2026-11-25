@@ -1,0 +1,77 @@
+{
+  "id": "E6E02A6B-78BA-5C73-8E5C-D3201923BF1D",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "B16633ED-BD5A-5629-A580-6FD92EFAEBAA",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": []
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "use framework \"AppKit\"\nuse scripting additions\n\n-- Request normal termination of GUI applications, preserving Finder and Rulr.\nset candidates to {}\nset candidateNames to {}\nset runningApps to current application's NSWorkspace's sharedWorkspace()'s runningApplications()\nrepeat with runningApp in runningApps\n    if (runningApp's activationPolicy() as integer) is 0 then\n        set bundleID to runningApp's bundleIdentifier() as text\n        if bundleID is not in {\"com.apple.finder\", \"app.rulr\", \"app.rulr.dev\", \"com.apple.ScriptEditor2\"} then\n            set end of candidates to contents of runningApp\n            set end of candidateNames to runningApp's localizedName() as text\n        end if\n    end if\nend repeat\nif (count candidates) is 0 then return \"No other GUI applications to quit.\"\nset AppleScript's text item delimiters to linefeed\nset listedNames to candidateNames as text\nset AppleScript's text item delimiters to \"\"\ndisplay dialog \"Save your work before continuing. Request normal quit for:\" & linefeed & linefeed & listedNames & linefeed & linefeed & \"Finder, Rulr and Script Editor stay open. Apps may ask about unsaved documents.\" buttons {\"Cancel\", \"Quit Apps\"} default button \"Cancel\" cancel button \"Cancel\"\nset declinedNames to {}\nrepeat with candidate in candidates\n    if not (candidate's terminate() as boolean) then\n        set end of declinedNames to candidate's localizedName() as text\n    end if\nend repeat\nif (count declinedNames) > 0 then\n    set AppleScript's text item delimiters to \", \"\n    set declinedText to declinedNames as text\n    set AppleScript's text item delimiters to \"\"\n    display dialog \"These apps did not accept the quit request: \" & declinedText buttons {\"OK\"} default button \"OK\"\nend if\nreturn \"Normal quit requests sent; review any app save dialogs.\"\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 120
+                }
+              }
+            },
+            "id": "7C024706-5978-5DAD-B2DF-5B82224367CA",
+            "key": "action.run-apple-script"
+          }
+        ],
+        "kind": "action",
+        "title": "Quit Open Apps"
+      }
+    ],
+    "id": "E3137C85-3BBA-5735-B518-F24D7F9C3BB1",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:28;modifiers:option;display:8"
+            }
+          }
+        },
+        "id": "EF0AB5D3-2B49-5D9E-92EE-E45FB806990E",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Quit Open Apps"
+}

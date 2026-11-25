@@ -1,0 +1,108 @@
+{
+  "id": "8E2CE634-218D-4DF9-8459-4D67FB024BC8",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "CC317A63-BACD-4E7A-AE70-AB317A6ADD08",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.clipboard-content"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "4AC53583-6938-4264-9583-607A6C590F96",
+            "key": "action.text.convert-to-plain-text"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4AC53583-6938-4264-9583-607A6C590F96"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "CC317A63-BACD-4E7A-AE70-AB317A6ADD08"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.convert-to-plain-text.plain-text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "4C1F4236-06A2-4FA0-8195-19B84E7CFAAD",
+            "key": "action.text.insert"
+          }
+        ],
+        "kind": "action",
+        "title": "Convert and Insert Plain Text"
+      }
+    ],
+    "id": "DF55F65A-56CD-4D37-8275-C1AB37E6983A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:9;modifiers:option;display:V"
+            }
+          }
+        },
+        "id": "AA9D132E-970F-4149-9C6B-F930E4D95D64",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Paste as Plain Text"
+}

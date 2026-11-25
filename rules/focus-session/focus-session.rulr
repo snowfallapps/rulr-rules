@@ -1,0 +1,227 @@
+{
+  "id": "219DB1EF-9EB5-5F2D-821A-8E1EA3A781D9",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "617AA109-4055-5ABC-8E35-08C15D0A63CD",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Start a 50-minute focus session?"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Focus Session"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "1E4E2213-BB45-58E8-9114-DF044663BD5B",
+            "key": "action.feedback.show-confirmation"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.MobileSMS",
+                    "name": "Messages"
+                  }
+                }
+              }
+            },
+            "id": "1434F827-0076-50A4-8849-EDCE23F07E8B",
+            "key": "action.application.quit"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.mail",
+                    "name": "Mail"
+                  }
+                }
+              }
+            },
+            "id": "FF3124C1-C292-5E71-A806-5BF58A27FEA6",
+            "key": "action.application.quit"
+          },
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "openWith": {
+                  "type": "dictionary",
+                  "value": {
+                    "source": {
+                      "type": "string",
+                      "value": "default"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "7F3AC2DF-BA6B-58FB-8D19-E30BF3492C0B",
+            "key": "action.file.open"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.TextEdit",
+                    "name": "TextEdit"
+                  }
+                }
+              }
+            },
+            "id": "996B5B66-6AAC-56A2-A021-59A060B7BD9C",
+            "key": "action.application.launch"
+          },
+          {
+            "configuration": {
+              "values": {
+                "duration": {
+                  "type": "number",
+                  "value": 50
+                },
+                "unit": {
+                  "type": "string",
+                  "value": "minutes"
+                }
+              }
+            },
+            "id": "635360F7-86FF-52DE-9877-F18298A86AA9",
+            "key": "action.control.delay"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Your focus session is complete."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Focus Session"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "59D740B7-0A8D-54D6-BEBE-1406004AB4DC",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Start and Complete Focus Session"
+      }
+    ],
+    "id": "AEE43253-9377-5BE7-BB50-A29CA3E39717",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:3;modifiers:option;display:F"
+            }
+          }
+        },
+        "id": "729E81B6-4FB3-5F43-BB84-EB59556310AA",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Focus Session"
+}

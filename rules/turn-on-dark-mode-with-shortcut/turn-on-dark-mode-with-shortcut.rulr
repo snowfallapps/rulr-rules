@@ -1,0 +1,52 @@
+{
+  "id": "8E2DFEE4-F590-5090-9214-795BCECCD018",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "0FB45C8C-D982-5594-A088-69819ECEB0F2",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "appearance": {
+                  "type": "string",
+                  "value": "dark"
+                }
+              }
+            },
+            "id": "3B2FF29E-34D8-5644-BD9F-DFD0B686B599",
+            "key": "action.system.set-system-appearance"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "693EFE21-7725-5307-A6EA-9FB8665C2F3E",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:2;modifiers:option;display:D"
+            }
+          }
+        },
+        "id": "FA5B9BDC-ECCE-50A9-AF44-821DF8242650",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Turn On Dark Mode with a Shortcut"
+}

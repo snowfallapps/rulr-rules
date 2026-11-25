@@ -1,0 +1,86 @@
+{
+  "id": "8526ECA2-8A8E-5907-B4A0-1D6142795FE5",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "8B933BB3-B06F-5EDA-A4BC-B0A95C893FAB",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "volume": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "id": "6239A69C-25A2-56B5-8F06-03024A8C432E",
+            "key": "action.system.set-volume"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.MobileSMS",
+                    "name": "Messages"
+                  }
+                }
+              }
+            },
+            "id": "CD7D3875-E6CC-5064-92B3-12DA2A293B06",
+            "key": "action.application.quit"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.mail",
+                    "name": "Mail"
+                  }
+                }
+              }
+            },
+            "id": "53B87C09-AB9C-5D3A-B34F-79DAB63CAE1E",
+            "key": "action.application.quit"
+          }
+        ],
+        "kind": "action",
+        "title": "Mute and Close Private Apps"
+      }
+    ],
+    "id": "773F2E06-3028-54F9-95C2-7F495123C562",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "durationUnit": {
+              "type": "string",
+              "value": "minutes"
+            },
+            "durationValue": {
+              "type": "number",
+              "value": 30
+            }
+          }
+        },
+        "id": "AA6FA226-54CA-5C53-90AB-1EFCCB9512C0",
+        "key": "trigger.system.idle"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Idle Privacy Mode"
+}

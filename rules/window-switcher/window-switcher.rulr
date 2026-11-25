@@ -1,0 +1,56 @@
+{
+  "id": "58D5797E-031D-5451-B24D-8348A51AB015",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "2BCCA4A6-3E90-5393-B2A1-ABD902E0D95B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "excludedApps": {
+                  "type": "array",
+                  "value": []
+                },
+                "layout": {
+                  "type": "string",
+                  "value": "horizontal"
+                }
+              }
+            },
+            "id": "7150A2FB-CDBC-5513-AADD-93D7C182308B",
+            "key": "action.window.show-window-switcher"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "956426F9-092C-5267-AF32-102D9FAB16E7",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:48;modifiers:option;display:Tab"
+            }
+          }
+        },
+        "id": "EFC36C78-2E55-5DE8-ABAC-40BF1A70B8E9",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Window Switcher"
+}

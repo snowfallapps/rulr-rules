@@ -1,0 +1,124 @@
+{
+  "id": "3997D356-3184-5FCA-AF41-5640370BE7D1",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "90F51822-20BE-54B3-90FA-BFBB855BC8CB",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "full-screen"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "634F71DE-9E77-50B7-BEFA-0EBD1D8E5EA6",
+            "key": "action.image.recognize-text-on-screen"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "634F71DE-9E77-50B7-BEFA-0EBD1D8E5EA6"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "90F51822-20BE-54B3-90FA-BFBB855BC8CB"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.ocr-screen.text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "2DA5C30D-5406-5E37-BE98-03CD7BEA8680",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Recognize and Show Screen Text"
+      }
+    ],
+    "id": "B01B97A4-F34F-5529-B2F3-E882DE5DC3D8",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "4CD59F54-69FC-5CF4-A08B-3FB96E04BF41",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Recognize Screen Text"
+}

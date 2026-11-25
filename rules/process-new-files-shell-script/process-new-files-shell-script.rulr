@@ -1,0 +1,155 @@
+{
+  "id": "81292721-D8F7-530D-BF8B-54D02A21AD28",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "2E60FBFD-BCE2-5D28-8508-D79D28901FA9",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "2E934321-0E8E-54ED-BBF4-AB624B512BE9"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D7293CF4-9489-522F-A5A4-1FA93FEB688A"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "printf '%s' \"$1\""
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "5A86129A-E2F7-57A7-9C08-62820548A639",
+            "key": "action.run-shell-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Process New Files ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Process New Files"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "951AAA72-6157-522F-920C-0000F42D82F2",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Run Script and Show Result"
+      }
+    ],
+    "id": "D7293CF4-9489-522F-A5A4-1FA93FEB688A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "2E934321-0E8E-54ED-BBF4-AB624B512BE9",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Process New Files"
+}

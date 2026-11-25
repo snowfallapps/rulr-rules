@@ -1,0 +1,102 @@
+{
+  "id": "A5A3EDE7-3ED3-553D-8B02-D5065C1CCA73",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "1B865651-2413-53FB-AB10-B34B8B324512",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "13345E3B-C6DB-58F8-A5BB-30FC23405997",
+            "key": "action.integration.chrome.get-current-tab"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "13345E3B-C6DB-58F8-A5BB-30FC23405997"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "1B865651-2413-53FB-AB10-B34B8B324512"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-get-current-tab.active-tab-url"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads/Rulr Notes.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "B1C32BA1-CBDD-5A97-BFDC-CAE2BD6F1A22",
+            "key": "action.file.write"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Save Current Page"
+      }
+    ],
+    "id": "4B71AFAA-E7E0-58AD-9F6A-57E9292CA9BA",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "485B9DF4-8BCE-5C35-8694-38C53D15CB3E",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Save Current Page"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "3C5D7D9C-1789-5AEA-A6F6-1D416F87234A",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "69DDDFFC-5D6F-572F-967D-01E90AA01B20",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.clipboard-text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "urlEncode"
+                }
+              }
+            },
+            "id": "FEC9CE0D-8173-50AC-9E50-651DD4C0D043",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "FEC9CE0D-8173-50AC-9E50-651DD4C0D043"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "69DDDFFC-5D6F-572F-967D-01E90AA01B20"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "8313D0EB-C060-5448-BA89-E85280AF6F88",
+            "key": "action.text.insert"
+          }
+        ],
+        "kind": "action",
+        "title": "URL Encode and Insert Text"
+      }
+    ],
+    "id": "2A682C38-50FC-5F9D-8EEB-3DE9703E232C",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:14;modifiers:option;display:E"
+            }
+          }
+        },
+        "id": "A18AF219-C428-5A95-8D38-C20F35E51D9B",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Paste URL-Encoded Text"
+}

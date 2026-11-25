@@ -1,0 +1,85 @@
+{
+  "id": "EDAA8495-6917-5ED7-B2D2-17F93DF44070",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "0DE42B1F-9049-5E8F-A668-B308497ADCF0",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": []
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "on run argv\n    if (count argv) is 0 then error \"Configure the trusted AppleScript file path in this Action's Arguments before enabling the schedule.\"\n    set scriptPath to item 1 of argv\n    if scriptPath starts with \"~/\" then\n        set scriptPath to POSIX path of (path to home folder) & text 3 thru -1 of scriptPath\n    end if\n    set scriptFile to POSIX file scriptPath as alias\n    set loadedScript to load script scriptFile\n    run script loadedScript\nend run\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 120
+                }
+              }
+            },
+            "id": "8DFAF602-80F8-5BF5-8A1C-F3E3C6A5C1DB",
+            "key": "action.run-apple-script"
+          }
+        ],
+        "kind": "action",
+        "title": "Schedule AppleScript File"
+      }
+    ],
+    "id": "C547A744-DFE7-57D1-A2ED-A74F4601BF07",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "scheduleFrequency": {
+              "type": "string",
+              "value": "weekly"
+            },
+            "weeklyTime": {
+              "type": "string",
+              "value": "09:00"
+            },
+            "weeklyWeekdays": {
+              "type": "string",
+              "value": "2,3,4,5,6"
+            }
+          }
+        },
+        "id": "22B563CA-D170-5C30-91A5-5D733D7610A4",
+        "key": "trigger.schedule.date-time"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Schedule"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Schedule AppleScript File"
+}

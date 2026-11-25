@@ -1,0 +1,161 @@
+{
+  "id": "AD97C69C-3CE2-5A36-A8AB-5A411B879318",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "113AD8B5-5B3E-5577-8F3B-8FEB7DABC41D",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "position": {
+                      "type": "dictionary",
+                      "value": {
+                        "coordinateMode": {
+                          "type": "string",
+                          "value": "percentage"
+                        },
+                        "kind": {
+                          "type": "string",
+                          "value": "window"
+                        },
+                        "window": {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "5E0198B6-AF44-5131-8080-1E62995DFB28"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "CFD227D4-F7E2-588F-BA64-FDAC36AD3DF3"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "trigger.application-window.window-created.window"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "trigger"
+                            }
+                          }
+                        },
+                        "x": {
+                          "type": "number",
+                          "value": 50
+                        },
+                        "y": {
+                          "type": "number",
+                          "value": 50
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "DFD91AF8-B677-59A0-A252-0439B68C3B5D",
+                "key": "action.system.move-mouse"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "button": {
+                      "type": "string",
+                      "value": "left-button"
+                    },
+                    "click": {
+                      "type": "string",
+                      "value": "single-click"
+                    },
+                    "modifiers": {
+                      "type": "string",
+                      "value": ""
+                    }
+                  }
+                },
+                "id": "89691377-7354-58A6-86D8-896F1D9916E2",
+                "key": "action.system.click-mouse"
+              }
+            ],
+            "kind": "action",
+            "title": "Move Pointer and Click"
+          }
+        ],
+        "id": "CDB3FB10-EA7E-572F-B261-624486F84FFF",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "5E0198B6-AF44-5131-8080-1E62995DFB28"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "CFD227D4-F7E2-588F-BA64-FDAC36AD3DF3"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.application-window.window-created.application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "DFE47C55-9A11-566D-8632-DA75AED7F835",
+            "key": "trigger.application-window.window-created.application"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Application"
+      }
+    ],
+    "id": "CFD227D4-F7E2-588F-BA64-FDAC36AD3DF3",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.Safari",
+                "name": "Safari"
+              }
+            }
+          }
+        },
+        "id": "5E0198B6-AF44-5131-8080-1E62995DFB28",
+        "key": "trigger.application-window.window-created"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Event Occurs"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Click a Window Position"
+}

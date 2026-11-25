@@ -1,0 +1,140 @@
+{
+  "id": "87E6EF31-A9CD-514B-8A1C-E5F45187AC4B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "56E07833-FCC0-5DA9-8A9F-227DDAEB1EEB",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "EBA2C54F-8BF0-5B80-8E97-BAC39A0ED5A0",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "EBA2C54F-8BF0-5B80-8E97-BAC39A0ED5A0"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "56E07833-FCC0-5DA9-8A9F-227DDAEB1EEB"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "urlEncode"
+                }
+              }
+            },
+            "id": "FEC0F08A-D562-53A7-BC92-9C26C088708D",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "url": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "https://www.google.com/search?q="
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "FEC0F08A-D562-53A7-BC92-9C26C088708D"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "56E07833-FCC0-5DA9-8A9F-227DDAEB1EEB"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "DB740F82-A92E-5363-8C2D-920A2CF49111",
+            "key": "action.integration.chrome.open-new-tab"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Search Selected Text"
+      }
+    ],
+    "id": "BE5C7D1A-A574-5E71-BFF3-91D975780853",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "9C96BF27-649D-58D2-9C21-6F4A4D21A129",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Search Selected Text"
+}

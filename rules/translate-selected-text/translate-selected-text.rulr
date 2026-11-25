@@ -1,0 +1,140 @@
+{
+  "id": "411B0ECC-984A-5C35-BB3F-A1D09DC49364",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "654300BB-DE63-5D2D-B855-2C0A557C129D",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "5C4F105D-EF3C-5CD3-BBB5-FFD74E5B761C",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "5C4F105D-EF3C-5CD3-BBB5-FFD74E5B761C"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "654300BB-DE63-5D2D-B855-2C0A557C129D"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "targetLanguage": {
+                  "type": "string",
+                  "value": "en"
+                }
+              }
+            },
+            "id": "69770CF4-CE30-5147-8561-A632B78E6246",
+            "key": "action.text.translate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "69770CF4-CE30-5147-8561-A632B78E6246"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "654300BB-DE63-5D2D-B855-2C0A557C129D"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.translate-text.translated-text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "C68D0217-727E-5F2F-B54B-8B767CA76F49",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Get, Translate, and Show Text"
+      }
+    ],
+    "id": "EC64375F-AE90-5724-A941-9E9AA3AEC96D",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";translate"
+            }
+          }
+        },
+        "id": "F1665BD5-708D-55BC-B965-BEAEB37F832F",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Translate Selected Text"
+}

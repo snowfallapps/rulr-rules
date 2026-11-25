@@ -1,0 +1,199 @@
+{
+  "id": "A9C9093B-5508-504F-84AD-4B9217A0C386",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "id": "86030827-66E9-599D-87F1-5AFB965F3087",
+                    "instances": [
+                      {
+                        "configuration": {
+                          "values": {
+                            "inputs": {
+                              "type": "array",
+                              "value": [
+                                {
+                                  "type": "dictionary",
+                                  "value": {
+                                    "keystroke": {
+                                      "type": "string",
+                                      "value": "keycode:49;modifiers:;display:Space"
+                                    },
+                                    "source": {
+                                      "type": "string",
+                                      "value": "key"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "id": "C60CA840-65CF-58A7-A325-618E9481E18E",
+                        "key": "action.system.type-text-or-press-keys"
+                      }
+                    ],
+                    "kind": "action",
+                    "title": "Advance One Screen"
+                  }
+                ],
+                "id": "2BB0126B-B129-522B-B1B8-A05D00475647",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "operand": {
+                          "type": "string",
+                          "value": "https://www.rulr.app/posts/mac-automation/"
+                        },
+                        "operator": {
+                          "type": "string",
+                          "value": "equals"
+                        },
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "E99773FD-D170-5AB1-A162-E77715DCC711"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "1D37744D-F8AE-572F-A8AF-991970C5351F"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.safari-get-current-tab.active-tab-url"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    "id": "3DFEB7FC-7133-5BB8-A8D7-84E41FCBBEDE",
+                    "key": "action.safari-get-current-tab.active-tab-url"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "operand": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "operator": {
+                          "type": "string",
+                          "value": "is"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.frontmost-application"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    },
+                    "id": "78605140-1B51-5702-BB42-698696EAB295",
+                    "key": "common.frontmost-application"
+                  }
+                ],
+                "kind": "condition",
+                "title": "Check Conditions"
+              }
+            ],
+            "id": "1D37744D-F8AE-572F-A8AF-991970C5351F",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {}
+                },
+                "id": "E99773FD-D170-5AB1-A162-E77715DCC711",
+                "key": "action.integration.safari.get-current-tab"
+              }
+            ],
+            "kind": "action",
+            "title": "Read Active Article URL"
+          }
+        ],
+        "id": "B44B9CE5-6D5E-5B83-BEB8-CF07E6E6BF02",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.frontmost-application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "146827CD-2606-54FB-8F37-CF4499E6BBCB",
+            "key": "common.frontmost-application"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "996138F1-1B15-5043-996A-106C0B0FE037",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "endTime": {
+              "type": "string",
+              "value": "24:00"
+            },
+            "everyUnit": {
+              "type": "string",
+              "value": "seconds"
+            },
+            "everyValue": {
+              "type": "number",
+              "value": 30
+            },
+            "startTime": {
+              "type": "string",
+              "value": "00:00"
+            }
+          }
+        },
+        "id": "DB3BEB85-B86F-5871-9AFC-363BFFE33E8D",
+        "key": "trigger.schedule.interval"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Repeat"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Read an Article Hands-Free"
+}

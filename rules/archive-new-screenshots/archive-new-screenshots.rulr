@@ -1,0 +1,135 @@
+{
+  "id": "521E0872-3457-5716-B1EC-51DCB3E5302B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "B47E9E58-DD7A-5999-9533-E14ADE646B8E",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Downloads"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4BCBF2C8-977C-5621-8BAB-3B6B8B75653D"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "F5BEB626-17BB-5C3E-A7DF-B61DCA223C59"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "E3436288-4430-5433-95E5-C983897C6673",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "88EF1BFB-317C-57F0-A800-F5F71F604B5D",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)screenshot.*\\.(png|jpe?g)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "4BCBF2C8-977C-5621-8BAB-3B6B8B75653D"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "F5BEB626-17BB-5C3E-A7DF-B61DCA223C59"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "E00FC929-AE50-5C1B-8EF4-B7299AC7BC36",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Screenshot"
+      }
+    ],
+    "id": "F5BEB626-17BB-5C3E-A7DF-B61DCA223C59",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "4BCBF2C8-977C-5621-8BAB-3B6B8B75653D",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Archive Screenshots"
+}

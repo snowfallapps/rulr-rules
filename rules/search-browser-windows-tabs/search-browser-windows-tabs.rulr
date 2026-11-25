@@ -1,0 +1,47 @@
+{
+  "id": "F4E05CEF-748A-5B49-AADE-59F5075B48BD",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "CF4EE56A-E5B9-5B36-88C0-27132E41FCCB",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "F74CF848-6748-528D-B8D0-FC7DBF830373",
+            "key": "action.integration.chrome.show-window-and-tab-manager"
+          }
+        ],
+        "kind": "action",
+        "title": "Open Chrome Window Manager"
+      }
+    ],
+    "id": "75A36E16-1E29-51D5-9973-6E126EB195F6",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "ED55192E-1FA0-5069-A4DC-BE89E35F35BB",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Chrome Window Manager"
+}

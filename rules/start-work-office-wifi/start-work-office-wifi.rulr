@@ -1,0 +1,297 @@
+{
+  "id": "F5E2C18F-99DE-50DD-BFD6-C4AB9B3806A9",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "452A312E-F62C-5930-9712-275B26C4AE10",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.tinyspeck.slackmacgap",
+                            "name": "Slack"
+                          }
+                        }
+                      }
+                    },
+                    "id": "630EFF20-2122-5B03-B680-40277B0B24C3",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "notion.id",
+                            "name": "Notion"
+                          }
+                        }
+                      }
+                    },
+                    "id": "E7FB0B6A-D9FB-5005-848B-8964BC84BF3C",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "openWith": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "url": {
+                          "type": "string",
+                          "value": "https://calendar.google.com"
+                        }
+                      }
+                    },
+                    "id": "AA920711-F07E-59CE-875F-07BA75A83241",
+                    "key": "action.web.open-url"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Morning Tools"
+              }
+            ],
+            "id": "A3C630DE-8A65-5C76-A07B-A70E3FA3ECC9",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T08:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "greaterThanOrEqual"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "C2C825DA-A3D2-5559-9257-D8D47E470D8B",
+                "key": "common.current-time"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T12:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "lessThan"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "13C1D09B-C055-5055-9CD3-63157909E4CC",
+                "key": "common.current-time"
+              }
+            ],
+            "kind": "condition",
+            "title": "Match Office Network"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "B18F7433-18F8-551D-A740-A3B36B2733B4",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.tinyspeck.slackmacgap",
+                            "name": "Slack"
+                          }
+                        }
+                      }
+                    },
+                    "id": "6DDE0613-9842-522F-A123-A330DED28AF8",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.figma.Desktop",
+                            "name": "Figma"
+                          }
+                        }
+                      }
+                    },
+                    "id": "54784582-F88D-5F8B-A802-BB64417A6B4C",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "openWith": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "url": {
+                          "type": "string",
+                          "value": "https://www.notion.so"
+                        }
+                      }
+                    },
+                    "id": "74FF7070-3FF0-579D-888D-2776D0108556",
+                    "key": "action.web.open-url"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Afternoon Tools"
+              }
+            ],
+            "id": "04800139-C419-5AE0-A175-D43F9E09E3B8",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T13:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "greaterThanOrEqual"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "D48BDE10-153C-5AD7-82D5-830C2ECE56AF",
+                "key": "common.current-time"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T18:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "lessThan"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "3F1C092F-E1DE-582B-BF32-8A3E61DE15CA",
+                "key": "common.current-time"
+              }
+            ],
+            "kind": "condition",
+            "title": "Match Office Network"
+          }
+        ],
+        "id": "65CBB08A-4CBC-5992-AC67-A7CC659C1FB1",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "Office"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "equals"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "735BFE20-052E-57D7-A188-EE9716B39E5A"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "01AC64DA-D8C5-53DC-B28F-2777C728E101"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.network-connected.ssid"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "2CBC610C-78CE-5033-98BB-E7C181BE59C6",
+            "key": "trigger.system.network-connected.ssid"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Office Network"
+      }
+    ],
+    "id": "01AC64DA-D8C5-53DC-B28F-2777C728E101",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "735BFE20-052E-57D7-A188-EE9716B39E5A",
+        "key": "trigger.system.network-connected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Network Connects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Office Work Mode"
+}

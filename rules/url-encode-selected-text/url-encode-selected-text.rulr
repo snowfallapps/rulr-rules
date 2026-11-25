@@ -1,0 +1,127 @@
+{
+  "id": "1BEAC707-BD92-5FE5-93F3-9A6F172795FA",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "35469B80-50BC-5EBF-815F-910FDB8A4175",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "0633F476-16BB-5FB4-A902-84926C321CB8",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "0633F476-16BB-5FB4-A902-84926C321CB8"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "35469B80-50BC-5EBF-815F-910FDB8A4175"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "urlEncode"
+                }
+              }
+            },
+            "id": "778456A9-D03E-5DB1-8F6A-06FE8E6340CC",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "778456A9-D03E-5DB1-8F6A-06FE8E6340CC"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "35469B80-50BC-5EBF-815F-910FDB8A4175"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "530A13DF-A60B-5C89-8297-5D2AC6F911A5",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Get, Encode, and Copy Text"
+      }
+    ],
+    "id": "C4E7C1BC-B308-59A4-92C0-4351F2684E0B",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "C0AD609F-C80D-52A9-A7E7-1597C70C0EAF",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Encode Selected Text"
+}

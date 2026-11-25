@@ -1,0 +1,162 @@
+{
+  "id": "03BF8922-0546-53CB-AE7D-759EEB942E72",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "6866F007-A9EC-5DCD-AB61-EB1E3EA06F4F",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "inputSource": {
+                      "type": "string",
+                      "value": "com.apple.keylayout.ABC"
+                    }
+                  }
+                },
+                "id": "28A9C97F-EDA3-58A3-99F4-8DF32BE53F49",
+                "key": "action.system.switch-input-method"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "conditionMatchMode": "or",
+        "id": "2E2F3DD0-D9BA-5185-82C6-20E5CDF759C0",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "205F5BEF-AC98-598D-A9E6-418FFE61EC15"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "6920FCB0-5726-5DD0-8906-611CB6F68D55"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.application-window.frontmost-application-changed.application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "873BBEAE-E00A-5868-8609-95079766268A",
+            "key": "trigger.application-window.frontmost-application-changed.application"
+          },
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.google.Chrome",
+                    "name": "Google Chrome"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "205F5BEF-AC98-598D-A9E6-418FFE61EC15"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "6920FCB0-5726-5DD0-8906-611CB6F68D55"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.application-window.frontmost-application-changed.application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "D837E901-234D-57E4-A4D0-59433F84D687",
+            "key": "trigger.application-window.frontmost-application-changed.application"
+          },
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.figma.Desktop",
+                    "name": "Figma"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "205F5BEF-AC98-598D-A9E6-418FFE61EC15"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "6920FCB0-5726-5DD0-8906-611CB6F68D55"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.application-window.frontmost-application-changed.application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "DD104F03-A5ED-5F65-9E1E-3567CDD8F878",
+            "key": "trigger.application-window.frontmost-application-changed.application"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Frontmost App"
+      }
+    ],
+    "id": "6920FCB0-5726-5DD0-8906-611CB6F68D55",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "205F5BEF-AC98-598D-A9E6-418FFE61EC15",
+        "key": "trigger.application-window.frontmost-application-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When App Changes"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Switch Input Method"
+}

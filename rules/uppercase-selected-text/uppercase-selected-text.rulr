@@ -1,0 +1,134 @@
+{
+  "id": "1417F5F6-2D0B-50BF-BF6B-185FE8CF213F",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "C6D236DB-2B59-5E1A-B1ED-7D60C72D3181",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "71749109-C32B-5EAB-A22B-90F8F926DABC",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "71749109-C32B-5EAB-A22B-90F8F926DABC"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "C6D236DB-2B59-5E1A-B1ED-7D60C72D3181"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "uppercase"
+                }
+              }
+            },
+            "id": "542CB9D1-49B1-55AC-8367-AA4E6D482138",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "542CB9D1-49B1-55AC-8367-AA4E6D482138"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "C6D236DB-2B59-5E1A-B1ED-7D60C72D3181"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "97516B81-2DB0-57F9-9206-996BD0FFA52E",
+            "key": "action.clipboard.set"
+          },
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "C9E8F303-14CB-5809-879F-476F6C516D0F",
+            "key": "action.clipboard.paste"
+          }
+        ],
+        "kind": "action",
+        "title": "Uppercase and Paste Selected Text"
+      }
+    ],
+    "id": "15B60D5F-254D-5D66-9B13-86961D9BCDA7",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "86E120D8-F5BA-5DE8-A6D2-8F163B7C500E",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Uppercase Selected Text"
+}

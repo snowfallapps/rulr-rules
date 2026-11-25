@@ -1,0 +1,98 @@
+{
+  "id": "C7E2552F-EA42-576B-BB52-A74567A34865",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "D0AA07AE-7BD9-5FA8-B580-772C113463E1",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "BC631528-18C3-5B6C-89B5-5AE3F282F384"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "C189DEF1-127B-5C2C-8D39-959A77A1BCF5"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.system.appearance-changed.appearance"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "on run argv\nreturn item 1 of argv\nend run"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "59A2FE8A-8733-5686-A897-6DAA5B3E33F6",
+            "key": "action.run-apple-script"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "C189DEF1-127B-5C2C-8D39-959A77A1BCF5",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "BC631528-18C3-5B6C-89B5-5AE3F282F384",
+        "key": "trigger.system.appearance-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Appearance Changes"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Sync App Appearance"
+}

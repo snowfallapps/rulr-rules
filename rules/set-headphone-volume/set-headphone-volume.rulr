@@ -1,0 +1,164 @@
+{
+  "id": "9B384F2C-FAC0-5313-A21E-C1370D70AD84",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "067D19E6-AA43-590B-86DE-F2A12A110570",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "volume": {
+                      "type": "number",
+                      "value": 20
+                    }
+                  }
+                },
+                "id": "D2F59F58-AA45-5922-BB63-DED197781A97",
+                "key": "action.system.set-volume"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.spotify.client",
+                        "name": "Spotify",
+                        "path": "/Applications/Spotify.app"
+                      }
+                    }
+                  }
+                },
+                "id": "1FBAC45F-B092-59CA-A6A4-42C5E2ACAD47",
+                "key": "action.application.launch"
+              }
+            ],
+            "kind": "action",
+            "title": "Set Volume and Open Spotify"
+          }
+        ],
+        "id": "BC9F8E27-BF8C-58C9-9204-870B6361E992",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "AirPods"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "6208590A-9E07-5A38-8AFF-35584BE68B59"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "40985CB9-29DF-5BC9-B378-770B94A381AB"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.audio-output-device-changed.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "10FFDF76-D616-5228-909C-37A894E99D7A",
+            "key": "trigger.system.audio-output-device-changed.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "If"
+      },
+      {
+        "children": [
+          {
+            "id": "55FF6642-6822-5AE6-B9E9-B5023FF9E047",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "volume": {
+                      "type": "number",
+                      "value": 30
+                    }
+                  }
+                },
+                "id": "0A0F362F-6740-511D-A622-53DA6AD7E7E1",
+                "key": "action.system.set-volume"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "381073C6-2732-5DE4-A830-3A7D1F3825C6",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "Speakers"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "6208590A-9E07-5A38-8AFF-35584BE68B59"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "40985CB9-29DF-5BC9-B378-770B94A381AB"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.audio-output-device-changed.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "A3896089-C86B-5660-B231-89A51228C710",
+            "key": "trigger.system.audio-output-device-changed.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "If"
+      }
+    ],
+    "id": "40985CB9-29DF-5BC9-B378-770B94A381AB",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "6208590A-9E07-5A38-8AFF-35584BE68B59",
+        "key": "trigger.system.audio-output-device-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Audio Device Setup"
+}

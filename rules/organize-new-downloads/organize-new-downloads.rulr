@@ -1,0 +1,94 @@
+{
+  "id": "E5E68B76-9275-53CB-A43F-85BEDA7BE196",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "B99AC169-4AA9-5766-A6F9-74A7C07D2D87",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "destinationFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "348CE185-6587-5FF6-9473-4E32012CCAE4"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "1D4BCB8F-3EF6-5EBC-91A1-203C63EAD5F1"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.input.folder-contents-changed.path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "use-numbered-name"
+                }
+              }
+            },
+            "id": "C14C71FA-195C-50FE-8187-9DD6DC240BA3",
+            "key": "action.file.move"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "1D4BCB8F-3EF6-5EBC-91A1-203C63EAD5F1",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "348CE185-6587-5FF6-9473-4E32012CCAE4",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Organize New Downloads"
+}

@@ -1,0 +1,99 @@
+{
+  "id": "568C59C3-B81D-5BA8-B175-C927B0603126",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "CF6D1900-B519-5E7F-AD37-3782FF5CC06A",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "EB78E88C-B5D7-55DC-8AF7-20397C33070E"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "CDBCD7C7-1CEE-5E9D-BE51-E291DBA9A026"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.input.folder-contents-changed.path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "use-numbered-name"
+                },
+                "newName": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Processed File"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "BEC8C2F8-E0F9-5A62-BCFC-8E01C67D5EB4",
+            "key": "action.file.rename"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "CDBCD7C7-1CEE-5E9D-BE51-E291DBA9A026",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "EB78E88C-B5D7-55DC-8AF7-20397C33070E",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Rename New Files"
+}

@@ -1,0 +1,233 @@
+{
+  "id": "99295784-603A-55CD-93A5-EF4666D7982E",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "0855EFA9-0479-5201-A8D3-0F17110F634E",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "content": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Download the selected link?"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "stopsRuleWhenCancelled": {
+                          "type": "boolean",
+                          "value": true
+                        },
+                        "title": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Download Link"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "4C2406A3-19AC-530E-B5BC-CE9AA12E5627",
+                    "key": "action.feedback.show-confirmation"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "destinationFolder": {
+                          "type": "string",
+                          "value": "~/Downloads"
+                        },
+                        "downloadStatus": {
+                          "type": "string",
+                          "value": "progress-and-result"
+                        },
+                        "stopsFlowWhenUnsuccessful": {
+                          "type": "boolean",
+                          "value": true
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "value": 60
+                        },
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "producerInstanceID": {
+                                  "type": "string",
+                                  "value": "D5DEA14F-4851-5E56-8AAE-BFB0CF168D15"
+                                },
+                                "producerNodeID": {
+                                  "type": "string",
+                                  "value": "1B01FA32-7881-5B06-983B-F7C7B322ED87"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "value": "variable"
+                                },
+                                "variableKey": {
+                                  "type": "string",
+                                  "value": "action.get-selected-text.text"
+                                },
+                                "variableSource": {
+                                  "type": "string",
+                                  "value": "action"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "6850D84A-23E7-579B-B15B-C6630A69979C",
+                    "key": "action.web.download-from-url"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "fileOrFolder": {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "6850D84A-23E7-579B-B15B-C6630A69979C"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "0855EFA9-0479-5201-A8D3-0F17110F634E"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.download-url.file-path"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "id": "C7F0B40A-C3BA-5A3B-B202-BAFA15530808",
+                    "key": "action.file.reveal"
+                  }
+                ],
+                "kind": "action",
+                "title": "Confirm, Download, and Reveal"
+              }
+            ],
+            "id": "8846BE92-5619-5FEE-9739-B76E3D9A6DC4",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "string",
+                      "value": "download"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "contains"
+                    },
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "D5DEA14F-4851-5E56-8AAE-BFB0CF168D15"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "1B01FA32-7881-5B06-983B-F7C7B322ED87"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.get-selected-text.text"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "id": "C1DDA762-01B3-5BFC-BD5C-5308E1E69F29",
+                "key": "action.get-selected-text.text"
+              }
+            ],
+            "kind": "condition",
+            "title": "Selected Text Contains Download"
+          }
+        ],
+        "id": "1B01FA32-7881-5B06-983B-F7C7B322ED87",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "D5DEA14F-4851-5E56-8AAE-BFB0CF168D15",
+            "key": "action.text.get-selected"
+          }
+        ],
+        "kind": "action",
+        "title": "Get Selected Link"
+      }
+    ],
+    "id": "071CC81F-2581-5729-AFF0-237F35014A46",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:2;modifiers:option;display:D"
+            }
+          }
+        },
+        "id": "B269F696-FD1B-517E-B651-F20F34755527",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Download and Reveal Link"
+}

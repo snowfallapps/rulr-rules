@@ -1,0 +1,387 @@
+{
+  "id": "BD6F080B-D11B-5DBA-8531-074E27D82D11",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "8AE331C8-7FF1-554E-85F4-DFC13927EA4D",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "https://scholar.google.com/"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "D75C0B3B-25C7-5112-B99F-FF913AA726C6",
+                    "key": "action.integration.chrome.open-new-tab"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "https://www.notion.so/"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "B6A84F7E-C903-5EB0-8AFB-74FFA4E8A569",
+                    "key": "action.integration.chrome.open-new-tab"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "content": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Research sources are ready."
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "sound": {
+                          "type": "boolean",
+                          "value": false
+                        },
+                        "title": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Research Workspace"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "BE40B53C-3BE8-5C7F-849C-0117F0734A5B",
+                    "key": "action.feedback.show-notification"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Morning Sources"
+              }
+            ],
+            "id": "065DA05D-6EAF-5F3D-885D-134B277A3EEC",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T08:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "greaterThanOrEqual"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "1A6AA778-F8F1-5EFD-BE05-03BB5CE07041",
+                "key": "common.current-time"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T12:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "lessThan"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "B4031BC9-52BB-5DDE-9C90-A56CA50B6666",
+                "key": "common.current-time"
+              }
+            ],
+            "kind": "condition",
+            "title": "Morning Window"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "DE78E3A7-5E40-5233-8371-CD0F21A437EA",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "https://docs.google.com/"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "5751C62E-5090-5162-81DF-D12396F9EAF0",
+                    "key": "action.integration.chrome.open-new-tab"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "https://drive.google.com/"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "6BCDB2DC-DACE-5282-87F2-0FC211C4E592",
+                    "key": "action.integration.chrome.open-new-tab"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "content": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Writing sources are ready."
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "sound": {
+                          "type": "boolean",
+                          "value": false
+                        },
+                        "title": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Research Workspace"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "B744F82D-9C66-58C0-AA89-4E77127E5B32",
+                    "key": "action.feedback.show-notification"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Afternoon Sources"
+              }
+            ],
+            "id": "533658DC-C6D1-55D2-8EDF-30B97CBBB9E1",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T13:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "greaterThanOrEqual"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "475E82EC-4589-503E-803C-E328E119E65E",
+                "key": "common.current-time"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "time",
+                      "value": "2001-01-01T18:00:00+08:00"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "lessThan"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.current-time"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "F23BFDAD-035F-5821-A6A7-0DE3AD34051C",
+                "key": "common.current-time"
+              }
+            ],
+            "kind": "condition",
+            "title": "Afternoon Window"
+          }
+        ],
+        "id": "6118CED1-8DFA-515A-A4A2-F4E957F999DC",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.google.Chrome",
+                    "name": "Google Chrome"
+                  }
+                }
+              }
+            },
+            "id": "B635C54E-65CE-59B4-B833-C559EC32E370",
+            "key": "action.application.activate"
+          }
+        ],
+        "kind": "action",
+        "title": "Prepare Chrome Workspace"
+      }
+    ],
+    "id": "4B36A3FD-6A13-5069-8011-09758BBDDD10",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:18;modifiers:option;display:R"
+            }
+          }
+        },
+        "id": "27B66CC6-C18E-5263-AC15-5A8797E8A9BD",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Research Workspace"
+}

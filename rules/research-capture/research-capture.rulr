@@ -1,0 +1,236 @@
+{
+  "id": "E8AAEDE3-9CFF-5157-9F5D-2BF9525D5BB6",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "14533817-39B9-5D78-B1E4-77D03FB166E8",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4A958A21-BE4B-5F67-948D-C0D0BDDBE196"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "8A70DD3A-275A-59AC-8DF5-023EE78D4189"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.clipboard-changed.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "trim"
+                }
+              }
+            },
+            "id": "D1BB0D51-1B8D-5F38-A1FE-C9AFCC2021C2",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "• "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "D1BB0D51-1B8D-5F38-A1FE-C9AFCC2021C2"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "14533817-39B9-5D78-B1E4-77D03FB166E8"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": " — "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.current-date-time"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\\n"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Research Notes.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "AE9C7B12-2E9E-562D-8B0E-7C8A1DDE419E",
+            "key": "action.file.write"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Saved to Research Notes."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": false
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Research Capture"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "0781309D-7726-566A-9EA0-BB31BB4AA772",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Trim and Save Research Text"
+      }
+    ],
+    "id": "8A70DD3A-275A-59AC-8DF5-023EE78D4189",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "4A958A21-BE4B-5F67-948D-C0D0BDDBE196",
+        "key": "trigger.input.clipboard-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Clipboard Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Research Capture"
+}

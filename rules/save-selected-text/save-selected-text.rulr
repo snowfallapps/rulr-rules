@@ -1,0 +1,102 @@
+{
+  "id": "BACA4877-DBB6-597C-8648-1513B576EB08",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "AA948690-DFD8-50C1-96E0-190CF051DD27",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "4EF480E1-8AC6-5502-BC8A-4529C959A939",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4EF480E1-8AC6-5502-BC8A-4529C959A939"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "AA948690-DFD8-50C1-96E0-190CF051DD27"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads/Rulr Notes.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "E290EE5A-66E2-5A21-9466-EBE0AED69A28",
+            "key": "action.file.write"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Save Selected Text"
+      }
+    ],
+    "id": "8368402B-AC4E-547A-83B5-4B6B92EEB8A6",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "378F7988-218A-554C-9346-BD3F6D76A790",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Save Selected Text"
+}

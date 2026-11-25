@@ -1,0 +1,55 @@
+{
+  "id": "71D82E85-43F6-57A4-A87A-6162E12ECF8C",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "24C7BD8F-0DD0-5FFE-ABF2-65700191546C",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                }
+              }
+            },
+            "id": "328B3435-0A89-59C7-91DD-257E459FA50C",
+            "key": "action.application.toggle-visibility"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "2619D87C-E3C5-578E-B266-C3170E95FF14",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "03F77D01-7AFA-59FC-967A-484F718D68CD",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Toggle App Visibility"
+}

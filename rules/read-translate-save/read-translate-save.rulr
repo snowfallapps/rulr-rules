@@ -1,0 +1,179 @@
+{
+  "id": "4572D885-179B-5877-A374-B33C4518072C",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "2D36AA22-0728-5881-BE61-10147927A1F6",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Research Draft.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "79BC8040-3873-5445-9AE0-9AAE1772150E",
+            "key": "action.file.read-text"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "79BC8040-3873-5445-9AE0-9AAE1772150E"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "2D36AA22-0728-5881-BE61-10147927A1F6"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.read-text-file.contents"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "targetLanguage": {
+                  "type": "string",
+                  "value": "en"
+                }
+              }
+            },
+            "id": "8724908D-874E-5922-9190-482C03610FF1",
+            "key": "action.text.translate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "8724908D-874E-5922-9190-482C03610FF1"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "2D36AA22-0728-5881-BE61-10147927A1F6"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.translate-text.translated-text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\\n"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Translated Research.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "0E4BD7F6-12C7-5A27-8AC8-A9E5D1388DAF",
+            "key": "action.file.write"
+          }
+        ],
+        "kind": "action",
+        "title": "Read, Translate, and Save Text"
+      }
+    ],
+    "id": "6B841F81-FDB9-5820-B10B-BE2F941E47D5",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "scheduleFrequency": {
+              "type": "string",
+              "value": "weekly"
+            },
+            "weeklyTime": {
+              "type": "string",
+              "value": "09:00"
+            },
+            "weeklyWeekdays": {
+              "type": "string",
+              "value": "2,3,4,5,6"
+            }
+          }
+        },
+        "id": "3FDD174E-675A-5EBA-A188-6032C6F16FAF",
+        "key": "trigger.schedule.date-time"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Schedule"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Read, Translate, and Save"
+}

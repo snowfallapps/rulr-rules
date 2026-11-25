@@ -1,0 +1,124 @@
+{
+  "id": "815D458E-4394-5F15-ACAC-BB50A1CB5917",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "7A82B77A-4123-56A0-8E80-3DEC3538923A",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "7B4D0A00-8EC1-5E17-A833-8ADAF28996FE"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "41088138-2307-53C1-AF32-96DFDD5B97CB"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.clipboard-changed.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "targetLanguage": {
+                  "type": "string",
+                  "value": "en"
+                }
+              }
+            },
+            "id": "5F63281C-7D00-59D0-935B-E1B30BC1370A",
+            "key": "action.text.translate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "5F63281C-7D00-59D0-935B-E1B30BC1370A"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "7A82B77A-4123-56A0-8E80-3DEC3538923A"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.translate-text.translated-text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "4B7A7DA0-EC98-599D-B257-BEC968609C62",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Translate and Show Clipboard Text"
+      }
+    ],
+    "id": "41088138-2307-53C1-AF32-96DFDD5B97CB",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "7B4D0A00-8EC1-5E17-A833-8ADAF28996FE",
+        "key": "trigger.input.clipboard-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Clipboard Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Translate Clipboard"
+}

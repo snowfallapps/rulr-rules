@@ -1,0 +1,288 @@
+{
+  "id": "BAC94A17-0140-59B3-B38E-E9C8176B74F3",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "1B0223D4-E7BA-562B-AA1B-F6480955A7B7",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "capture-on-run"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "FB60986E-970C-5407-8CE5-98645322C496",
+            "key": "action.image.capture-screen-or-window"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Enter a filename without .png. Cancel leaves the capture in its temporary location."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Name This Screenshot"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "2E0C8C49-0D9D-52D7-A4C7-6931334F5465",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "FB60986E-970C-5407-8CE5-98645322C496"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "1B0223D4-E7BA-562B-AA1B-F6480955A7B7"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.capture-screen-or-window.file-path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "stop-with-error"
+                },
+                "newName": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "2E0C8C49-0D9D-52D7-A4C7-6931334F5465"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "1B0223D4-E7BA-562B-AA1B-F6480955A7B7"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": ".png"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "A42B32DC-ED96-5FC3-86A9-E72BA966C45B",
+            "key": "action.file.rename"
+          },
+          {
+            "configuration": {
+              "values": {
+                "destinationFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "A42B32DC-ED96-5FC3-86A9-E72BA966C45B"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "1B0223D4-E7BA-562B-AA1B-F6480955A7B7"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.rename-file-or-folder.resource"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "stop-with-error"
+                }
+              }
+            },
+            "id": "BD2CE82D-11DE-5881-8150-C74D143B8D84",
+            "key": "action.file.move"
+          },
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "BD2CE82D-11DE-5881-8150-C74D143B8D84"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "1B0223D4-E7BA-562B-AA1B-F6480955A7B7"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.move-file-or-folder.resource"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "8904A24D-CAC8-5758-A10C-42070CDC06A0",
+            "key": "action.file.reveal"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture, Ask for Name, and Save Screenshot"
+      }
+    ],
+    "id": "EA50F950-6CE5-56AE-9414-189E046FF267",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:25;modifiers:option;display:9"
+            }
+          }
+        },
+        "id": "9926BF2E-CD85-5A38-904F-972C5232B7F5",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Capture and Name Screenshot"
+}

@@ -1,0 +1,202 @@
+{
+  "id": "31F82BDE-8712-5BB8-B8BD-664CE457DCA9",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "F5002C67-6A95-586C-8296-EEB80CB2D9EE",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.Notes",
+                        "name": "Notes"
+                      }
+                    }
+                  }
+                },
+                "id": "C9085FFC-ED6E-5C9F-BDB0-09A2ED67B5ED",
+                "key": "action.application.launch"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "volume": {
+                      "type": "number",
+                      "value": 25
+                    }
+                  }
+                },
+                "id": "CB9360E9-A03F-5D5D-85D8-4413334401C2",
+                "key": "action.system.set-volume"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.FaceTime",
+                        "name": "FaceTime"
+                      }
+                    }
+                  }
+                },
+                "id": "FCBB1DAC-4415-5DED-AC30-C5292545F490",
+                "key": "action.application.activate"
+              }
+            ],
+            "kind": "action",
+            "title": "Prepare Meeting Workspace"
+          }
+        ],
+        "id": "12238BBC-52BD-59C2-8FC7-A06D3AC316CA",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "AirPods"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.audio-output-device-name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "6CDCE982-FE4C-5C37-A7C9-0CAFEEA5029E",
+            "key": "common.audio-output-device-name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Audio Output"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "34085441-0A86-5D71-9C11-E9D45558B4AA",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.Notes",
+                        "name": "Notes"
+                      }
+                    }
+                  }
+                },
+                "id": "2CD70D60-863B-56FF-9179-9ECBA50AA207",
+                "key": "action.application.launch"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "volume": {
+                      "type": "number",
+                      "value": 15
+                    }
+                  }
+                },
+                "id": "1F243681-3F6B-51E6-97A4-6370DF9CD840",
+                "key": "action.system.set-volume"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.FaceTime",
+                        "name": "FaceTime"
+                      }
+                    }
+                  }
+                },
+                "id": "12AE666A-2C0C-5CFD-80B6-D712F5106188",
+                "key": "action.application.activate"
+              }
+            ],
+            "kind": "action",
+            "title": "Prepare Meeting Workspace"
+          }
+        ],
+        "id": "2797BF44-C03E-503C-B7B5-B0F61265346B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "AirPods"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "doesNotContain"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.audio-output-device-name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "EED37ADF-45F3-5694-90A5-E320CA069A49",
+            "key": "common.audio-output-device-name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Audio Output"
+      }
+    ],
+    "id": "0B6BDC69-9DBA-515B-A3AA-533B8CCE2C42",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.FaceTime",
+                "name": "FaceTime"
+              }
+            }
+          }
+        },
+        "id": "E882C8AF-1D5C-553E-BC47-6985ED6593AA",
+        "key": "trigger.application-window.app-launch"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When App Launches"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Meeting Mode"
+}

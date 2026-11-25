@@ -1,0 +1,215 @@
+{
+  "id": "B39F9B48-7380-5171-A4B9-3C1C594B3AF5",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "8FA2B95D-F2F2-59C0-A174-1E294001AB91",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "B365F0DA-4B1B-5B01-A9F0-CDA7982DD5AC",
+            "key": "action.integration.chrome.get-current-tab"
+          },
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "08181F77-E5A3-5BA2-BE1A-018C1E0BC5BC",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Title: "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "B365F0DA-4B1B-5B01-A9F0-CDA7982DD5AC"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "8FA2B95D-F2F2-59C0-A174-1E294001AB91"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-get-current-tab.active-tab-title"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\\nURL: "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "B365F0DA-4B1B-5B01-A9F0-CDA7982DD5AC"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "8FA2B95D-F2F2-59C0-A174-1E294001AB91"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-get-current-tab.active-tab-url"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\\nQuote: "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "08181F77-E5A3-5BA2-BE1A-018C1E0BC5BC"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "8FA2B95D-F2F2-59C0-A174-1E294001AB91"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "\\n\\n"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Citations.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "47358B95-BE92-53BC-9265-A5A04C62E037",
+            "key": "action.file.write"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture and Save Citation"
+      }
+    ],
+    "id": "6C59EFED-4B2B-52D0-80ED-BCF58AADC35F",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";cite"
+            }
+          }
+        },
+        "id": "A5C4C53E-9168-5DD8-AC6B-E251A3DED60C",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Citation Capture"
+}

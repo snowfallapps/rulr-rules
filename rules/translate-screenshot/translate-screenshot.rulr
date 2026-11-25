@@ -1,0 +1,199 @@
+{
+  "id": "CD29B682-C74F-5EC0-9625-EE3A573A289C",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "250CBE5F-4E3E-5F2A-BE1F-91A5DD9809F7",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "full-screen"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "D505EFE4-0276-5D7A-8419-D96B85FCD667",
+            "key": "action.image.capture-screen-or-window"
+          },
+          {
+            "configuration": {
+              "values": {
+                "sourceImage": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "D505EFE4-0276-5D7A-8419-D96B85FCD667"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "250CBE5F-4E3E-5F2A-BE1F-91A5DD9809F7"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.capture-screen-or-window.file-path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "965A32F5-206C-5062-8ACE-5493A838213D",
+            "key": "action.image.recognize-text-in-image"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "965A32F5-206C-5062-8ACE-5493A838213D"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "250CBE5F-4E3E-5F2A-BE1F-91A5DD9809F7"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ocr-image.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "targetLanguage": {
+                  "type": "string",
+                  "value": "en"
+                }
+              }
+            },
+            "id": "4A780B5B-DB03-5E58-A31C-481248B6D20D",
+            "key": "action.text.translate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "4A780B5B-DB03-5E58-A31C-481248B6D20D"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "250CBE5F-4E3E-5F2A-BE1F-91A5DD9809F7"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.translate-text.translated-text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "49CB50D0-1AB9-5349-BC12-9F0A30EE7C34",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture, Translate, and Show Text"
+      }
+    ],
+    "id": "EE7E4B00-00E7-5EFF-AAFC-A192AB5A80A0",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "17A42954-15BA-5E44-8E54-48CE32EF9E81",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Translate Screen Text"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "C99AE985-3ABA-5D45-A577-05A88AE12C22",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "E1D3DC60-74BB-5D51-949B-0085E2455496",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.google.Chrome",
+                    "name": "Google Chrome"
+                  }
+                }
+              }
+            },
+            "id": "682D0E3F-AD2B-50A5-BD75-B700941C3006",
+            "key": "action.application.launch"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.google.Chrome",
+                    "name": "Google Chrome"
+                  }
+                }
+              }
+            },
+            "id": "FA166736-B565-5228-8629-B13689E148A4",
+            "key": "action.application.activate"
+          }
+        ],
+        "kind": "action",
+        "title": "Launch and Focus App"
+      }
+    ],
+    "id": "50AED560-E004-5000-8B6A-A24D2DB31C90",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "05D984C9-F181-5EB1-A669-FBA1E718EE46",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Launch and Focus App"
+}

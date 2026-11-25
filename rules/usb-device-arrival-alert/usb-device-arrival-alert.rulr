@@ -1,0 +1,149 @@
+{
+  "id": "64FF1908-EA05-53A3-B6E2-296CDEA22163",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "8EBA5B39-F506-5F8A-8436-A432B384CC86",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "content": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "source": {
+                              "type": "string",
+                              "value": "custom-text"
+                            },
+                            "text": {
+                              "type": "string",
+                              "value": "USB device connected: "
+                            }
+                          }
+                        },
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "7D232819-AC56-58CB-8CA3-68768B6C8907"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "223D4356-69FD-5277-A2C3-FF8FFF48B771"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "trigger.input.usb-device-connected.deviceName"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "trigger"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "sound": {
+                      "type": "boolean",
+                      "value": true
+                    },
+                    "title": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "source": {
+                              "type": "string",
+                              "value": "custom-text"
+                            },
+                            "text": {
+                              "type": "string",
+                              "value": "USB Device Alert"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "id": "802D1C1C-6EED-5F07-80AD-BE4084BDB1AF",
+                "key": "action.feedback.show-notification"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "4DFE7331-7C32-5248-ABAD-188D430C648D",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "USB"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "7D232819-AC56-58CB-8CA3-68768B6C8907"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "223D4356-69FD-5277-A2C3-FF8FFF48B771"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.usb-device-connected.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "4E8FD0D8-4912-5A58-853C-9E8AE6927538",
+            "key": "trigger.input.usb-device-connected.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match USB Device"
+      }
+    ],
+    "id": "223D4356-69FD-5277-A2C3-FF8FFF48B771",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "7D232819-AC56-58CB-8CA3-68768B6C8907",
+        "key": "trigger.input.usb-device-connected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Device Connects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "USB Device Alert"
+}

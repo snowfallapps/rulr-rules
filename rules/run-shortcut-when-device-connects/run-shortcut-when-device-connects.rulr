@@ -1,0 +1,88 @@
+{
+  "id": "61567CEF-E152-5F74-82F7-AB6995F5B3BA",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "FFF34993-A0B7-51BD-9EC4-3A3BBB62620A",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "timeout": {
+                      "type": "number",
+                      "value": 30
+                    }
+                  }
+                },
+                "id": "E280FE95-395E-5111-8E9C-F88C36BD5B47",
+                "key": "action.run-shortcut"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "D8AA3EB1-4604-52F6-AE78-B19BEB57AAE9",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "USB"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "AF50288E-838A-51AD-A02C-054180B81045"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "5B7BC12D-0383-549B-B4E0-64986E9A7015"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.usb-device-connected.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "5242C94D-F587-5786-8B40-554D8B6ABDDD",
+            "key": "trigger.input.usb-device-connected.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match USB Device"
+      }
+    ],
+    "id": "5B7BC12D-0383-549B-B4E0-64986E9A7015",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "AF50288E-838A-51AD-A02C-054180B81045",
+        "key": "trigger.input.usb-device-connected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Device Connects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Run Shortcut for USB Device"
+}

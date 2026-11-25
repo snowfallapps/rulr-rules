@@ -1,0 +1,85 @@
+{
+  "id": "66912E9A-F573-519C-837D-D2205BFC2F6B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "D29DB219-1ED0-5389-A64B-FA7E17377E24",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "4A0192E4-5FF9-5D5A-9743-9682FC2B1C92",
+            "key": "action.integration.chrome.get-current-tab"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "4A0192E4-5FF9-5D5A-9743-9682FC2B1C92"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D29DB219-1ED0-5389-A64B-FA7E17377E24"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-get-current-tab.active-tab-url"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "F885C263-92C8-5214-AC8C-F63C96D6A116",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Copy Current URL"
+      }
+    ],
+    "id": "A9D3BDB6-087A-51DA-8DBB-C4C827CC4EA8",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "61637896-EA3E-53FC-9F40-C2A0AB31A972",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Copy Current Chrome URL"
+}

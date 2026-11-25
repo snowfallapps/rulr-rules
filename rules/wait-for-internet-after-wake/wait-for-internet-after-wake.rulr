@@ -1,0 +1,215 @@
+{
+  "id": "347C5704-A491-5528-8E7C-A10009E401D4",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "DB7B757D-B825-55BF-AC94-933CC960939C",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.tinyspeck.slackmacgap",
+                            "name": "Slack"
+                          }
+                        }
+                      }
+                    },
+                    "id": "0E47CDEF-C2B8-56C2-99E3-C2307FB900A7",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "openWith": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "url": {
+                          "type": "string",
+                          "value": "https://calendar.google.com"
+                        }
+                      }
+                    },
+                    "id": "2457A012-630B-5C61-9E13-4ADB959BCE12",
+                    "key": "action.web.open-url"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Office Tools"
+              }
+            ],
+            "id": "647E112E-E3BB-587E-94EB-CE6ACA47979C",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "string",
+                      "value": "Office"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "equals"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.wifi-network-name"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "80F624DE-9E00-5105-BEE8-924D6BFE2DF2",
+                "key": "common.wifi-network-name"
+              }
+            ],
+            "kind": "condition",
+            "title": "Match Network"
+          },
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "0C9547B2-4A68-5554-91FC-9660B57D9D8B",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "notion.id",
+                            "name": "Notion"
+                          }
+                        }
+                      }
+                    },
+                    "id": "8CA9C48A-F4E9-562A-8182-64A16C075D64",
+                    "key": "action.application.launch"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "openWith": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "url": {
+                          "type": "string",
+                          "value": "https://www.notion.so"
+                        }
+                      }
+                    },
+                    "id": "B7F63BA7-81EB-59AA-B7F8-8ADB078B58FB",
+                    "key": "action.web.open-url"
+                  }
+                ],
+                "kind": "action",
+                "title": "Open Remote Work Tools"
+              }
+            ],
+            "id": "0EF742F5-4EF2-53D4-A7EB-50D3E28F4034",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "string",
+                      "value": "Home"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "equals"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.wifi-network-name"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                },
+                "id": "CE636319-ABA3-517D-9864-DCB1D1B21FED",
+                "key": "common.wifi-network-name"
+              }
+            ],
+            "kind": "condition",
+            "title": "Match Network"
+          }
+        ],
+        "id": "CBE7B903-7303-5373-B664-16B6EA8689DE",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operator": {
+                  "type": "string",
+                  "value": "isTrue"
+                },
+                "timeoutDuration": {
+                  "type": "number",
+                  "value": 2
+                },
+                "timeoutUnit": {
+                  "type": "string",
+                  "value": "minutes"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.network-is-connected"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "D59DA917-20C6-5E98-860D-4465A4A37AFE",
+            "key": "action.control.wait-until"
+          }
+        ],
+        "kind": "action",
+        "title": "Wait for Internet"
+      }
+    ],
+    "id": "3F37F50C-89D4-5EBA-B2D3-4D7E0FA45812",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "59441F24-1F99-5E7A-8A5F-BCCA01DFE9A1",
+        "key": "trigger.system.wake"
+      }
+    ],
+    "kind": "trigger",
+    "title": "After Wake"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Resume Work"
+}

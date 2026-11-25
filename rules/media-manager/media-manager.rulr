@@ -1,0 +1,47 @@
+{
+  "id": "35157C33-C41D-59C0-836B-20958FA8ADD0",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "52789E88-E57E-5E8E-AC7B-A34B998AC852",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "474BFBDC-A83C-5A55-BDFF-2C16676BC416",
+            "key": "action.system.show-media-manager"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "69A156DE-71C9-5850-AE7F-292D26A521C5",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:46;modifiers:option;display:M"
+            }
+          }
+        },
+        "id": "586CDB76-7AB1-5A04-8FCE-76B56BB8CD61",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Media Manager"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "59AB1FE2-92F1-5A0C-BA9C-65EC4F99A525",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "9673B23F-D3CF-5745-8D2D-0E331AF0D013",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "openWith": {
+                  "type": "dictionary",
+                  "value": {
+                    "source": {
+                      "type": "string",
+                      "value": "default"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "41EC79F5-3583-5E20-90F7-FFCDE660BACC",
+            "key": "action.file.open"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Open Research Drive ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Open Research Drive"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "64085104-CDBE-5973-BFF9-6A5FD9F3FFA3",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Open Research Drive"
+      }
+    ],
+    "id": "BF5A2B3C-2D78-56D5-A5B4-5120ED539C25",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "A3A99DD7-D378-5C28-A689-445FDECFB80C",
+        "key": "trigger.input.volume-mounted"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Volume Mounts"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Open Research Drive"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "1D6B8BE6-05D9-5F96-8267-C494628B5062",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "7B71BEB6-CF87-5F13-900E-206C9E5DDA4B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Text Expansion"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "D22742F5-F817-5159-B81B-3337008542EA",
+            "key": "action.text.insert"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "0FC6093B-DB3D-56B0-B95B-8AD8F42CECA5",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";addr"
+            }
+          }
+        },
+        "id": "8ECFFD99-42F7-5C74-8CC1-D424F72C60A2",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Text Expansion"
+}

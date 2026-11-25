@@ -1,0 +1,56 @@
+{
+  "id": "B74236B2-D702-57CC-B9F0-F529FAB58EB6",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "3C7E6FE5-BCF7-58F9-8E62-1B58001786A6",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "300CEC6E-9C68-5BDB-B348-F729C38EC9A3",
+            "key": "action.run-shortcut"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "3AA37A81-D96E-534B-92CF-892C3FA4E58E",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "B4042E3C-41C1-5C90-9F38-A9C4AC6FD446",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Run Shortcut for Folder"
+}

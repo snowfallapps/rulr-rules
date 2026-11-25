@@ -1,0 +1,202 @@
+{
+  "id": "32EE2DFC-CB3F-50F7-9773-A02988DE24E8",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "0805E695-0BAE-501A-967F-FD7033F8F28C",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Enter text to process with the shell script."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Process Text"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "0034B200-3C06-5AC0-9408-485265D8FA5F",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "0034B200-3C06-5AC0-9408-485265D8FA5F"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "0805E695-0BAE-501A-967F-FD7033F8F28C"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "on run argv\nreturn item 1 of argv\nend run"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "8404CD96-B8FA-503E-A0D3-772E070EDD24",
+            "key": "action.run-apple-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "8404CD96-B8FA-503E-A0D3-772E070EDD24"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "0805E695-0BAE-501A-967F-FD7033F8F28C"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.run-applescript.result"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                },
+                "withStickyWindow": {
+                  "type": "boolean",
+                  "value": false
+                }
+              }
+            },
+            "id": "3E6489B7-6E43-53F5-A475-3B175042E28A",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Ask, Process, and Show Text"
+      }
+    ],
+    "id": "1877FD41-CFDB-5B11-92E5-C9BF698EF52E",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:15;modifiers:option;display:R"
+            }
+          }
+        },
+        "id": "73BDE37F-551B-501E-9CE5-0FBAD1A7E4FA",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Process Text"
+}

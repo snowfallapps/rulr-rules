@@ -1,0 +1,36 @@
+name: Sync published rules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-published-rules
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sync website catalog and files
+        run: python scripts/sync_rules.py
+      - name: Commit changed mirror files
+        run: |
+          git add README.md catalog.json rules/
+          if git diff --cached --quiet; then
+            echo 'No published changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: sync published Rulr rules'
+          git push

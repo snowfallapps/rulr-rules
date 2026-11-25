@@ -1,0 +1,73 @@
+{
+  "id": "4BBEA730-02BC-5A0C-8FF0-1DAD9ED197BF",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "1865EEC0-9D46-58D8-B26F-F2CAB6DC53E9",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "openWith": {
+                  "type": "dictionary",
+                  "value": {
+                    "source": {
+                      "type": "string",
+                      "value": "default"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "2F5F039B-5468-5068-8D77-CBB4ADF7716A",
+            "key": "action.file.open"
+          }
+        ],
+        "kind": "action",
+        "title": "Open Project Folder"
+      }
+    ],
+    "id": "A8DCCB5C-5D25-5D01-AC4F-D830ADDD0D02",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.TextEdit",
+                "name": "TextEdit"
+              }
+            }
+          }
+        },
+        "id": "2AC9326B-48CD-5DA4-A333-C712359DE51F",
+        "key": "trigger.application-window.app-launch"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When App Launches"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Open Project Folder"
+}

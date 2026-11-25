@@ -1,0 +1,278 @@
+{
+  "id": "3456D83B-1299-5EC3-B00F-01FBB775F9A0",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "40241954-C509-5B0A-80AC-87A306B707E1",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "file": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "A64AC18D-54BD-5892-A8EE-5E5B8ADC7F8F"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D73D70EF-7561-5A97-AF62-33B47E180B13"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "978AD814-BE93-576B-887F-6806DEA49243",
+                "key": "action.file.read-text"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "source": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "978AD814-BE93-576B-887F-6806DEA49243"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "40241954-C509-5B0A-80AC-87A306B707E1"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.read-text-file.contents"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "transform": {
+                      "type": "string",
+                      "value": "normalizeLineEndings"
+                    }
+                  }
+                },
+                "id": "60756F6C-8539-59B1-BD03-F8E2FB034A4E",
+                "key": "action.text.transform"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "content": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "60756F6C-8539-59B1-BD03-F8E2FB034A4E"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "40241954-C509-5B0A-80AC-87A306B707E1"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.transform-text.text-result"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "file": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "A64AC18D-54BD-5892-A8EE-5E5B8ADC7F8F"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D73D70EF-7561-5A97-AF62-33B47E180B13"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "writingMode": {
+                      "type": "string",
+                      "value": "overwrite-all-contents"
+                    }
+                  }
+                },
+                "id": "EE3C8FA5-FB3C-5A4A-8166-BEAB432B5EDB",
+                "key": "action.file.write"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Documents/Notes Archive"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "A64AC18D-54BD-5892-A8EE-5E5B8ADC7F8F"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D73D70EF-7561-5A97-AF62-33B47E180B13"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "597BE07F-0A58-51CA-91D4-0129C465B75F",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Normalize and Archive"
+          }
+        ],
+        "id": "5CEEA354-C2DE-5061-B392-1FEB9ACD1C03",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": ".txt"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "endsWith"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "A64AC18D-54BD-5892-A8EE-5E5B8ADC7F8F"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "D73D70EF-7561-5A97-AF62-33B47E180B13"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "D21FB7E4-0C37-53A2-9351-419AB00C96C2",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "D73D70EF-7561-5A97-AF62-33B47E180B13",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Documents/Research Inbox"
+            }
+          }
+        },
+        "id": "A64AC18D-54BD-5892-A8EE-5E5B8ADC7F8F",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Transform and Archive Notes"
+}

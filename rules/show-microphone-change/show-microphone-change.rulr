@@ -1,0 +1,108 @@
+{
+  "id": "2E581972-F04C-5578-8A16-E8622813613D",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "A4641EBF-8393-500D-A6A0-838F60E88B9C",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Microphone changed to: "
+                        }
+                      }
+                    },
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "BF93527C-411A-59CE-BEF1-573E6A9741B9"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D771E6B0-9A42-5C57-A6F9-C88FFBF7D9AC"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.system.audio-input-device-changed.deviceName"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Microphone Change Alert"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "E5EF0DEB-32E1-5A37-BB05-554C9806AA36",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "D771E6B0-9A42-5C57-A6F9-C88FFBF7D9AC",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "BF93527C-411A-59CE-BEF1-573E6A9741B9",
+        "key": "trigger.system.audio-input-device-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Microphone Changes"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Microphone Change Alert"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "561E50DA-1100-5D3E-ADFF-E25F2ED7F35E",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "17B93D35-8D4A-55FC-A238-44A68A1C1C69",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "screen": {
+                  "type": "string",
+                  "value": "1"
+                },
+                "window": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "CF311F33-2C09-5BD4-9D47-9BF225FD217A"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "F90AB9B6-7E68-5EFE-BD3F-07394CA796B6"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "specific-window"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.application-window.window-created.window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "98D17C48-3680-5600-972C-34669B5903E7",
+            "key": "action.window.move-to-screen"
+          },
+          {
+            "configuration": {
+              "values": {
+                "window": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "CF311F33-2C09-5BD4-9D47-9BF225FD217A"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "F90AB9B6-7E68-5EFE-BD3F-07394CA796B6"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "specific-window"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.application-window.window-created.window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "B04A4DC2-FA66-53DF-86F8-EED18DD1C8D0",
+            "key": "action.window.set-full-screen"
+          }
+        ],
+        "kind": "action",
+        "title": "Move to Presentation Display and Toggle Full Screen"
+      }
+    ],
+    "id": "F90AB9B6-7E68-5EFE-BD3F-07394CA796B6",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.QuickTimePlayerX",
+                "name": "QuickTime Player"
+              }
+            }
+          }
+        },
+        "id": "CF311F33-2C09-5BD4-9D47-9BF225FD217A",
+        "key": "trigger.application-window.window-created"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Event Occurs"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Present New Video Windows"
+}

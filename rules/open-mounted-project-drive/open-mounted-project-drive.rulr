@@ -1,0 +1,77 @@
+{
+  "id": "ED5F301C-276A-5ECD-9EF9-3895072E2C67",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "C2FB0240-4D90-5A25-8041-DE05B54B6807",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "ADBA735A-901F-5298-B316-E6DBEE9B599B"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "0DDCAC08-5036-5218-ABA5-9C4E408F3754"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.input.volume-mounted.volumePath"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                },
+                "openWith": {
+                  "type": "dictionary",
+                  "value": {
+                    "source": {
+                      "type": "string",
+                      "value": "default"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "AA3873F6-4C7A-5236-8EF6-8B870C249578",
+            "key": "action.file.open"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "0DDCAC08-5036-5218-ABA5-9C4E408F3754",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "ADBA735A-901F-5298-B316-E6DBEE9B599B",
+        "key": "trigger.input.volume-mounted"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Volume Mounts"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Project Drive"
+}

@@ -1,0 +1,173 @@
+{
+  "id": "6762172B-F0F2-51CE-8793-28BCA6B2D2D3",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "78A71E82-2A02-5DCB-9260-351CE97E77D3",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "full-screen"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "50BE2FAE-CA48-5280-9C70-D819F746C8AC",
+            "key": "action.image.capture-screen-or-window"
+          },
+          {
+            "configuration": {
+              "values": {
+                "conversion": {
+                  "type": "dictionary",
+                  "value": {
+                    "format": {
+                      "type": "string",
+                      "value": "png"
+                    }
+                  }
+                },
+                "sourceImage": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "50BE2FAE-CA48-5280-9C70-D819F746C8AC"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "78A71E82-2A02-5DCB-9260-351CE97E77D3"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.capture-screen-or-window.file-path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "12FB1C61-4193-5F71-8A2E-808FE3AC33D9",
+            "key": "action.image.convert"
+          },
+          {
+            "configuration": {
+              "values": {
+                "destinationFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Documents/Screenshots"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "12FB1C61-4193-5F71-8A2E-808FE3AC33D9"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "78A71E82-2A02-5DCB-9260-351CE97E77D3"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.convert-image.file-path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "use-numbered-name"
+                }
+              }
+            },
+            "id": "B7499282-988F-5E94-AD5F-3D2075583640",
+            "key": "action.file.copy"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture, Convert, and Save Image"
+      }
+    ],
+    "id": "85882932-788E-53F0-A710-A1675438E624",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";screenshot"
+            }
+          }
+        },
+        "id": "291F94F1-0B34-53D9-A673-F67F298136B5",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Capture Image"
+}

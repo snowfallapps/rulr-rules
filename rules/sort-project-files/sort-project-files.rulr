@@ -1,0 +1,334 @@
+{
+  "id": "5B288578-7C62-5D59-87F7-1B30AB890ABF",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "8C15E7C5-D0A7-5BAE-82B1-1A796464B5DB",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Documents"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "82CC3498-D19B-52EC-B3C6-F17957EC54EE",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Move to Documents"
+          }
+        ],
+        "id": "1F11E842-9F77-5C0B-9453-17539FAA533B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": ".pdf"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "endsWith"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "09D42A93-7352-56A8-AE09-ECACDAE6C6BB",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match File Type"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "03F0BF18-DF15-5011-9327-80047DC44A79",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Pictures"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "7B93B20E-F790-57C1-86FF-1BDD0145485B",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Move to Assets"
+          }
+        ],
+        "id": "395A807E-B8DE-5C34-B313-86DE226B5F82",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)\\.(png|jpe?g|gif|heic|webp)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "B77BE4C3-8D6B-513C-9AC7-46577FF33044",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match File Type"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "449AEAE9-092B-5B60-AEBF-96C73C419235",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Downloads/Archives"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "4B4BC7AB-60A5-5947-84EB-A7C6EBE77F77",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Move to Archives"
+          }
+        ],
+        "id": "B1F2987B-EAC9-51A7-B6F8-3E68091D60AA",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": ".zip"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "endsWith"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "455844E4-3615-52F0-90F0-CC5748C78F5C"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "A0ACE269-87E8-5783-8549-3AE6A065A976",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match File Type"
+      }
+    ],
+    "id": "455844E4-3615-52F0-90F0-CC5748C78F5C",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "7682F4A2-7A8D-5F64-8A85-CE9790BF780B",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Sort Project Files"
+}

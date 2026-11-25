@@ -1,0 +1,95 @@
+{
+  "id": "074C0F08-B1EC-5766-AA5D-2344CC661DF5",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "3B6F0CDD-F495-5184-B1CA-F950A7614B47",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Continue with this action?"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Confirm Before Shutdown"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "298B39B0-56C4-5900-ADEA-ECD90D7349A0",
+            "key": "action.feedback.show-confirmation"
+          },
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "DA2BCA54-C513-52BA-A996-0F76F1E6B95F",
+            "key": "action.system.shut-down-computer"
+          }
+        ],
+        "kind": "action",
+        "title": "Confirm and Shut Down"
+      }
+    ],
+    "id": "F2969292-EB9F-5ED9-A741-9049058BECA4",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "38DD40E1-7DEB-5D95-9221-143AA5CCE4EE",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Confirm Before Shutdown"
+}

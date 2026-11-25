@@ -1,0 +1,107 @@
+{
+  "id": "159FC8DE-5F65-5916-88F2-72FB6BFEBE2F",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "8773A6DD-C199-5C0D-8AE1-0563343582E2",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.google.Chrome",
+                    "name": "Google Chrome"
+                  }
+                }
+              }
+            },
+            "id": "81F3CE69-592B-5A15-9A96-68B0021AF3DE",
+            "key": "action.application.activate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "url": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "https://www.google.com"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "53464E20-48EE-504D-8627-437226D40A71",
+            "key": "action.integration.chrome.open-new-tab"
+          },
+          {
+            "configuration": {
+              "values": {
+                "url": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "https://www.google.com"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "519B5AAA-D528-52BC-99D6-F579C686C9B2",
+            "key": "action.integration.chrome.open-new-tab"
+          }
+        ],
+        "kind": "action",
+        "title": "Open Browser and Restore Tabs"
+      }
+    ],
+    "id": "DC30A7D4-06B6-585F-B9A1-6F2057F2C04B",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "2A24D82E-1817-5E29-81EC-DAA26BB26DE4",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Restore Work Tabs"
+}

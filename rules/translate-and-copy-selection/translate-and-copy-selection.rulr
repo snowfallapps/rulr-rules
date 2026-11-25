@@ -1,0 +1,127 @@
+{
+  "id": "B1DEA2F5-0F3C-56D4-A9A0-128E903B6308",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "3AAEA6D1-D733-5AD8-B5E3-6F23BA7086ED",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "0D4BA300-55D4-506E-AEED-89CF1A145916",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "0D4BA300-55D4-506E-AEED-89CF1A145916"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "3AAEA6D1-D733-5AD8-B5E3-6F23BA7086ED"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "targetLanguage": {
+                  "type": "string",
+                  "value": "en"
+                }
+              }
+            },
+            "id": "726BC01B-BBD3-54F1-80AD-8F63C29A563D",
+            "key": "action.text.translate"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "726BC01B-BBD3-54F1-80AD-8F63C29A563D"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "3AAEA6D1-D733-5AD8-B5E3-6F23BA7086ED"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.translate-text.translated-text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "A4FACB22-E7E2-58A0-9A34-AB0015EB4EAE",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Translate and Copy Text"
+      }
+    ],
+    "id": "87760371-6DC6-540C-B0E9-A63BD1E039B8",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:22;modifiers:option;display:Y"
+            }
+          }
+        },
+        "id": "74AF23E3-C420-5FB0-B1A7-1579FA6BFF61",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Translate and Copy"
+}

@@ -1,0 +1,95 @@
+{
+  "id": "AE405185-656A-5841-969E-157E3CE928F7",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "3DED8F58-5B69-5230-833E-1038C2139AC4",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {}
+                },
+                "id": "B020519B-19C4-52A1-B36E-F2B10C905ADD",
+                "key": "action.system.switch-audio-output-device"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "volume": {
+                      "type": "number",
+                      "value": 35
+                    }
+                  }
+                },
+                "id": "19BFC048-7A46-53CF-83D7-C43D4482A94E",
+                "key": "action.system.set-volume"
+              }
+            ],
+            "kind": "action",
+            "title": "Switch Output and Set Volume"
+          }
+        ],
+        "id": "D3808541-64BC-5448-A625-4FEFFDC00C73",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "AirPods"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "B9C5DF10-EE7D-5491-89BD-407E81B96650"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "55DA931B-6438-50D7-9861-A5160FDAC5FE"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.bluetooth-device-connected.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "4FF1DE68-A89D-5C4C-8ED8-7E8C42E82E00",
+            "key": "trigger.system.bluetooth-device-connected.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "55DA931B-6438-50D7-9861-A5160FDAC5FE",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "B9C5DF10-EE7D-5491-89BD-407E81B96650",
+        "key": "trigger.system.bluetooth-device-connected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Bluetooth Connects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Set Up Headset Audio"
+}

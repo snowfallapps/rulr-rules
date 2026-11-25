@@ -1,0 +1,130 @@
+{
+  "id": "D18E6370-422E-5932-9D84-60D488C1F17B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "D07EAEB9-D49C-54EE-95F5-1C2B06EA27B3",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                }
+              }
+            },
+            "id": "366785D0-5BAC-5045-ACCA-4D17E7ED7415",
+            "key": "action.application.launch"
+          },
+          {
+            "configuration": {
+              "values": {
+                "openWith": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                },
+                "url": {
+                  "type": "string",
+                  "value": "https://www.google.com"
+                }
+              }
+            },
+            "id": "0BCA70C6-D368-5DC1-BC8A-0B30A0362816",
+            "key": "action.web.open-url"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Morning Work Setup ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Morning Work Setup"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "7FF677C8-6F6A-5709-964A-D4BA9ABA0EFC",
+            "key": "action.feedback.show-notification"
+          }
+        ],
+        "kind": "action",
+        "title": "Open Morning Work Setup"
+      }
+    ],
+    "id": "407A4AF4-47F0-5912-9188-53EBA3774E90",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "scheduleFrequency": {
+              "type": "string",
+              "value": "weekly"
+            },
+            "weeklyTime": {
+              "type": "string",
+              "value": "09:00"
+            },
+            "weeklyWeekdays": {
+              "type": "string",
+              "value": "2,3,4,5,6"
+            }
+          }
+        },
+        "id": "018AA0A9-1526-5249-94F4-AE5DBD738DA1",
+        "key": "trigger.schedule.date-time"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Schedule"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Morning Work Setup"
+}

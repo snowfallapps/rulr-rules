@@ -1,0 +1,91 @@
+{
+  "id": "E35C7D2C-1264-5F5E-BCD9-FB3D28BBCDB3",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "E229497B-1E8B-5C19-AF84-C8E0F592B0D3",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.Safari",
+                        "name": "Safari"
+                      }
+                    }
+                  }
+                },
+                "id": "A7725362-4DA3-57EB-9161-2A5BD9B70B5A",
+                "key": "action.application.launch"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "42916FFD-5974-5C66-856A-9525D2406104",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "USB"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "12D1FF6B-ED70-5629-8242-7C936DDE4032"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "319077D5-52DF-5FD9-8BD5-6C51AFBA818E"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.usb-device-connected.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "DF71595D-BC7E-5B01-BFFA-674508CE4C0D",
+            "key": "trigger.input.usb-device-connected.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match USB Device"
+      }
+    ],
+    "id": "319077D5-52DF-5FD9-8BD5-6C51AFBA818E",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "12D1FF6B-ED70-5629-8242-7C936DDE4032",
+        "key": "trigger.input.usb-device-connected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Device Connects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "USB App Launcher"
+}

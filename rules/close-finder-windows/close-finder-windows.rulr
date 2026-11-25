@@ -1,0 +1,113 @@
+{
+  "id": "773FDC48-724A-5E0D-9D71-80F765E15283",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "D0196889-7165-573C-8A75-5A7D3D31278F",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "inputs": {
+                      "type": "array",
+                      "value": []
+                    },
+                    "script": {
+                      "type": "dictionary",
+                      "value": {
+                        "filePath": {
+                          "type": "string",
+                          "value": ""
+                        },
+                        "mode": {
+                          "type": "string",
+                          "value": "text-script"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "-- Keep Finder's front window; close the remaining window snapshot.\ntell application \"Finder\"\n    if (count windows) < 2 then return\n    set otherWindows to every window whose index is greater than 1\n    repeat with otherWindow in otherWindows\n        close otherWindow\n    end repeat\nend tell\n"
+                        }
+                      }
+                    },
+                    "stopsFlowWhenUnsuccessful": {
+                      "type": "boolean",
+                      "value": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "value": 120
+                    }
+                  }
+                },
+                "id": "4A3592B2-E464-565D-AD20-F034A5E5CF85",
+                "key": "action.run-apple-script"
+              }
+            ],
+            "kind": "action",
+            "title": "Keep Current Finder Window"
+          }
+        ],
+        "id": "5A260A9D-CEF6-55F1-A00D-56074ED24C0A",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.finder",
+                    "name": "Finder"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.frontmost-application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "311133B0-EAE1-554E-B8FF-940009A39B48",
+            "key": "common.frontmost-application"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "1CBD591C-7903-5656-B1E4-DB4C021948E7",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:26;modifiers:option;display:7"
+            }
+          }
+        },
+        "id": "F5059615-CC99-52AB-AEFC-BC616A083CE1",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Keep Current Finder Window"
+}

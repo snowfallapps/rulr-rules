@@ -1,0 +1,135 @@
+{
+  "id": "146FF9A8-E82A-5B8E-98FC-F673B0A5FFF2",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "36017588-2556-50D4-89CA-871C419EC68E",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Downloads"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "A62707F7-BEFE-5943-AF8D-9FBED0737BB7"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "868DAD69-0561-56AA-AD0B-3DA7E1136513"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "5169581B-F423-5C75-B971-FA7C4F57B1C0",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "E7156A13-7802-5D58-8018-6F7B7CB8EF87",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": ".pdf"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "endsWith"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "A62707F7-BEFE-5943-AF8D-9FBED0737BB7"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "868DAD69-0561-56AA-AD0B-3DA7E1136513"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "5F8CCEC4-343E-52F2-83DF-BF028C03B71E",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match PDF File"
+      }
+    ],
+    "id": "868DAD69-0561-56AA-AD0B-3DA7E1136513",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "A62707F7-BEFE-5943-AF8D-9FBED0737BB7",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Organize Downloaded PDFs"
+}

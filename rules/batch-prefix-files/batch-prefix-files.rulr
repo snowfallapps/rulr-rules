@@ -1,0 +1,90 @@
+{
+  "id": "FA8E4555-38D6-5EDD-BE84-654589F9603D",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-18T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-18T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [],
+        "id": "D32AB375-AB59-5BB1-BD65-66F96F753F69",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": []
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "folder=\"\"\nmode=\"preview\"\nextension=\"pdf\"\nprefix=\"project-\"\n/bin/bash -s -- \"$mode\" \"$folder\" \"$extension\" \"$prefix\" <<'RULR_BATCH_PREFIX_SCRIPT'\n#!/bin/bash\nset -euo pipefail\nexport LC_ALL=C\n\nfail() {\n    printf 'Error: %s\\n' \"$*\" >&2\n    exit 1\n}\n\n[[ $# -eq 4 ]] || fail 'Usage: /bin/bash batch-prefix-files.sh preview|apply /absolute/folder extension prefix'\nmode=$1\nfolder=$2\nextension=$3\nprefix=$4\n\n[[ \"$mode\" == preview || \"$mode\" == apply ]] || fail 'Mode must be preview or apply.'\n[[ \"$folder\" == /* && -d \"$folder\" ]] || fail 'Choose an existing absolute folder path.'\n[[ \"$extension\" =~ ^[A-Za-z0-9]+$ ]] || fail 'Use an extension without a dot, such as pdf.'\n[[ \"$prefix\" =~ ^[A-Za-z0-9_-]+$ ]] || fail 'Use a nonempty prefix containing only letters, digits, hyphens or underscores.'\nfolder=$(cd -P -- \"$folder\" && pwd)\n[[ \"$folder\" != / ]] || fail 'Choose a working folder, not the filesystem root.'\n[[ -r \"$folder\" && -x \"$folder\" ]] || fail 'The folder must be readable and searchable.'\nlock_path=\"$folder/.rulr-prefix-rename.lock\"\n\nif [[ \"$mode\" == apply ]]; then\n    [[ -w \"$folder\" ]] || fail 'The folder must be writable.'\n    /bin/mkdir \"$lock_path\" || fail 'Cannot acquire the folder lock. Check permissions or an existing run.'\n    trap '/bin/rmdir \"$lock_path\"' EXIT\n    trap 'exit 130' INT\n    trap 'exit 143' TERM\nelse\n    [[ ! -e \"$lock_path\" && ! -L \"$lock_path\" ]] || fail 'Another run or a leftover lock exists.'\nfi\n\nshopt -s nullglob\nsources=()\ntargets=()\nfor source in \"$folder\"/*.\"$extension\"; do\n    [[ -f \"$source\" && ! -L \"$source\" ]] || continue\n    filename=${source##*/}\n    [[ \"$filename\" != \"$prefix\"* ]] || continue\n    target=\"$folder/$prefix$filename\"\n    [[ ! -e \"$target\" && ! -L \"$target\" ]] || fail \"Target already exists: $target. No files have been renamed.\"\n    sources+=(\"$source\")\n    targets+=(\"$target\")\ndone\n\nif [[ ${#sources[@]} -eq 0 ]]; then\n    printf 'No matching unprefixed files. Nothing changed.\\n'\n    exit 0\nfi\n\nprintf 'Mode: %s; files: %s\\n' \"$mode\" \"${#sources[@]}\"\nfor index in \"${!sources[@]}\"; do\n    printf '%q -> %q\\n' \"${sources[$index]}\" \"${targets[$index]}\"\ndone\n[[ \"$mode\" == apply ]] || exit 0\n\nfor index in \"${!sources[@]}\"; do\n    source=${sources[$index]}\n    target=${targets[$index]}\n    [[ -f \"$source\" && ! -L \"$source\" ]] || fail 'A source changed after preview. Earlier RENAMED entries may already be complete.'\n    [[ ! -e \"$target\" && ! -L \"$target\" ]] || fail 'A target appeared after preview. Earlier RENAMED entries may already be complete.'\n    /bin/mv -n \"$source\" \"$target\" || fail 'Move failed. Review earlier RENAMED entries before retrying.'\n    [[ ! -e \"$source\" && ! -L \"$source\" ]] || fail 'Move was skipped. Review earlier RENAMED entries before retrying.'\n    printf 'RENAMED %q -> %q\\n' \"$source\" \"$target\"\ndone\nRULR_BATCH_PREFIX_SCRIPT\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "135E563B-66C1-5BC8-B2AC-7CC64338E030",
+            "key": "action.run-shell-script"
+          }
+        ],
+        "kind": "action",
+        "title": "Prefix Matching Files"
+      }
+    ],
+    "id": "B96971FC-6731-5B3D-B00A-8F08508DDC72",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "endTime": {
+              "type": "string",
+              "value": "24:00"
+            },
+            "everyUnit": {
+              "type": "string",
+              "value": "minutes"
+            },
+            "everyValue": {
+              "type": "number",
+              "value": 30
+            },
+            "startTime": {
+              "type": "string",
+              "value": "00:00"
+            }
+          }
+        },
+        "id": "5C9392A7-751D-5553-9656-C5AAD59AC9CD",
+        "key": "trigger.schedule.interval"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Repeat"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Batch Prefix Files"
+}

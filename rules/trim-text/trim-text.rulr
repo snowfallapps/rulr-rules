@@ -1,0 +1,172 @@
+{
+  "id": "1E42FD87-F9E9-543E-B20A-0CA410461096",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "D872E2A2-E25A-5FDA-8A32-952B7711A3A3",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Enter a value to continue."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Trim Text"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "9B104583-D06C-567E-B47B-9F1ED0FACF0E",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "9B104583-D06C-567E-B47B-9F1ED0FACF0E"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D872E2A2-E25A-5FDA-8A32-952B7711A3A3"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "trim"
+                }
+              }
+            },
+            "id": "D88900CD-74F6-5D36-801E-D5E755B11A89",
+            "key": "action.text.transform"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "D88900CD-74F6-5D36-801E-D5E755B11A89"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "D872E2A2-E25A-5FDA-8A32-952B7711A3A3"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.transform-text.text-result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "B56D08A4-137A-51C1-A29D-D3651CC17CD3",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Ask, Trim, and Copy Text"
+      }
+    ],
+    "id": "0189AB21-98C0-53F3-A249-EB6F84C51D81",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";rulr"
+            }
+          }
+        },
+        "id": "EB353856-90CE-5D53-84C1-B50257C28B14",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Trim Text"
+}

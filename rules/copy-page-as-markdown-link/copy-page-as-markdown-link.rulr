@@ -1,0 +1,108 @@
+{
+  "id": "E7392C01-7E16-509F-BE61-8CBAF75C9ACB",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "DAE3ABB6-9D5D-512B-AFFD-712244CEDC61",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "script": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "(() => { const title = document.title.replace(/([\\[\\]\\\\])/g, '\\\\$1'); const url = window.location.href.replace(/>/g, '%3E'); return `[${title}](<${url}>)`; })()"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "7C4745A2-C3B7-57E5-8F48-ABBFF1AD7DFE",
+            "key": "action.integration.chrome.run-java-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "7C4745A2-C3B7-57E5-8F48-ABBFF1AD7DFE"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "DAE3ABB6-9D5D-512B-AFFD-712244CEDC61"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-run-javascript.result"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "7C8A18C8-13AF-53AF-A487-FF6DF4805968",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Format and Copy Markdown Link"
+      }
+    ],
+    "id": "571F6B35-F355-5157-B52D-2059AF572D9F",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:46;modifiers:option;display:M"
+            }
+          }
+        },
+        "id": "EBD214A2-472D-59B7-89FF-EAD6347FC1DB",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Copy Page as Markdown Link"
+}

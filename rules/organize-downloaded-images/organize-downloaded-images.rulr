@@ -1,0 +1,135 @@
+{
+  "id": "60113C12-7BF4-55A1-9BD1-8A986CCDE526",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "4587C1CF-A8DF-5366-9103-578FEF7D85AC",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Downloads"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "85BBD65D-08B2-592A-941F-16D5B4361046"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "36FC9D8A-D4D2-5E04-8266-074E87322611"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "744F9F95-390B-52C2-90CF-C0D864C4D7D1",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "694C91D5-4483-53A2-B718-62B1EADFD4FA",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)\\.(png|jpe?g|gif|heic|webp)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "85BBD65D-08B2-592A-941F-16D5B4361046"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "36FC9D8A-D4D2-5E04-8266-074E87322611"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "C7E98F05-03DC-5BB2-901F-27FE409FE0A7",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Image File"
+      }
+    ],
+    "id": "36FC9D8A-D4D2-5E04-8266-074E87322611",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "85BBD65D-08B2-592A-941F-16D5B4361046",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Organize Downloaded Images"
+}

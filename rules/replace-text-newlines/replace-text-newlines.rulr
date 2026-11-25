@@ -1,0 +1,195 @@
+{
+  "id": "27C24315-0740-5953-9F97-DE1AB3CB01BF",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "B8BCC01D-FD42-58BF-8F56-FFA88BC3CFAC",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "captureGroup": {
+                      "type": "integer",
+                      "value": 1
+                    },
+                    "matchOccurrence": {
+                      "type": "string",
+                      "value": "first"
+                    },
+                    "searchPattern": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "source": {
+                              "type": "string",
+                              "value": "custom-text"
+                            },
+                            "text": {
+                              "type": "string",
+                              "value": "/(\\d+)(?=\\R|$)"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "source": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "5F08441E-5093-5299-910F-E2953284482C"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "E2756FFB-FC7F-584F-9B73-C0FE6DDBF036"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "trigger.input.clipboard-changed.text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "trigger"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "textCaseMode": {
+                      "type": "string",
+                      "value": "match-case"
+                    }
+                  }
+                },
+                "id": "BAFBA8CC-4D7D-545E-831C-B6C0A4D2D5D0",
+                "key": "action.text.extract"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "content": {
+                      "type": "dictionary",
+                      "value": {
+                        "payload": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "producerInstanceID": {
+                                  "type": "string",
+                                  "value": "BAFBA8CC-4D7D-545E-831C-B6C0A4D2D5D0"
+                                },
+                                "producerNodeID": {
+                                  "type": "string",
+                                  "value": "B8BCC01D-FD42-58BF-8F56-FFA88BC3CFAC"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "value": "variable"
+                                },
+                                "variableKey": {
+                                  "type": "string",
+                                  "value": "action.extract-text.text-result"
+                                },
+                                "variableSource": {
+                                  "type": "string",
+                                  "value": "action"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "value": "text"
+                        }
+                      }
+                    },
+                    "withStickyWindow": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  }
+                },
+                "id": "2F5A395C-1554-58F8-8FD6-5B41A5AC6C01",
+                "key": "action.feedback.show-text-or-image"
+              }
+            ],
+            "kind": "action",
+            "title": "Extract and Show Line-End Number"
+          }
+        ],
+        "id": "02F9B9F3-B73E-55DC-A94C-F993971CB04D",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "/(\\d+)(?=\\R|$)"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "5F08441E-5093-5299-910F-E2953284482C"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "E2756FFB-FC7F-584F-9B73-C0FE6DDBF036"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.clipboard-changed.text"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "DBD6DE0B-6B84-54A2-AFD5-F79798351B90",
+            "key": "trigger.input.clipboard-changed.text"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "E2756FFB-FC7F-584F-9B73-C0FE6DDBF036",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "5F08441E-5093-5299-910F-E2953284482C",
+        "key": "trigger.input.clipboard-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Clipboard Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Extract Line-End Number"
+}

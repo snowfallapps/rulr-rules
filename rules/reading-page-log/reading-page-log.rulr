@@ -1,0 +1,97 @@
+{
+  "id": "1E1AA9D2-E84C-5C43-85B0-39E6994EBD7F",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "AF287796-7ABC-5AA7-8CD6-BC85889E6C4F",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "D28A32DC-B00F-590C-A754-2239EF27EBA4",
+            "key": "action.integration.chrome.get-current-tab"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "D28A32DC-B00F-590C-A754-2239EF27EBA4"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "AF287796-7ABC-5AA7-8CD6-BC85889E6C4F"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.chrome-get-current-tab.active-tab-url"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "file": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads/Rulr Notes.txt"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "writingMode": {
+                  "type": "string",
+                  "value": "append-to-end"
+                }
+              }
+            },
+            "id": "F33CEB09-2D7A-5740-89A5-176F7BA4AF33",
+            "key": "action.file.write"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture Reading Pages"
+      }
+    ],
+    "id": "ADE36054-F4D6-5ADD-8E14-CE2A8C846A34",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "7A1D5C1C-157D-5060-A69E-5AFB90B6FCFA",
+        "key": "trigger.application-window.focused-window-title-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Window Changes"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Capture Reading Pages"
+}

@@ -1,0 +1,159 @@
+{
+  "id": "1A8B9852-FE48-5CB1-AF4C-98E8DE7FB182",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "22ACB939-29C9-572B-AA0F-48363810EB53",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "8E410B16-0748-5ACE-8A35-7656FA621EC9"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "0165FCA7-23BB-59AA-8DD3-493DAECD1366"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "openWith": {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "default"
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "D212EA6C-6561-532B-AD2F-4049BF0890A0",
+                "key": "action.file.open"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "1B2809AC-5846-5949-941A-685791945156",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "added"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "equals"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "8E410B16-0748-5ACE-8A35-7656FA621EC9"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "0165FCA7-23BB-59AA-8DD3-493DAECD1366"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.change"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "44C03B63-C2A6-5164-B3AF-DD373D1266F5",
+            "key": "trigger.input.folder-contents-changed.change"
+          },
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "file"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "equals"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "8E410B16-0748-5ACE-8A35-7656FA621EC9"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "0165FCA7-23BB-59AA-8DD3-493DAECD1366"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.kind"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "4E620FFC-71EC-54D2-A5BB-0790FA000E04",
+            "key": "trigger.input.folder-contents-changed.kind"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "0165FCA7-23BB-59AA-8DD3-493DAECD1366",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "8E410B16-0748-5ACE-8A35-7656FA621EC9",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Open New Files"
+}

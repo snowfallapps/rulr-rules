@@ -1,0 +1,94 @@
+{
+  "id": "F00391D0-E03C-5AA1-B1E7-0190C2FE8792",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "94799C9B-15F4-537B-9850-DCCDBD76E9F4",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "116BD127-C68A-57E0-A878-46602C042CFD",
+            "key": "action.integration.chrome.get-current-tab"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "116BD127-C68A-57E0-A878-46602C042CFD"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "94799C9B-15F4-537B-9850-DCCDBD76E9F4"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.chrome-get-current-tab.active-tab-url"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "AB587DDC-E70C-5237-A651-39A9A5D3CD06",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Show Current Tab"
+      }
+    ],
+    "id": "25C4A944-B485-55D6-B979-B552E1B466F7",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "BFF1FC04-404B-54FA-AE5F-92DC0CFB01EA",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Show Current Tab"
+}

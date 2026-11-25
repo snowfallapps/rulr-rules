@@ -1,0 +1,126 @@
+{
+  "id": "85CA57E9-AF56-59B9-A752-2133C5049947",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "AB98628A-BBDD-5E45-99A3-C5F2E4D732DF",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Review Reminder ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Review Reminder"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "864DFDF9-B555-50BF-979A-558B894B61F0",
+            "key": "action.feedback.show-notification"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Review Reminder"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "C0E7C6E7-C14C-5B6A-9835-4C8271637ED3",
+            "key": "action.feedback.speak-text"
+          }
+        ],
+        "kind": "action",
+        "title": "Remind to Review"
+      }
+    ],
+    "id": "054CAC9A-C434-578A-9A95-B3ED296FB711",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "endTime": {
+              "type": "string",
+              "value": "17:00"
+            },
+            "everyUnit": {
+              "type": "string",
+              "value": "minutes"
+            },
+            "everyValue": {
+              "type": "number",
+              "value": 30
+            },
+            "startTime": {
+              "type": "string",
+              "value": "09:00"
+            }
+          }
+        },
+        "id": "7E21D353-F1B8-5B36-8E6D-3B4AD4E05B7B",
+        "key": "trigger.schedule.interval"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Repeat"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Review Reminder"
+}

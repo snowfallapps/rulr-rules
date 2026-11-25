@@ -1,0 +1,77 @@
+{
+  "id": "FAEA2F90-B120-54BA-A2F7-B88C174A4053",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "6A23C017-4D60-50F7-8EDF-BB4222C34255",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": []
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "use framework \"AppKit\"\nuse scripting additions\n\n-- Capture the target before a confirmation dialog changes application focus.\nset targetApp to current application's NSWorkspace's sharedWorkspace()'s frontmostApplication()\nset bundleID to targetApp's bundleIdentifier() as text\nset targetName to targetApp's localizedName() as text\nif bundleID is in {\"com.apple.finder\", \"app.rulr\", \"app.rulr.dev\", \"com.apple.ScriptEditor2\"} then error \"Focus the application you want to recover first.\"\ndisplay dialog \"Force quit and reopen \" & targetName & \"? Unsaved work in that application may be lost.\" buttons {\"Cancel\", \"Force Quit and Reopen\"} default button \"Cancel\" cancel button \"Cancel\"\nif not (targetApp's forceTerminate() as boolean) then error \"The application did not accept the force-quit request.\"\nrepeat 50 times\n    if targetApp's isTerminated() as boolean then exit repeat\n    delay 0.1\nend repeat\nif not (targetApp's isTerminated() as boolean) then error \"The application has not terminated. It was not reopened.\"\ndo shell script \"/usr/bin/open -b \" & quoted form of bundleID\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 120
+                }
+              }
+            },
+            "id": "AAD104CD-10EE-5301-9D75-56AA6A6146E6",
+            "key": "action.run-apple-script"
+          }
+        ],
+        "kind": "action",
+        "title": "Recover a Stuck App"
+      }
+    ],
+    "id": "29399075-0D57-57A9-94CB-7C0CEB2A4DE3",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:18;modifiers:option;display:1"
+            }
+          }
+        },
+        "id": "A1771CC7-3A79-5E5A-9DC2-42C636922897",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Recover a Stuck App"
+}

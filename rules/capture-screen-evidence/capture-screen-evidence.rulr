@@ -1,0 +1,127 @@
+{
+  "id": "E068BAEC-B79A-58F1-86D1-4FDFA76BA6DE",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "3923191B-AA78-595E-87BD-A0AA21E7A73E",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "full-screen"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "886ADE28-6B7F-59AE-A240-C9C84F314D9F",
+            "key": "action.image.capture-screen-or-window"
+          },
+          {
+            "configuration": {
+              "values": {
+                "destinationFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "path": {
+                      "type": "string",
+                      "value": "~/Downloads"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                },
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "886ADE28-6B7F-59AE-A240-C9C84F314D9F"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "3923191B-AA78-595E-87BD-A0AA21E7A73E"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.capture-screen-or-window.file-path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "nameConflict": {
+                  "type": "string",
+                  "value": "use-numbered-name"
+                }
+              }
+            },
+            "id": "CE36D900-D6D4-540A-8BF3-B057994C3FED",
+            "key": "action.file.move"
+          }
+        ],
+        "kind": "action",
+        "title": "Capture and Save Screen Evidence"
+      }
+    ],
+    "id": "A15B30DE-0C9D-55E2-A8A8-C387F5FBCB3F",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "C3E7AE5D-93CB-591F-B314-C86A6CE07A24",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Save Screen Capture"
+}

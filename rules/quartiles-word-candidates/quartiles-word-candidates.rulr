@@ -1,0 +1,200 @@
+{
+  "id": "72B94673-4A76-5FE0-9FAB-CD67E84E9BF4",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "B783C3B2-1CA0-51C4-9DD3-ED52337E9DC2",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Enter the 20 tiles separated by spaces or commas. Each tile is used at most once per candidate word. Results are local dictionary candidates, not verified Apple answers."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "stopsRuleWhenCancelled": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Quartiles Tiles"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "18163D17-0081-56B5-9167-9C68571F9C14",
+            "key": "action.feedback.ask-for-input"
+          },
+          {
+            "configuration": {
+              "values": {
+                "inputs": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "18163D17-0081-56B5-9167-9C68571F9C14"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "B783C3B2-1CA0-51C4-9DD3-ED52337E9DC2"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ask-for-input.input"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "script": {
+                  "type": "dictionary",
+                  "value": {
+                    "filePath": {
+                      "type": "string",
+                      "value": ""
+                    },
+                    "mode": {
+                      "type": "string",
+                      "value": "text-script"
+                    },
+                    "text": {
+                      "type": "string",
+                      "value": "exec /usr/bin/osascript -l JavaScript - \"$1\" <<'RULR_QUARTILES_JS'\n// Candidate finder only. The local dictionary is not Apple's accepted-answer list.\nObjC.import('Foundation');\n\nfunction run(argv) {\n    if (argv.length !== 1) throw new Error('Expected one list of 20 puzzle tiles.');\n    var tiles = String(argv[0]).toLowerCase().trim().split(/[\\s,]+/);\n    if (tiles.length !== 20 || tiles.some(function (t) { return !/^[a-z]{1,12}$/.test(t); })) {\n        throw new Error('Enter exactly 20 English letter tiles, separated by spaces or commas.');\n    }\n    // A machine-specific dictionary path may be selected here if this file is absent.\n    var dictionaryPath = '/usr/share/dict/words';\n    var readError = Ref();\n    var dictionaryString = $.NSString.stringWithContentsOfFileEncodingError(dictionaryPath, $.NSUTF8StringEncoding, readError);\n    var text = ObjC.unwrap(dictionaryString);\n    if (typeof text !== 'string' || !text.length) throw new Error('A readable UTF-8 dictionary with one word per line is required: ' + dictionaryPath);\n    if (text.length > 12000000) throw new Error('Choose a dictionary smaller than 12 million characters.');\n    var dictionary = Object.create(null);\n    text.split(/\\r?\\n/).forEach(function (line) {\n        var word = line.trim().toLowerCase();\n        if (/^[a-z]+$/.test(word)) dictionary[word] = true;\n    });\n    var found = Object.create(null);\n    var combinations = 0;\n    function visit(word, used, indices) {\n        if (indices.length > 0) {\n            combinations += 1;\n            if (dictionary[word] && (!found[word] || indices.length > found[word].parts.length)) {\n                found[word] = {word: word, parts: indices.map(function (i) { return tiles[i]; }), indices: indices.slice()};\n            }\n        }\n        if (indices.length === 4) return;\n        for (var i = 0; i < 20; i += 1) {\n            if (!(used & (1 << i))) visit(word + tiles[i], used | (1 << i), indices.concat([i]));\n        }\n    }\n    visit('', 0, []);\n    var matches = Object.keys(found).map(function (word) { return found[word]; });\n    matches.sort(function (a, b) { return b.parts.length - a.parts.length || a.word.localeCompare(b.word); });\n    var lines = [\n        'Quartiles word candidates',\n        'Tiles: ' + tiles.join(' '),\n        'Dictionary: ' + dictionaryPath,\n        'Ordered tile combinations checked: ' + combinations,\n        'Unique dictionary matches: ' + matches.length,\n        '',\n        'These are dictionary candidates, not verified Apple News answers.',\n        'Check words in the puzzle yourself; no answer is entered and no Reveal command is used.',\n        'Each combination uses 1 to 4 distinct tile positions. A word may share tiles with other candidate words.',\n        ''\n    ];\n    matches.forEach(function (match) {\n        lines.push(match.parts.length + ' tiles | ' + match.word + ' | ' + match.parts.join(' + ') + ' | positions ' + match.indices.map(function (i) { return i + 1; }).join(', '));\n    });\n    if (!matches.length) lines.push('No matches in this dictionary. Check the tiles and dictionary selection.');\n    var outputPath = ObjC.unwrap($.NSTemporaryDirectory()) + 'rulr-quartiles-' + ObjC.unwrap($.NSUUID.UUID.UUIDString) + '.txt';\n    var writeError = Ref();\n    var ok = $(lines.join('\\n') + '\\n').writeToFileAtomicallyEncodingError(outputPath, true, $.NSUTF8StringEncoding, writeError);\n    if (!ok) throw new Error('Could not write the candidate report.');\n    return outputPath;\n}\n\nRULR_QUARTILES_JS\n"
+                    }
+                  }
+                },
+                "stopsFlowWhenUnsuccessful": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 120
+                }
+              }
+            },
+            "id": "77946665-CC18-5688-9FE6-01856EB4AB1C",
+            "key": "action.run-shell-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "77946665-CC18-5688-9FE6-01856EB4AB1C"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "B783C3B2-1CA0-51C4-9DD3-ED52337E9DC2"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.run-shell-script.result"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "openWith": {
+                  "type": "dictionary",
+                  "value": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.apple.TextEdit",
+                        "name": "TextEdit"
+                      }
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "selected"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "246CB2B3-18A8-586B-B733-FD8EB9D8A50A",
+            "key": "action.file.open"
+          }
+        ],
+        "kind": "action",
+        "title": "Ask for Tiles, Find Candidates, and Open Report"
+      }
+    ],
+    "id": "86991FD0-6ABD-5A53-A2EA-21CDECCD0BFE",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:12;modifiers:option;display:Q"
+            }
+          }
+        },
+        "id": "F60FCA42-09A7-50A9-9DAC-76FBBB3F1EBA",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Find Quartiles Word Candidates"
+}

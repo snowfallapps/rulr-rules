@@ -1,0 +1,55 @@
+{
+  "id": "25572E66-4E94-5354-BEBC-0AE31C19BED7",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "5FB6F6C9-F8A8-5480-B0D5-591DD8D5A46F",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Safari",
+                    "name": "Safari"
+                  }
+                }
+              }
+            },
+            "id": "F30D547C-27AE-5B44-B248-21AB23980B31",
+            "key": "action.application.launch"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "1DAA7B75-CBE1-5A81-A0E6-88CA692ABDB2",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "DCACB690-126C-5D92-9762-4FDC34515792",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Launch App"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "ACB50ECC-CE7C-5E51-A792-4B886832DD30",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "38770CB9-CFE6-5E87-B7D8-354CBDC530FE",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "inputs": {
+                      "type": "array",
+                      "value": []
+                    },
+                    "script": {
+                      "type": "dictionary",
+                      "value": {
+                        "filePath": {
+                          "type": "string",
+                          "value": ""
+                        },
+                        "mode": {
+                          "type": "string",
+                          "value": "text-script"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "tell application \"Finder\"\n    set chosenItems to selection as alias list\n    if (count chosenItems) is 0 then error \"Select files or folders in Finder first.\"\n    set sourceFolder to container of item 1 of chosenItems as alias\n    repeat with chosenItem in chosenItems\n        if (container of chosenItem as alias) is not sourceFolder then error \"Choose items from one folder.\"\n    end repeat\nend tell\nset response to display dialog \"Name the folder for the selected Finder items:\" default answer \"Collected Files\" buttons {\"Cancel\", \"Create and Move\"} default button \"Create and Move\" cancel button \"Cancel\"\nset folderName to text returned of response\nif folderName is \"\" or folderName contains \":\" or folderName contains \"/\" then error \"Use a nonempty folder name without a colon or slash.\"\ntell application \"Finder\"\n    if exists item folderName of sourceFolder then error \"That name already exists. Choose another name.\"\n    set groupedFolder to make new folder at sourceFolder with properties {name:folderName}\n    move chosenItems to groupedFolder\n    reveal groupedFolder\nend tell\n"
+                        }
+                      }
+                    },
+                    "stopsFlowWhenUnsuccessful": {
+                      "type": "boolean",
+                      "value": true
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "value": 120
+                    }
+                  }
+                },
+                "id": "352B27CB-6B4E-5C85-BFB3-16A6BD3CA75A",
+                "key": "action.run-apple-script"
+              }
+            ],
+            "kind": "action",
+            "title": "Group Selected Files"
+          }
+        ],
+        "id": "89CD3E67-9721-5031-BF00-AC9A21270E86",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.finder",
+                    "name": "Finder"
+                  }
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "is"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.frontmost-application"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "85FA4A98-29DD-5AC3-BCFD-97C9D6EA7337",
+            "key": "common.frontmost-application"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "B34189AB-1BA3-57EA-9224-7DE759745C37",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:20;modifiers:option;display:3"
+            }
+          }
+        },
+        "id": "3F595150-6D68-5D06-9481-382606426A4D",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Group Selected Files"
+}

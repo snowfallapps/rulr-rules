@@ -1,0 +1,117 @@
+{
+  "id": "FF98BA9C-A18D-57F2-858F-D6452AA882CD",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "99604C00-0212-57EC-9B4E-3DCEB18660D4",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "script": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "document.title"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "timeout": {
+                  "type": "number",
+                  "value": 30
+                }
+              }
+            },
+            "id": "563BF982-CAB0-55E1-8045-306B63F5F986",
+            "key": "action.integration.chrome.run-java-script"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "dictionary",
+                  "value": {
+                    "payload": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "563BF982-CAB0-55E1-8045-306B63F5F986"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "99604C00-0212-57EC-9B4E-3DCEB18660D4"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.chrome-run-javascript.result"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "value": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "E8384185-4085-54C9-9963-53894DEE74C8",
+            "key": "action.feedback.show-text-or-image"
+          }
+        ],
+        "kind": "action",
+        "title": "Run and Show JavaScript Result"
+      }
+    ],
+    "id": "FC9DD594-94CC-510F-90EB-796B3944988A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "3A40EC1A-3198-540A-A5F1-A84111851D4E",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Run Tab JavaScript"
+}

@@ -1,0 +1,223 @@
+{
+  "id": "0D8BF59D-9F6D-5A0D-BDC1-93D0A1F70CCE",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "id": "40482629-99A1-570F-96CB-E4DBAEED3781",
+                "instances": [
+                  {
+                    "configuration": {
+                      "values": {
+                        "content": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "producerInstanceID": {
+                                  "type": "string",
+                                  "value": "93FFA262-9A23-5EAC-8332-D6AEA94D58CB"
+                                },
+                                "producerNodeID": {
+                                  "type": "string",
+                                  "value": "E54A3EBC-1E2B-5528-9BF1-82DF211A7182"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "value": "variable"
+                                },
+                                "variableKey": {
+                                  "type": "string",
+                                  "value": "action.transform-text.text-result"
+                                },
+                                "variableSource": {
+                                  "type": "string",
+                                  "value": "action"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "stopsRuleWhenCancelled": {
+                          "type": "boolean",
+                          "value": true
+                        },
+                        "title": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "source": {
+                                  "type": "string",
+                                  "value": "custom-text"
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "value": "Open Copied Link in Safari?"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "DE18EC2A-CF45-55ED-8027-D241FA8D78D5",
+                    "key": "action.feedback.show-confirmation"
+                  },
+                  {
+                    "configuration": {
+                      "values": {
+                        "url": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "producerInstanceID": {
+                                  "type": "string",
+                                  "value": "93FFA262-9A23-5EAC-8332-D6AEA94D58CB"
+                                },
+                                "producerNodeID": {
+                                  "type": "string",
+                                  "value": "E54A3EBC-1E2B-5528-9BF1-82DF211A7182"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "value": "variable"
+                                },
+                                "variableKey": {
+                                  "type": "string",
+                                  "value": "action.transform-text.text-result"
+                                },
+                                "variableSource": {
+                                  "type": "string",
+                                  "value": "action"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "id": "D7F597A3-7EF8-5493-B79F-33094807087A",
+                    "key": "action.integration.safari.open-new-tab"
+                  }
+                ],
+                "kind": "action",
+                "title": "Review and Open Copied Link"
+              }
+            ],
+            "id": "549C043E-E386-5FFC-8E26-65B5B839E65F",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "operand": {
+                      "type": "string",
+                      "value": "(?i)^https?://[^\\s]+$"
+                    },
+                    "operator": {
+                      "type": "string",
+                      "value": "matchesRegex"
+                    },
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "93FFA262-9A23-5EAC-8332-D6AEA94D58CB"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "E54A3EBC-1E2B-5528-9BF1-82DF211A7182"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "action.transform-text.text-result"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "action"
+                    }
+                  }
+                },
+                "id": "40535CF7-928A-5F9A-8DFC-070C81D88B18",
+                "key": "action.transform-text.text-result"
+              }
+            ],
+            "kind": "condition",
+            "title": "Check Conditions"
+          }
+        ],
+        "id": "E54A3EBC-1E2B-5528-9BF1-82DF211A7182",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "source": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "common.clipboard-text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "common"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "transform": {
+                  "type": "string",
+                  "value": "trim"
+                }
+              }
+            },
+            "id": "93FFA262-9A23-5EAC-8332-D6AEA94D58CB",
+            "key": "action.text.transform"
+          }
+        ],
+        "kind": "action",
+        "title": "Read and Trim Clipboard Text"
+      }
+    ],
+    "id": "BC79E67E-8C67-57AF-ADF0-F79F93F27B8A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:31;modifiers:option;display:O"
+            }
+          }
+        },
+        "id": "C22A2D36-0625-53CC-9D89-F9D1F6F99ECF",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Open Clipboard Link"
+}

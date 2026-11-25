@@ -1,0 +1,123 @@
+{
+  "id": "D19082B7-CCF6-5794-9518-A4003CE24CD4",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "2CD7E3C1-2E38-5737-8B2C-0D4FDDA1B447",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Low Battery Alert ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Low Battery Alert"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "B6CFEC2F-F498-5958-A967-E1A5D93DF2D4",
+            "key": "action.feedback.show-notification"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Low Battery Alert"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "935FC0A6-FF97-52A6-804E-362E605835F8",
+            "key": "action.feedback.speak-text"
+          }
+        ],
+        "kind": "action",
+        "title": "Show and Speak Low Battery Warning"
+      }
+    ],
+    "id": "C71AEDA9-D1B5-5415-A762-A35B712CA2FD",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "batteryLevelCondition": {
+              "type": "dictionary",
+              "value": {
+                "operator": {
+                  "type": "string",
+                  "value": "fallsToOrBelow"
+                },
+                "value": {
+                  "type": "number",
+                  "value": 20
+                }
+              }
+            }
+          }
+        },
+        "id": "96109698-9DE7-5A1B-BE6D-670F7B5AB31F",
+        "key": "trigger.system.battery-level-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Battery Drops"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Low Battery Alert"
+}

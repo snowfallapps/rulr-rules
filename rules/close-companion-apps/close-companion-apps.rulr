@@ -1,0 +1,73 @@
+{
+  "id": "4A01FEF1-DA15-54DC-A23A-CD4F38468C04",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "1EF71D51-F119-52E7-8652-F6C7C39971E2",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.Notes",
+                    "name": "Notes"
+                  }
+                }
+              }
+            },
+            "id": "44772488-9D8C-5C5E-B1EC-39A8E37514C6",
+            "key": "action.application.quit"
+          },
+          {
+            "configuration": {
+              "values": {
+                "application": {
+                  "type": "application",
+                  "value": {
+                    "bundleIdentifier": "com.apple.TextEdit",
+                    "name": "TextEdit"
+                  }
+                }
+              }
+            },
+            "id": "D01966BF-5D07-5FB6-9B5A-A903C3D7BF8E",
+            "key": "action.application.quit"
+          }
+        ],
+        "kind": "action",
+        "title": "Close Companion Apps"
+      }
+    ],
+    "id": "5894CCEA-3645-511D-84A7-9B424968AD77",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "application": {
+              "type": "application",
+              "value": {
+                "bundleIdentifier": "com.apple.Safari",
+                "name": "Safari"
+              }
+            }
+          }
+        },
+        "id": "193D7D20-A923-5463-B83C-5158653D0701",
+        "key": "trigger.application-window.app-quit"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When App Quits"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Close Work Apps"
+}

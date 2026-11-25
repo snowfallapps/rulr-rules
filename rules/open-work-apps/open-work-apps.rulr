@@ -1,0 +1,146 @@
+{
+  "id": "8FE8EA7D-CF0E-59C0-9F19-8BC58BEEFA5B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "2D651809-86CE-5356-9363-E2B2F5483D97",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.tinyspeck.slackmacgap",
+                        "name": "Slack",
+                        "path": "/Applications/Slack.app"
+                      }
+                    }
+                  }
+                },
+                "id": "DD32755C-FA68-55CB-BE15-108AC93C8A4F",
+                "key": "action.application.launch"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "notion.id",
+                        "name": "Notion",
+                        "path": "/Applications/Notion.app"
+                      }
+                    }
+                  }
+                },
+                "id": "665C14AE-0449-5434-8168-797751A0290B",
+                "key": "action.application.launch"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "application": {
+                      "type": "application",
+                      "value": {
+                        "bundleIdentifier": "com.figma.Desktop",
+                        "name": "Figma",
+                        "path": "/Applications/Figma.app"
+                      }
+                    }
+                  }
+                },
+                "id": "7C476E39-E122-53CA-9F5B-BB6D0C96057E",
+                "key": "action.application.launch"
+              }
+            ],
+            "kind": "action",
+            "title": "Launch Work Apps"
+          }
+        ],
+        "conditionMatchMode": "or",
+        "id": "9CFC93F0-79F9-5BAF-BDAF-A044D91947C2",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "time",
+                  "value": "2001-01-01T12:00:00+08:00"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "lessThan"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.current-time"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "E6365CBE-DE2B-5CA7-AD41-080BB2495E62",
+            "key": "common.current-time"
+          },
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "time",
+                  "value": "2001-01-01T13:00:00+08:00"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "greaterThanOrEqual"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "common.current-time"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "common"
+                }
+              }
+            },
+            "id": "7F93C1AF-A962-5C85-AFD9-B6263D20DC9A",
+            "key": "common.current-time"
+          }
+        ],
+        "kind": "condition",
+        "title": "If"
+      }
+    ],
+    "id": "60166055-6F6B-5D68-87BA-21435264144F",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:13;modifiers:option;display:W"
+            }
+          }
+        },
+        "id": "D0ED2D80-1312-5983-8984-BC7B030F4D5A",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Open Work Apps"
+}

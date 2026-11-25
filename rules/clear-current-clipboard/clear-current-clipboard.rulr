@@ -1,0 +1,70 @@
+{
+  "id": "C90F6FA0-C1E9-5A08-9EDE-9C003FC2F35D",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "6F51005E-A6C8-5461-BEB9-C0AB3A1F760F",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "EMPTY"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "BE7ED01E-A1BA-5959-897A-C4245C0F8E47",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Replace Clipboard When Away"
+      }
+    ],
+    "id": "5A40B48F-91A3-56E9-9C04-E4D9C9E344BB",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "durationUnit": {
+              "type": "string",
+              "value": "minutes"
+            },
+            "durationValue": {
+              "type": "number",
+              "value": 5
+            }
+          }
+        },
+        "id": "0E9BCB6F-42D4-5B06-81AF-8A00DDE8F1D2",
+        "key": "trigger.system.idle"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Event Occurs"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Clear Clipboard When Away"
+}

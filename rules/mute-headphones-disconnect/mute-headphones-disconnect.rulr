@@ -1,0 +1,83 @@
+{
+  "id": "EC9D8EC3-1058-5BE1-BDA1-767EA9A7A570",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "036C85FD-35DC-5B3F-A052-BBC0AEC20BFB",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {}
+                },
+                "id": "BECFCE44-3862-5CF6-ABD9-EDBB7933D6FA",
+                "key": "action.system.mute-or-unmute-audio"
+              }
+            ],
+            "kind": "action",
+            "title": "Do"
+          }
+        ],
+        "id": "B75ECF51-F9DF-5317-80B7-56FB04956B13",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "AirPods"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "contains"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "BA9F905C-F650-5DA6-A94D-06C66CB20997"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "B8D5D1A3-6A86-53B6-BC5E-5E6698C3C17A"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.bluetooth-device-disconnected.deviceName"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "08088844-EDC7-5BE7-9B8E-05C0D3FCEE23",
+            "key": "trigger.system.bluetooth-device-disconnected.deviceName"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "B8D5D1A3-6A86-53B6-BC5E-5E6698C3C17A",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "BA9F905C-F650-5DA6-A94D-06C66CB20997",
+        "key": "trigger.system.bluetooth-device-disconnected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Bluetooth Disconnects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Mute Disconnected Headphones"
+}

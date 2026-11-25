@@ -1,0 +1,235 @@
+{
+  "id": "D371E042-3ADB-583E-94D5-D0D46009591B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "50C2C887-6FCC-5A20-A47F-DCF3D491B45B",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Pictures/Media"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "468F9DFF-4A82-5DBA-91B7-CB6F0A29703B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "83FACF56-FC3B-5CAA-AB06-CE151E89FC19"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "B767BC1E-C90B-5D5B-A62D-28B665C47A97",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Store Images"
+          }
+        ],
+        "id": "E409D611-499C-53FB-A8E7-13CD06ECE896",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)\\.(png|jpe?g|heic|webp)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "468F9DFF-4A82-5DBA-91B7-CB6F0A29703B"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "83FACF56-FC3B-5CAA-AB06-CE151E89FC19"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "5A3A3685-AA74-56A5-8FE7-169ADA362B57",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Media Type"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "C44EAF7D-E0D9-521C-817A-B0B14E44AE72",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "destinationFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "path": {
+                          "type": "string",
+                          "value": "~/Movies/Imports"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "selected"
+                        }
+                      }
+                    },
+                    "fileOrFolder": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "468F9DFF-4A82-5DBA-91B7-CB6F0A29703B"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "83FACF56-FC3B-5CAA-AB06-CE151E89FC19"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    },
+                    "nameConflict": {
+                      "type": "string",
+                      "value": "use-numbered-name"
+                    }
+                  }
+                },
+                "id": "01D4CD3E-3D16-5E24-8CCC-443553639C13",
+                "key": "action.file.move"
+              }
+            ],
+            "kind": "action",
+            "title": "Store Video"
+          }
+        ],
+        "id": "4DE76731-97D5-5238-89D9-656326FDB797",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)\\.(mov|mp4|m4v)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "468F9DFF-4A82-5DBA-91B7-CB6F0A29703B"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "83FACF56-FC3B-5CAA-AB06-CE151E89FC19"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "91EE65DC-5ED7-559A-8EC9-5DD3BF4D22AD",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Media Type"
+      }
+    ],
+    "id": "83FACF56-FC3B-5CAA-AB06-CE151E89FC19",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "468F9DFF-4A82-5DBA-91B7-CB6F0A29703B",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Import Media"
+}

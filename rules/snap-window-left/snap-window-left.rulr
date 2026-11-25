@@ -1,0 +1,74 @@
+{
+  "id": "B038A72C-CACF-5B15-B358-60EB4D57D47E",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "8185ACB7-D914-5647-9E3E-ED1CDE23AC90",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "position": {
+                  "type": "dictionary",
+                  "value": {
+                    "preset": {
+                      "type": "string",
+                      "value": "left-half"
+                    }
+                  }
+                },
+                "window": {
+                  "type": "dictionary",
+                  "value": {
+                    "source": {
+                      "type": "string",
+                      "value": "specific-window"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "1FA2F6F3-94DE-569D-963A-094C5B72EB2E",
+            "key": "action.window.set-layout"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "DB416814-C569-5ED6-A85E-94CC7B3C032E",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:123;modifiers:option;display:←"
+            }
+          }
+        },
+        "id": "0A5E12D6-7DDF-5562-A105-23CAC1FEE5DE",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Move Window to Left Half"
+}

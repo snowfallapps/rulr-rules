@@ -1,0 +1,115 @@
+{
+  "id": "A1A310E5-E7FA-5862-BFC0-F7ED3D0BC66B",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "EC27A542-4579-599B-BF3A-0ACEB4F85261",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "captureTarget": {
+                  "type": "dictionary",
+                  "value": {
+                    "kind": {
+                      "type": "string",
+                      "value": "screen"
+                    },
+                    "positionMode": {
+                      "type": "string",
+                      "value": "center"
+                    },
+                    "screenMode": {
+                      "type": "string",
+                      "value": "full-screen"
+                    },
+                    "sizeMode": {
+                      "type": "string",
+                      "value": "percentage"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "common.focused-window"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "common"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "540F7302-7129-5800-ACBE-BE964B865951",
+            "key": "action.image.recognize-text-on-screen"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "540F7302-7129-5800-ACBE-BE964B865951"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "EC27A542-4579-599B-BF3A-0ACEB4F85261"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.ocr-screen.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "16333296-AD40-5E28-AC82-63AA0317A46E",
+            "key": "action.clipboard.set"
+          }
+        ],
+        "kind": "action",
+        "title": "Recognize and Copy Screen Text"
+      }
+    ],
+    "id": "7483D2FD-987C-5CA3-935C-F2C4C8719347",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "key": {
+              "type": "string",
+              "value": "keycode:49;modifiers:option;display:Space"
+            }
+          }
+        },
+        "id": "C563EC7F-98E3-536D-B527-62594AB0916E",
+        "key": "trigger.input.hot-key-pressed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Shortcut"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Copy Screen Text"
+}

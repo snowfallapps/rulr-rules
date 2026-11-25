@@ -1,0 +1,109 @@
+{
+  "id": "E3D3ED4D-3A34-557D-B6FC-2E8323612788",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "AAEEFF0E-27CD-5907-9C87-9F6B4662D6C9",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "screen": {
+                      "type": "string",
+                      "value": "1"
+                    },
+                    "window": {
+                      "type": "dictionary",
+                      "value": {
+                        "application": {
+                          "type": "application",
+                          "value": {
+                            "bundleIdentifier": "com.apple.Safari",
+                            "name": "Safari"
+                          }
+                        },
+                        "scope": {
+                          "type": "string",
+                          "value": "last-used"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "specific-app"
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "0FD00231-444D-55CE-8C82-1048587D047F",
+                "key": "action.window.move-to-screen"
+              }
+            ],
+            "kind": "action",
+            "title": "Move Window"
+          }
+        ],
+        "id": "A1DBEA08-6FF7-5FA8-A178-39571A46FED7",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "number",
+                  "value": 1
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "greaterThan"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "D4B94124-4414-5879-8E1A-A9385CA8B965"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "99F9196C-392C-5FA5-A1AA-139B24A99EA6"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.system.display-layout-changed.displayCount"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "9DB6EEB6-013D-525B-9860-E0BADEB0660C",
+            "key": "trigger.system.display-layout-changed.displayCount"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Display Layout"
+      }
+    ],
+    "id": "99F9196C-392C-5FA5-A1AA-139B24A99EA6",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "D4B94124-4414-5879-8E1A-A9385CA8B965",
+        "key": "trigger.system.display-layout-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Display Layout Changes"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Monitor Workspace"
+}

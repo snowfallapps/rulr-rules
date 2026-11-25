@@ -1,0 +1,109 @@
+{
+  "id": "E2F514D3-8832-5F25-8C45-F4A94DAEE1D4",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "785E00C1-0061-5FA3-A246-67CCD0872597",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Offline Alert ran successfully."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sound": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "title": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Offline Alert"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "2B8FC510-F5B6-544C-AB3F-BD6D20F2AC8C",
+            "key": "action.feedback.show-notification"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "source": {
+                          "type": "string",
+                          "value": "custom-text"
+                        },
+                        "text": {
+                          "type": "string",
+                          "value": "Offline Alert"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "281F0518-BB70-539E-A2BE-1F77EBFDC358",
+            "key": "action.feedback.speak-text"
+          }
+        ],
+        "kind": "action",
+        "title": "Show and Speak Offline Warning"
+      }
+    ],
+    "id": "E536A198-7BE4-5D1A-B99B-191A31719E37",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "4FE90A6F-6513-5210-A7E7-7ECBDC5183FA",
+        "key": "trigger.system.network-disconnected"
+      }
+    ],
+    "kind": "trigger",
+    "title": "When Network Disconnects"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Offline Alert"
+}

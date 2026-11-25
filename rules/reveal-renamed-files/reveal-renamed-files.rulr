@@ -1,0 +1,77 @@
+{
+  "id": "D4477127-F694-5FB6-A97A-2E099D9C55C0",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "09DFBAB5-3A66-59C3-A4DC-F37A095C309A",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "fileOrFolder": {
+                  "type": "dictionary",
+                  "value": {
+                    "producerInstanceID": {
+                      "type": "string",
+                      "value": "F786E520-33C6-596E-89A6-6A6E31F1C77D"
+                    },
+                    "producerNodeID": {
+                      "type": "string",
+                      "value": "4431469F-EF22-576A-8A84-B26C4C648DFC"
+                    },
+                    "source": {
+                      "type": "string",
+                      "value": "variable"
+                    },
+                    "variableKey": {
+                      "type": "string",
+                      "value": "trigger.input.folder-contents-changed.path"
+                    },
+                    "variableSource": {
+                      "type": "string",
+                      "value": "trigger"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "8051099A-33C4-5C45-B4C2-77EE793DBE2C",
+            "key": "action.file.reveal"
+          }
+        ],
+        "kind": "action",
+        "title": "Do"
+      }
+    ],
+    "id": "4431469F-EF22-576A-8A84-B26C4C648DFC",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "F786E520-33C6-596E-89A6-6A6E31F1C77D",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Reveal Renamed Files"
+}

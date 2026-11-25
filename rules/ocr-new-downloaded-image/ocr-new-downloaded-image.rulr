@@ -1,0 +1,165 @@
+{
+  "id": "202DC67D-D60C-59B6-A298-31B893691D2E",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "5CB37D7E-2ED0-50FA-B23F-5677350A9973",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "sourceImage": {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "03495A20-B3F4-500A-B83C-4E4646FED2AB"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "94AEC387-EDEE-5A4B-8B08-9334FB8CF7E9"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "trigger.input.folder-contents-changed.path"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "trigger"
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "CC050622-4ED5-5375-8736-BD19245B602B",
+                "key": "action.image.recognize-text-in-image"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "content": {
+                      "type": "dictionary",
+                      "value": {
+                        "payload": {
+                          "type": "array",
+                          "value": [
+                            {
+                              "type": "dictionary",
+                              "value": {
+                                "producerInstanceID": {
+                                  "type": "string",
+                                  "value": "CC050622-4ED5-5375-8736-BD19245B602B"
+                                },
+                                "producerNodeID": {
+                                  "type": "string",
+                                  "value": "5CB37D7E-2ED0-50FA-B23F-5677350A9973"
+                                },
+                                "source": {
+                                  "type": "string",
+                                  "value": "variable"
+                                },
+                                "variableKey": {
+                                  "type": "string",
+                                  "value": "action.ocr-image.text"
+                                },
+                                "variableSource": {
+                                  "type": "string",
+                                  "value": "action"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "value": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": "F767E9DA-57F7-500B-B894-FCEDC4259B5E",
+                "key": "action.feedback.show-text-or-image"
+              }
+            ],
+            "kind": "action",
+            "title": "Recognize and Show Image Text"
+          }
+        ],
+        "id": "97251770-430F-5F39-9C6D-BA906B26C19B",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "(?i)\\.(png|jpe?g|heic|webp)$"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "03495A20-B3F4-500A-B83C-4E4646FED2AB"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "94AEC387-EDEE-5A4B-8B08-9334FB8CF7E9"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.folder-contents-changed.name"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "146DAF9A-3709-51C7-B75F-8B0E66E892DA",
+            "key": "trigger.input.folder-contents-changed.name"
+          }
+        ],
+        "kind": "condition",
+        "title": "Match Image File"
+      }
+    ],
+    "id": "94AEC387-EDEE-5A4B-8B08-9334FB8CF7E9",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "change": {
+              "type": "string",
+              "value": "added"
+            },
+            "folder": {
+              "type": "string",
+              "value": "~/Downloads"
+            }
+          }
+        },
+        "id": "03495A20-B3F4-500A-B83C-4E4646FED2AB",
+        "key": "trigger.input.folder-contents-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Folder Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Extract Image Text"
+}

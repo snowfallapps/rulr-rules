@@ -1,0 +1,89 @@
+{
+  "id": "61B0BC56-C28C-5165-8D6A-0DA553D93C15",
+  "isEnabled": true,
+  "metadata": {
+    "createdAt": "2026-09-07T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-09-07T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "id": "33377DB3-69EA-524D-82A0-2C04AE071069",
+        "instances": [
+          {
+            "configuration": {
+              "values": {}
+            },
+            "id": "742D6DDE-A8C7-5F59-B9D6-69D1CBBC84DD",
+            "key": "action.text.get-selected"
+          },
+          {
+            "configuration": {
+              "values": {
+                "content": {
+                  "type": "array",
+                  "value": [
+                    {
+                      "type": "dictionary",
+                      "value": {
+                        "producerInstanceID": {
+                          "type": "string",
+                          "value": "742D6DDE-A8C7-5F59-B9D6-69D1CBBC84DD"
+                        },
+                        "producerNodeID": {
+                          "type": "string",
+                          "value": "33377DB3-69EA-524D-82A0-2C04AE071069"
+                        },
+                        "source": {
+                          "type": "string",
+                          "value": "variable"
+                        },
+                        "variableKey": {
+                          "type": "string",
+                          "value": "action.get-selected-text.text"
+                        },
+                        "variableSource": {
+                          "type": "string",
+                          "value": "action"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "id": "7E3A11A4-791B-52A0-95D7-B088EEE7F6AB",
+            "key": "action.feedback.speak-text"
+          }
+        ],
+        "kind": "action",
+        "title": "Get and Speak Selected Text"
+      }
+    ],
+    "id": "3A0915B3-1B92-55A4-87E8-C2308C8467BB",
+    "instances": [
+      {
+        "configuration": {
+          "values": {
+            "matchCase": {
+              "type": "string",
+              "value": "exact"
+            },
+            "strings": {
+              "type": "string",
+              "value": ";speak"
+            }
+          }
+        },
+        "id": "B45E9512-0873-5B54-BCF3-EC2DCF0069BA",
+        "key": "trigger.input.text-typed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Text Entry"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Speak Selected Text"
+}

@@ -1,0 +1,186 @@
+{
+  "id": "56595070-B8D1-5040-83B7-B0B12044D2A7",
+  "isEnabled": false,
+  "metadata": {
+    "createdAt": "2026-11-22T00:00:00Z",
+    "rootOrder": 100,
+    "updatedAt": "2026-11-22T00:00:00Z"
+  },
+  "notificationBehavior": "staySilent",
+  "ruleData": {
+    "children": [
+      {
+        "children": [
+          {
+            "id": "5C31855C-3043-568A-8B65-140DE30A868B",
+            "instances": [
+              {
+                "configuration": {
+                  "values": {
+                    "matchOccurrence": {
+                      "type": "string",
+                      "value": "all"
+                    },
+                    "replacementText": {
+                      "type": "array",
+                      "value": []
+                    },
+                    "searchPattern": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "source": {
+                              "type": "string",
+                              "value": "custom-text"
+                            },
+                            "text": {
+                              "type": "string",
+                              "value": "[0-9#*]\\uFE0F?\\u20E3|\\p{Regional_Indicator}{2}|\\p{Extended_Pictographic}[\\p{Emoji_Modifier}\\uFE0F]*(?:\\u200D\\p{Extended_Pictographic}[\\p{Emoji_Modifier}\\uFE0F]*)*[\\x{E0020}-\\x{E007F}]*"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "source": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "A28CD6BF-9804-5090-90CD-9DD9929F7750"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "88453D1C-E470-5F21-B97B-07376A99D958"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "trigger.input.clipboard-changed.text"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "trigger"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "textCaseMode": {
+                      "type": "string",
+                      "value": "match-case"
+                    },
+                    "textMatchMode": {
+                      "type": "string",
+                      "value": "regular-expression"
+                    }
+                  }
+                },
+                "id": "2CEC0BA9-6D0D-5C8E-AEA5-BB84A84E2F88",
+                "key": "action.text.replace"
+              },
+              {
+                "configuration": {
+                  "values": {
+                    "content": {
+                      "type": "array",
+                      "value": [
+                        {
+                          "type": "dictionary",
+                          "value": {
+                            "producerInstanceID": {
+                              "type": "string",
+                              "value": "2CEC0BA9-6D0D-5C8E-AEA5-BB84A84E2F88"
+                            },
+                            "producerNodeID": {
+                              "type": "string",
+                              "value": "5C31855C-3043-568A-8B65-140DE30A868B"
+                            },
+                            "source": {
+                              "type": "string",
+                              "value": "variable"
+                            },
+                            "variableKey": {
+                              "type": "string",
+                              "value": "action.replace-text.text-result"
+                            },
+                            "variableSource": {
+                              "type": "string",
+                              "value": "action"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "id": "513F64CE-E0CB-5CE5-BBD1-F70BAC4C8D7E",
+                "key": "action.clipboard.set"
+              }
+            ],
+            "kind": "action",
+            "title": "Remove Emoji and Copy Text"
+          }
+        ],
+        "id": "4A4A72FC-BB19-59F3-92CB-D9DC2545A189",
+        "instances": [
+          {
+            "configuration": {
+              "values": {
+                "operand": {
+                  "type": "string",
+                  "value": "[0-9#*]\\uFE0F?\\u20E3|\\p{Regional_Indicator}{2}|\\p{Extended_Pictographic}[\\p{Emoji_Modifier}\\uFE0F]*(?:\\u200D\\p{Extended_Pictographic}[\\p{Emoji_Modifier}\\uFE0F]*)*[\\x{E0020}-\\x{E007F}]*"
+                },
+                "operator": {
+                  "type": "string",
+                  "value": "matchesRegex"
+                },
+                "producerInstanceID": {
+                  "type": "string",
+                  "value": "A28CD6BF-9804-5090-90CD-9DD9929F7750"
+                },
+                "producerNodeID": {
+                  "type": "string",
+                  "value": "88453D1C-E470-5F21-B97B-07376A99D958"
+                },
+                "variableKey": {
+                  "type": "string",
+                  "value": "trigger.input.clipboard-changed.text"
+                },
+                "variableSource": {
+                  "type": "string",
+                  "value": "trigger"
+                }
+              }
+            },
+            "id": "3040ADEF-434F-56CE-9D81-6A19F4591FC0",
+            "key": "trigger.input.clipboard-changed.text"
+          }
+        ],
+        "kind": "condition",
+        "title": "Check Conditions"
+      }
+    ],
+    "id": "88453D1C-E470-5F21-B97B-07376A99D958",
+    "instances": [
+      {
+        "configuration": {
+          "values": {}
+        },
+        "id": "A28CD6BF-9804-5090-90CD-9DD9929F7750",
+        "key": "trigger.input.clipboard-changed"
+      }
+    ],
+    "kind": "trigger",
+    "title": "On Clipboard Change"
+  },
+  "startBehavior": "runAutomatically",
+  "title": "Remove Emoji from Text"
+}
