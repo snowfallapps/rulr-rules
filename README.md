@@ -21,47 +21,53 @@
 <p align="center">macOS 26+ · 100 official rules · MIT-licensed examples</p>
 
 <p align="center">
-  <a href="https://www.rulr.app/rules/mac-window-switcher/">
+  <a href="https://www.rulr.app/rules/set-volume-audio-device-mac/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/rulr-rule-dark.png">
-      <img src="assets/rulr-rule-light.png" alt="Rulr rule editor showing a keyboard shortcut connected to the Window Switcher action" width="880" height="609">
+      <img src="assets/rulr-rule-light.png" alt="Rulr showing the Audio Device Setup Rule and its execution results" width="880" height="609">
     </picture>
   </a>
 </p>
 
 ## About Rulr
 
-[Rulr](https://www.rulr.app/) is a Mac automation app for building visual Rules:
-choose **when** a task starts, add **if** conditions when needed, and connect the
-actions to **do**. Use Rules for apps, windows, files, text, browser tasks, and
-system settings. You can build a Rule yourself or describe a task to the optional
-AI Builder, then review and adjust the result.
+[Rulr](https://www.rulr.app/) is a visual automation app for macOS. A Rule starts
+with **When** (an event like a shortcut or a device change), optionally checks
+**If** (a condition like the device name), and runs **Do** (actions like setting
+the volume or opening an app). Build a Rule on the canvas, or describe the task to
+the optional AI Builder and review the result before enabling it.
 
-This is the official collection of rule examples and setup guides. Each example
-includes an importable `.rulr` file, configuration instructions, and a link to its
-interactive preview on the website. The Rulr application is developed separately;
-its source code is not included here.
+This is the official collection of Rulr examples. Each rule folder has an
+importable `.rulr` file, setup instructions, and a link to the interactive website
+preview.
+
+## A few rules to try
+
+- 🎬 [Set Volume by Audio Device](rules/set-headphone-volume/) sets different volume levels for headphones and speakers when the audio output changes.
+- 💼 [Window Switcher](rules/window-switcher/) opens a visual picker for your open windows with a keyboard shortcut.
+- ✍️ [Paste as Plain Text](rules/insert-plain-text/) pastes clipboard text without its original formatting.
+- 📁 [Organize New Downloads](rules/organize-new-downloads/) moves new downloads into the right folder.
 
 ## Get started
 
 1. [Download Rulr](https://www.rulr.app/download/Rulr.dmg) for macOS 26 or later.
-2. Choose a rule in the [directory below](#rule-directory). Open its website preview and select **Open in Rulr**, or download the `.rulr` file from its folder and open it with the app.
-3. Review the rule, select your own apps, folders, devices, or shortcut where needed, and grant the required permissions before enabling it.
+2. Pick a rule from the [directory](#rule-directory). Choose **Open in Rulr** on the website preview, or download the `.rulr` file and open it in the app.
+3. Review the trigger and actions, choose your own apps, folders, devices, or shortcuts where needed, and grant the permissions listed in the setup guide.
+4. Enable the rule and try it once. Check that it does what you expect before relying on it in your daily workflow.
 
-Some Triggers and Actions require Rulr Pro. Each rule's detail page explains its
-setup and limitations. Importing the examples does not require an AI provider;
-using AI Builder requires your own supported provider connection.
+The setup guide lists any Rulr Pro requirements. You can import examples without
+connecting an AI provider. AI Builder uses your own supported provider connection.
 
 ## Rule directory
 
 100 rules, organized by their primary Gallery category. Open a rule's name
 for its README and download, or choose **Preview and setup** for the website.
 
-[Work & Productivity](#work-productivity) · [Study & Research](#study-research) · [Writing & Communication](#writing-communication) · [Daily Life & Personal](#daily-life-personal) · [Files & Organization](#files-organization) · [Web & Browsing](#web-browsing) · [Entertainment & Media](#entertainment-media)
+[💼 Work & Productivity](#work-productivity) · [📚 Study & Research](#study-research) · [✍️ Writing & Communication](#writing-communication) · [🌱 Daily Life & Personal](#daily-life-personal) · [📁 Files & Organization](#files-organization) · [🌐 Web & Browsing](#web-browsing) · [🎬 Entertainment & Media](#entertainment-media)
 
 <a id="work-productivity"></a>
 
-### Work & Productivity
+### 💼 Work & Productivity
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -90,7 +96,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="study-research"></a>
 
-### Study & Research
+### 📚 Study & Research
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -115,7 +121,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="writing-communication"></a>
 
-### Writing & Communication
+### ✍️ Writing & Communication
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -132,7 +138,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="daily-life-personal"></a>
 
-### Daily Life & Personal
+### 🌱 Daily Life & Personal
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -154,7 +160,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="files-organization"></a>
 
-### Files & Organization
+### 📁 Files & Organization
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -178,7 +184,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="web-browsing"></a>
 
-### Web & Browsing
+### 🌐 Web & Browsing
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -196,7 +202,7 @@ for its README and download, or choose **Preview and setup** for the website.
 
 <a id="entertainment-media"></a>
 
-### Entertainment & Media
+### 🎬 Entertainment & Media
 
 | Rule | What it does | Website |
 | --- | --- | --- |
