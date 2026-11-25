@@ -4,7 +4,7 @@ Batch rename matching files in a Mac folder by adding a prefix on a schedule. Th
 
 Set the folder path in the included script, choose an extension and prefix, then review the timer. The script is embedded in the Rule; a separate download is available below for Terminal use.
 
-[Website preview and full setup](https://www.rulr.app/rules/batch-rename-files-mac/) · [Download batch-prefix-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/batch-prefix-files/batch-prefix-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/batch-rename-files-mac/) · [Download batch-prefix-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/batch-prefix-files/batch-prefix-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

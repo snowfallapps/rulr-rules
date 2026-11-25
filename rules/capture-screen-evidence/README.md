@@ -4,7 +4,7 @@ Capture the full Mac screen with a shortcut and move the resulting file to a sel
 
 Option-Space captures the full screen; Move File uses the capture file path and defaults to Downloads. Select an unused shortcut and destination.
 
-[Website preview and full setup](https://www.rulr.app/rules/save-screen-capture-folder-mac/) · [Download capture-screen-evidence.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/capture-screen-evidence/capture-screen-evidence.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/save-screen-capture-folder-mac/) · [Download capture-screen-evidence.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/capture-screen-evidence/capture-screen-evidence.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

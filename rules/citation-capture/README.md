@@ -4,7 +4,7 @@ Use a typed phrase to append a Chrome page title, URL and selected text to a cit
 
 The default phrase is `;cite`; the Rule reads the current Chrome tab and selection, then appends the assembled citation to a text file. Choose a phrase and an accessible destination file.
 
-[Website preview and full setup](https://www.rulr.app/rules/save-chrome-citation-quote-mac/) · [Download citation-capture.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/citation-capture/citation-capture.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/save-chrome-citation-quote-mac/) · [Download citation-capture.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/citation-capture/citation-capture.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

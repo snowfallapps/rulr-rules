@@ -4,7 +4,7 @@ Clear other Finder windows on Mac with Option + 7 while keeping the window you a
 
 Bring the Finder window you want to keep to the front first. The script snapshots windows with an index greater than one and closes those windows, leaving the front window and its tabs open.
 
-[Website preview and full setup](https://www.rulr.app/rules/close-all-finder-windows-mac/) · [Download close-finder-windows.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/close-finder-windows/close-finder-windows.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/close-all-finder-windows-mac/) · [Download close-finder-windows.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/close-finder-windows/close-finder-windows.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

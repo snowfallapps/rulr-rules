@@ -4,7 +4,7 @@ Launch a chosen Mac app with a keyboard shortcut.
 
 The example uses Option-Space to launch Safari with no Condition. Select your app and an unused shortcut in the Rule.
 
-[Website preview and full setup](https://www.rulr.app/rules/launch-app-with-shortcut-mac/) · [Download launch-app-if-needed.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/launch-app-if-needed/launch-app-if-needed.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/launch-app-with-shortcut-mac/) · [Download launch-app-if-needed.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/launch-app-if-needed/launch-app-if-needed.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

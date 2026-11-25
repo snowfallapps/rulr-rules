@@ -4,7 +4,7 @@ When FaceTime launches, this Rule checks the current audio output name, opens No
 
 The sample uses 25% volume when the output name contains `AirPods` and 15% otherwise. Choose your meeting app, notes app, device name, and preferred levels after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/meeting-mode-audio-mac/) · [Download meeting-app-setup.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/meeting-app-setup/meeting-app-setup.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/meeting-mode-audio-mac/) · [Download meeting-app-setup.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/meeting-app-setup/meeting-app-setup.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Open a Mac media control panel with Option + M. See detected music and video sou
 
 The Rule connects Hotkey Pressed to Show Media Manager with no Conditions or Action parameters. Replace the shortcut to suit your keyboard; source discovery and playback control depend on the app, browser, and permissions.
 
-[Website preview and full setup](https://www.rulr.app/rules/control-media-playback-mac/) · [Download media-manager.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/media-manager/media-manager.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/control-media-playback-mac/) · [Download media-manager.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/media-manager/media-manager.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

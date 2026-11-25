@@ -4,7 +4,7 @@ Open an app automatically when a USB device connects to your Mac. Match your acc
 
 The sample matches names containing `USB` and launches Safari. Replace the broad name filter and select the app you use with your accessory after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-app-usb-device-mac/) · [Download open-app-for-usb-device.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-app-for-usb-device/open-app-for-usb-device.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-app-usb-device-mac/) · [Download open-app-for-usb-device.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-app-for-usb-device/open-app-for-usb-device.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

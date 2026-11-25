@@ -4,7 +4,7 @@ Copy the current Chrome page as a Markdown link containing its page title and UR
 
 Press the chosen hotkey to read the active page title and URL in Chrome, format them as a Markdown link, and place the result on the clipboard.
 
-[Website preview and full setup](https://www.rulr.app/rules/copy-page-markdown-link-mac/) · [Download copy-page-as-markdown-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/copy-page-as-markdown-link/copy-page-as-markdown-link.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/copy-page-markdown-link-mac/) · [Download copy-page-as-markdown-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/copy-page-as-markdown-link/copy-page-as-markdown-link.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

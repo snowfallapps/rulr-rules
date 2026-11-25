@@ -1,10 +1,10 @@
-# Organize Downloaded PDFs
+# Automatically Sort Downloaded PDFs on Mac
 
-Automatically move new PDF downloads from a watched Downloads folder into a destination folder on your Mac.
+Organize PDFs as they arrive in your Mac Downloads folder. This Rulr rule checks each new filename for the .pdf extension and moves matching files to your chosen folder.
 
 When a new folder item is added, the Rule checks whether its name ends in `.pdf` and moves the matching path. Choose the watched Downloads folder and PDF destination before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/organize-downloaded-pdfs-mac/) · [Download organize-downloaded-pdfs.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/organize-downloaded-pdfs/organize-downloaded-pdfs.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/organize-downloaded-pdfs-mac/) · [Download organize-downloaded-pdfs.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/organize-downloaded-pdfs/organize-downloaded-pdfs.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

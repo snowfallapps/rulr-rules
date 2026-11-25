@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://www.rulr.app"
 REPOSITORY = "https://github.com/snowfallapps/rulr-rules"
 CATALOG_URL = SITE + "/rule-gallery/catalog.json"
+RULE_README_COPY = json.loads((ROOT / "scripts/rule-readme-copy.json").read_text())
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 
 
@@ -80,10 +81,16 @@ def selected_documentation(rule: dict) -> str:
 def rule_readme(rule: dict) -> str:
     slug = rule["slug"]
     detail = SITE + rule["page"]
-    download = f"{REPOSITORY}/raw/refs/heads/main/rules/{slug}/{slug}.rulr"
-    return f"""# {rule['title']}
+    download = f"{REPOSITORY}/raw/HEAD/rules/{slug}/{slug}.rulr"
+    copy = RULE_README_COPY.get(slug, {})
+    title = copy.get("title", rule["title"])
+    intro = rule["intro"]
+    if "intro" in copy:
+        _, separator, rest = intro.partition("\n\n")
+        intro = copy["intro"] + separator + rest
+    return f"""# {title}
 
-{markdown(rule['intro'], detail)}
+{markdown(intro, detail)}
 
 [Website preview and full setup]({detail}) · [Download {slug}.rulr]({download}) · [All rules](../../README.md)
 
@@ -117,7 +124,7 @@ def repository_readme(catalog: dict) -> str:
 
 <p align="center">
   <strong>Visual automation for your Mac.</strong><br>
-  Connect When, If, and Do to automate everyday tasks.
+  Download macOS automation rules for keyboard shortcuts, file organization, and everyday tasks.
 </p>
 
 <p align="center">
@@ -152,6 +159,7 @@ preview.
 
 ## A few rules to try
 
+- ⌨️ [Dark Mode Keyboard Shortcut for Mac](rules/turn-on-dark-mode-with-shortcut/) turns on Dark Mode with a key combination you choose.
 - 🎬 [Set Volume by Audio Device](rules/set-headphone-volume/) sets different volume levels for headphones and speakers when the audio output changes.
 - 💼 [Window Switcher](rules/window-switcher/) opens a visual picker for your open windows with a keyboard shortcut.
 - ✍️ [Paste as Plain Text](rules/insert-plain-text/) pastes clipboard text without its original formatting.
@@ -204,7 +212,8 @@ for its README and download, or choose **View** for the website.''']
             "| --- | --- | --- |",
         ]
         for rule in entries:
-            lines.append(f"| [{table_text(rule['title'])}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [View]({SITE}{rule['page']}) |")
+            title = RULE_README_COPY.get(rule["slug"], {}).get("title", rule["title"])
+            lines.append(f"| [{table_text(title)}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [View]({SITE}{rule['page']}) |")
     lines += ["", "## Updates and contributions", "", "The website is the source of truth for rule configurations and setup text. This repository mirrors the published catalog daily and supports manual synchronization. It uses only public website URLs, without access to the private website or app repositories.",
               "", "Pull requests with fixes or new examples are welcome. Mirrored files may be replaced by synchronization, so rule and documentation changes must also be incorporated into the website source. See [CONTRIBUTING.md](CONTRIBUTING.md).", "", "## License", "", "The examples, documentation, and sync script in this repository are available under the [MIT License](LICENSE). This does not license the Rulr app or its trademarks.", ""]
     return "\n".join(lines)

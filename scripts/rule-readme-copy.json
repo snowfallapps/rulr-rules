@@ -1,0 +1,38 @@
+{
+  "turn-on-dark-mode-with-shortcut": {
+    "title": "Dark Mode Keyboard Shortcut for Mac",
+    "intro": "Set up a keyboard shortcut to turn on Dark Mode on your Mac without opening System Settings. Import this Rulr rule and choose the key combination you want to use."
+  },
+  "organize-new-downloads": {
+    "title": "Automatically Organize Downloads on Mac",
+    "intro": "Keep your Mac Downloads folder organized by automatically moving new files to a folder you choose. Select a destination different from Downloads before enabling the rule."
+  },
+  "organize-downloaded-images": {
+    "title": "Automatically Sort Downloaded Images on Mac",
+    "intro": "Sort new image downloads into a separate folder on your Mac. This Rulr rule watches Downloads and moves files with matching extensions such as PNG, JPEG, and HEIC."
+  },
+  "organize-downloaded-pdfs": {
+    "title": "Automatically Sort Downloaded PDFs on Mac",
+    "intro": "Organize PDFs as they arrive in your Mac Downloads folder. This Rulr rule checks each new filename for the .pdf extension and moves matching files to your chosen folder."
+  },
+  "rename-new-files": {
+    "title": "Automatically Rename New Files on Mac",
+    "intro": "Rename files automatically as they arrive in a Mac folder you choose. Set the replacement name in Rulr and use numbered filenames to handle name conflicts."
+  },
+  "window-switcher": {
+    "title": "Mac Window Switcher with a Keyboard Shortcut",
+    "intro": "Switch between open windows on your Mac with a visual picker. Press Option + Tab to open the picker, then select the window you want to bring forward."
+  },
+  "insert-plain-text": {
+    "title": "Paste Without Formatting on Mac",
+    "intro": "Paste as plain text on Mac with Option + V. This Rulr rule strips formatting from clipboard text before inserting it into the active app."
+  },
+  "copy-screen-text": {
+    "title": "Copy Text from Images on Mac with OCR",
+    "intro": "Extract text from images, screenshots, or apps visible on your Mac screen. Press your Rulr shortcut to run OCR on the screen and copy the recognized text to the clipboard."
+  },
+  "switch-audio-output": {
+    "title": "Switch Audio Output on Mac with a Keyboard Shortcut",
+    "intro": "Use a keyboard shortcut to switch your Mac audio output to a chosen speaker, pair of headphones, or display without opening Sound settings."
+  }
+}

@@ -4,7 +4,7 @@ Automatically press the Spacebar on Mac to advance a long Safari article while r
 
 Choose your article and reading interval before enabling. Switching to another app or a different article skips new matching events; the Rule never clicks the mouse.
 
-[Website preview and full setup](https://www.rulr.app/rules/auto-press-spacebar-mac/) · [Download repeat-spacebar-reading.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/repeat-spacebar-reading/repeat-spacebar-reading.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/auto-press-spacebar-mac/) · [Download repeat-spacebar-reading.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/repeat-spacebar-reading/repeat-spacebar-reading.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

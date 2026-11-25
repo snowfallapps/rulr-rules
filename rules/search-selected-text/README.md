@@ -4,7 +4,7 @@ Select text in a Mac app and open a web search for it with one keyboard shortcut
 
 The Rule reads the current selection, URL-encodes it, and opens the search URL in Google Chrome. Change the URL template to use Google, DuckDuckGo, or another search service.
 
-[Website preview and full setup](https://www.rulr.app/rules/search-selected-text-mac/) · [Download search-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/search-selected-text/search-selected-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/search-selected-text-mac/) · [Download search-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/search-selected-text/search-selected-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

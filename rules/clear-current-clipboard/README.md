@@ -4,7 +4,7 @@ Clear old copied content from the current Mac clipboard after five minutes of sy
 
 Choose the idle threshold after importing. This reacts to time without user input, rather than requiring you to remember a cleanup shortcut.
 
-[Website preview and full setup](https://www.rulr.app/rules/clear-clipboard-mac/) · [Download clear-current-clipboard.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/clear-current-clipboard/clear-current-clipboard.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/clear-clipboard-mac/) · [Download clear-current-clipboard.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/clear-current-clipboard/clear-current-clipboard.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

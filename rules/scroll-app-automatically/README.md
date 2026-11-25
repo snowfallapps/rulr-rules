@@ -4,7 +4,7 @@ Automatically scroll a selected Mac application by a configured distance wheneve
 
 Choose the application, pointer position, scroll direction, and distance after importing the Rule. The Rule moves the pointer into the target window before scrolling the content beneath it.
 
-[Website preview and full setup](https://www.rulr.app/rules/scroll-app-automatically-mac/) · [Download scroll-app-automatically.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/scroll-app-automatically/scroll-app-automatically.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/scroll-app-automatically-mac/) · [Download scroll-app-automatically.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/scroll-app-automatically/scroll-app-automatically.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

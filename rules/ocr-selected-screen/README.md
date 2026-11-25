@@ -4,7 +4,7 @@ Press a shortcut to recognize text on the full Mac screen and show the result in
 
 Option-Space starts full-screen recognition and displays the OCR output. Change the shortcut or capture target if needed.
 
-[Website preview and full setup](https://www.rulr.app/rules/recognize-screen-text-mac/) · [Download ocr-selected-screen.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/ocr-selected-screen/ocr-selected-screen.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/recognize-screen-text-mac/) · [Download ocr-selected-screen.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/ocr-selected-screen/ocr-selected-screen.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Open each new file in its default application when it is added directly to a wat
 
 The Rule listens for an added folder item, checks that the changed item is a file, and opens its path with the default application. Choose a watched folder and test with a safe sample file before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-new-files-mac/) · [Download open-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-new-files/open-new-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-new-files-mac/) · [Download open-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-new-files/open-new-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

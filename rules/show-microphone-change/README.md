@@ -4,7 +4,7 @@ Get a Mac microphone change notification showing the new default input's name. N
 
 The Rule listens for Audio Input Device Changed and inserts the new device name into its notification. Customize the title, message, or sound after importing to suit your recording or meeting setup.
 
-[Website preview and full setup](https://www.rulr.app/rules/microphone-change-alert-mac/) · [Download show-microphone-change.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/show-microphone-change/show-microphone-change.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/microphone-change-alert-mac/) · [Download show-microphone-change.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/show-microphone-change/show-microphone-change.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

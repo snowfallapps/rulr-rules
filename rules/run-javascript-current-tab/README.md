@@ -4,7 +4,7 @@ Run JavaScript in the active Chrome tab on Mac with a keyboard shortcut and disp
 
 Choose an unused shortcut and review the script before running it. The sample targets Google Chrome and uses a 30-second timeout.
 
-[Website preview and full setup](https://www.rulr.app/rules/run-javascript-chrome-tab-mac/) · [Download run-javascript-current-tab.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/run-javascript-current-tab/run-javascript-current-tab.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/run-javascript-chrome-tab-mac/) · [Download run-javascript-current-tab.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/run-javascript-current-tab/run-javascript-current-tab.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

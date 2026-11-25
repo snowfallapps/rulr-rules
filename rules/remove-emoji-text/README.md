@@ -4,7 +4,7 @@ Automatically remove common emojis when you copy text on Mac. The Rule checks th
 
 Enable this only when you want matching copies cleaned automatically. The Condition prevents ordinary text and the already-cleaned result from entering the replacement flow.
 
-[Website preview and full setup](https://www.rulr.app/rules/remove-emojis-from-text-mac/) · [Download remove-emoji-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/remove-emoji-text/remove-emoji-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/remove-emojis-from-text-mac/) · [Download remove-emoji-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/remove-emoji-text/remove-emoji-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

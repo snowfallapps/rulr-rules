@@ -4,7 +4,7 @@ Automatically move one app window to your chosen display when an external monito
 
 The Rule runs when the display layout changes, checks that more than one display is connected, and moves the selected app's last-used window to the target screen. Choose the application and display after importing it.
 
-[Website preview and full setup](https://www.rulr.app/rules/arrange-windows-monitor-mac/) · [Download setup-windows-for-monitor.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/setup-windows-for-monitor/setup-windows-for-monitor.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/arrange-windows-monitor-mac/) · [Download setup-windows-for-monitor.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/setup-windows-for-monitor/setup-windows-for-monitor.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

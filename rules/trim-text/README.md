@@ -4,7 +4,7 @@ Trim unwanted spaces and line breaks from text on your Mac, then copy the cleane
 
 Transform Text can use another transformation, while Insert Text or Write to File can carry the result into pasted copy, notes, messages, or structured text.
 
-[Website preview and full setup](https://www.rulr.app/rules/trim-copy-text-mac/) · [Download trim-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/trim-text/trim-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/trim-copy-text-mac/) · [Download trim-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/trim-text/trim-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

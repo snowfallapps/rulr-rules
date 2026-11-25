@@ -4,7 +4,7 @@ Convert selected text to uppercase on Mac with one keyboard shortcut. Rulr trans
 
 The Rule gets the selection, transforms its case, puts the result on the clipboard, and pastes it. Choose a shortcut after importing and use it in an editable text field where pasting replaces the selection.
 
-[Website preview and full setup](https://www.rulr.app/rules/uppercase-selected-text-mac/) · [Download uppercase-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/uppercase-selected-text/uppercase-selected-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/uppercase-selected-text-mac/) · [Download uppercase-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/uppercase-selected-text/uppercase-selected-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

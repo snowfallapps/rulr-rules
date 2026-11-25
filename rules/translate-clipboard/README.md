@@ -4,7 +4,7 @@ Translate clipboard text automatically on Mac whenever you copy a passage. Choos
 
 Clipboard Changed passes the copied text to Translate Text, which targets English in the sample. Change the target language after importing and enable the Rule when you want clipboard-driven translation.
 
-[Website preview and full setup](https://www.rulr.app/rules/translate-clipboard-mac/) · [Download translate-clipboard.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/translate-clipboard/translate-clipboard.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/translate-clipboard-mac/) · [Download translate-clipboard.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/translate-clipboard/translate-clipboard.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

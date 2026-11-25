@@ -4,7 +4,7 @@ Automatically separate new photos and videos into different folders on Mac. Watc
 
 The sample watches Downloads and uses filename extensions to select an image or video branch. Choose your source and both destination folders after importing; name conflicts use numbered filenames.
 
-[Website preview and full setup](https://www.rulr.app/rules/sort-photos-videos-mac/) · [Download media-import-pipeline.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/media-import-pipeline/media-import-pipeline.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/sort-photos-videos-mac/) · [Download media-import-pipeline.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/media-import-pipeline/media-import-pipeline.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Automatically organize your Downloads folder on Mac by file type. Move new image
 
 Three filename Conditions route each matching arrival to its destination, using numbered names for conflicts. Choose the watched folder and all three destinations before enabling it; existing downloads are not processed automatically.
 
-[Website preview and full setup](https://www.rulr.app/rules/sort-downloads-mac/) · [Download smart-download-router.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/smart-download-router/smart-download-router.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/sort-downloads-mac/) · [Download smart-download-router.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/smart-download-router/smart-download-router.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

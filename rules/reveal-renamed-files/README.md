@@ -4,7 +4,7 @@ Reveal a newly added file from a watched Mac folder in Finder.
 
 The current Trigger is configured for added items in Downloads, and passes the item path to Reveal File. Choose the watched folder and change the event to Renamed if that is your goal.
 
-[Website preview and full setup](https://www.rulr.app/rules/reveal-new-files-in-finder-mac/) · [Download reveal-renamed-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/reveal-renamed-files/reveal-renamed-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/reveal-new-files-in-finder-mac/) · [Download reveal-renamed-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/reveal-renamed-files/reveal-renamed-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

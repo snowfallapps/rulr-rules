@@ -4,7 +4,7 @@ Press Option–E on your Mac to URL-encode clipboard text for a query parameter 
 
 The Rule passes Current Clipboard Text through Transform Text with URL Encode, then sends the encoded output to Insert Text. Enable Accessibility permission for insertion and change the hotkey after import if Option–E is already in use.
 
-[Website preview and full setup](https://www.rulr.app/rules/url-encode-paste-text-mac/) · [Download paste-as-plain-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/paste-as-plain-text/paste-as-plain-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/url-encode-paste-text-mac/) · [Download paste-as-plain-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/paste-as-plain-text/paste-as-plain-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

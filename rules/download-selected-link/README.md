@@ -4,7 +4,7 @@ Download a selected link on your Mac with a keyboard shortcut, confirm the downl
 
 Move File or Folder and Rename File or Folder can follow the download, allowing each result to enter a project folder, asset archive, or another file-organizing flow.
 
-[Website preview and full setup](https://www.rulr.app/rules/download-selected-link-mac/) · [Download download-selected-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/download-selected-link/download-selected-link.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/download-selected-link-mac/) · [Download download-selected-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/download-selected-link/download-selected-link.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

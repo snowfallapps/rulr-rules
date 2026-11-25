@@ -4,7 +4,7 @@ Pass a newly added file path to a shell script and show a success notification o
 
 The folder Trigger passes the item path as the first script input. The supplied example prints that input and does not modify the file; select a folder and write your own script for additional processing.
 
-[Website preview and full setup](https://www.rulr.app/rules/run-shell-script-new-file-mac/) · [Download process-new-files-shell-script.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/process-new-files-shell-script/process-new-files-shell-script.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/run-shell-script-new-file-mac/) · [Download process-new-files-shell-script.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/process-new-files-shell-script/process-new-files-shell-script.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

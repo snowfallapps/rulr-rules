@@ -4,7 +4,7 @@ Move and resize the focused window to the left half of your Mac screen with a ke
 
 The Rule uses Set Window Layout with Focused Window and the left-half preset. Change the shortcut or choose another layout after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/snap-window-left-mac/) · [Download snap-window-left.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/snap-window-left/snap-window-left.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/snap-window-left-mac/) · [Download snap-window-left.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/snap-window-left/snap-window-left.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

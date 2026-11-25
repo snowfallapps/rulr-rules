@@ -4,7 +4,7 @@ Set a repeating study reminder on Mac during a chosen time window. The Rule show
 
 The sample runs every 30 minutes from 9:00 to 17:00. Adjust the interval, active hours, and message after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/repeat-study-reminder-mac/) · [Download study-reminder.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/study-reminder/study-reminder.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/repeat-study-reminder-mac/) · [Download study-reminder.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/study-reminder/study-reminder.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

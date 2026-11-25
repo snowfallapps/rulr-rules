@@ -4,7 +4,7 @@ Start a scheduled study session on Mac by opening Chrome, a research page and a 
 
 The example uses a weekly 9:00 schedule, Google Scholar and a Focus folder. Change the schedule, URL and folder to suit your study routine.
 
-[Website preview and full setup](https://www.rulr.app/rules/schedule-study-session-mac/) · [Download study-session.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/study-session/study-session.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/schedule-study-session-mac/) · [Download study-session.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/study-session/study-session.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Type a configured trigger phrase on your Mac to retrieve selected text from a co
 
 Text Typed starts the Rule, Get Selected Text reads the selection from the frontmost application, and Speak Text reads it aloud. Choose a trigger phrase and use it with selected text in a compatible application.
 
-[Website preview and full setup](https://www.rulr.app/rules/read-selected-text-aloud-mac/) · [Download speak-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/speak-selected-text/speak-selected-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/read-selected-text-aloud-mac/) · [Download speak-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/speak-selected-text/speak-selected-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

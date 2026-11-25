@@ -4,7 +4,7 @@ Open a Chrome research workspace with a keyboard shortcut, then load different r
 
 The time-based branches can open different source URLs or lead into more Actions, extending the Rule into a writing setup, project launcher, or daily reading routine.
 
-[Website preview and full setup](https://www.rulr.app/rules/chrome-research-workspace/) · [Download browser-research-flow.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/browser-research-flow/browser-research-flow.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/chrome-research-workspace/) · [Download browser-research-flow.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/browser-research-flow/browser-research-flow.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

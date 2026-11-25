@@ -1,10 +1,10 @@
-# Organize Downloaded Images
+# Automatically Sort Downloaded Images on Mac
 
-Move newly added image files from a watched Mac folder to a chosen destination.
+Sort new image downloads into a separate folder on your Mac. This Rulr rule watches Downloads and moves files with matching extensions such as PNG, JPEG, and HEIC.
 
 A filename condition matches PNG, JPEG, GIF, HEIC and WebP extensions before Move File runs. The sample watches Downloads and also targets Downloads; choose a different destination first.
 
-[Website preview and full setup](https://www.rulr.app/rules/move-new-image-files-mac/) · [Download organize-downloaded-images.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/organize-downloaded-images/organize-downloaded-images.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/move-new-image-files-mac/) · [Download organize-downloaded-images.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/organize-downloaded-images/organize-downloaded-images.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Normalize line endings in new text files in a watched Mac folder, then move thos
 
 For a newly added name ending in `.txt`, the Rule reads the file, normalizes line endings, overwrites its contents and moves it to the selected archive. Choose separate inbox and archive folders.
 
-[Website preview and full setup](https://www.rulr.app/rules/normalize-archive-new-text-files-mac/) · [Download transform-and-archive-notes.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/transform-and-archive-notes/transform-and-archive-notes.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/normalize-archive-new-text-files-mac/) · [Download transform-and-archive-notes.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/transform-and-archive-notes/transform-and-archive-notes.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

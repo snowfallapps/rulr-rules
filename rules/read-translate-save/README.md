@@ -4,7 +4,7 @@ Translate a text file on a schedule on Mac and append the translated text to ano
 
 Choose the source file, destination file, target language, and schedule after importing. The sample appends results, so repeated runs add further entries.
 
-[Website preview and full setup](https://www.rulr.app/rules/translate-text-file-schedule-mac/) · [Download read-translate-save.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/read-translate-save/read-translate-save.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/translate-text-file-schedule-mac/) · [Download read-translate-save.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/read-translate-save/read-translate-save.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

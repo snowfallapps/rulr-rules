@@ -4,7 +4,7 @@ Sort newly added files in a watched Mac folder into separate destinations by fil
 
 The default watches Downloads: PDF files go to Documents, image extensions to Pictures, and ZIP files to Downloads/Archives. Choose your own source and three destinations before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/sort-project-files-by-type-mac/) · [Download sort-project-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/sort-project-files/sort-project-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/sort-project-files-by-type-mac/) · [Download sort-project-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/sort-project-files/sort-project-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

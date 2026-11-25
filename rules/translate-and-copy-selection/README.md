@@ -4,7 +4,7 @@ Use a shortcut to translate selected text on Mac and put the translation on the 
 
 Option-Y reads the selection, translates it to English and replaces the clipboard with the translated text. Choose a different shortcut or target language in the Rule.
 
-[Website preview and full setup](https://www.rulr.app/rules/translate-selected-text-copy-mac/) · [Download translate-and-copy-selection.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/translate-and-copy-selection/translate-and-copy-selection.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/translate-selected-text-copy-mac/) · [Download translate-and-copy-selection.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/translate-and-copy-selection/translate-and-copy-selection.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

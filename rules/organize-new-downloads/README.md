@@ -1,10 +1,10 @@
-# Organize New Downloads
+# Automatically Organize Downloads on Mac
 
-Move newly added items from a watched Mac folder to a chosen destination.
+Keep your Mac Downloads folder organized by automatically moving new files to a folder you choose. Select a destination different from Downloads before enabling the rule.
 
 The default watches Downloads and also targets Downloads. Before enabling, select a different destination folder; the Trigger passes the added item path to Move File.
 
-[Website preview and full setup](https://www.rulr.app/rules/move-new-files-to-folder-mac/) · [Download organize-new-downloads.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/organize-new-downloads/organize-new-downloads.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/move-new-files-to-folder-mac/) · [Download organize-new-downloads.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/organize-new-downloads/organize-new-downloads.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

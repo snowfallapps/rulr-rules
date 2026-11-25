@@ -4,7 +4,7 @@ Convert letters to numbers on Mac with A1Z26, where A=1 through Z=26, or convert
 
 The Rule asks for input, passes it to an embedded AppleScript and shows the result. It does not read or modify a Numbers or Excel workbook.
 
-[Website preview and full setup](https://www.rulr.app/rules/letters-to-numbers-mac/) · [Download letters-and-positions.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/letters-and-positions/letters-and-positions.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/letters-to-numbers-mac/) · [Download letters-and-positions.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/letters-and-positions/letters-and-positions.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

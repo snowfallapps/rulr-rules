@@ -4,7 +4,7 @@ Append the active Chrome tab URL to a text file when a window title changes on M
 
 The Trigger watches focused-window title changes; the Rule reads the current Chrome tab and appends its URL to the configured file. Choose a log file before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/log-chrome-url-window-title-changes-mac/) · [Download reading-page-log.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/reading-page-log/reading-page-log.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/log-chrome-url-window-title-changes-mac/) · [Download reading-page-log.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/reading-page-log/reading-page-log.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

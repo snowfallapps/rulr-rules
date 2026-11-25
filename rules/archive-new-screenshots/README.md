@@ -4,7 +4,7 @@ Move new Mac screenshots from a watched folder into an archive folder automatica
 
 When a folder item is added, the Rule checks whether its name matches a screenshot file and moves the matching path to your archive. Choose the watched and archive folders before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/archive-screenshots-mac/) · [Download archive-new-screenshots.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/archive-new-screenshots/archive-new-screenshots.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/archive-screenshots-mac/) · [Download archive-new-screenshots.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/archive-new-screenshots/archive-new-screenshots.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Automatically copy matching new files to another folder on Mac while keeping the
 
 The sample watches Downloads, matches names containing `Project`, and copies each matching event path to a separate destination. Choose your source, name filter, and backup folder after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/copy-new-files-backup-mac/) · [Download back-up-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/back-up-new-files/back-up-new-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/copy-new-files-backup-mac/) · [Download back-up-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/back-up-new-files/back-up-new-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

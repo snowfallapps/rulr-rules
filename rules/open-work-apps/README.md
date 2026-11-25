@@ -4,7 +4,7 @@ Open your work apps with one Mac keyboard shortcut during your chosen work hours
 
 Different Launch Application Actions and Conditions can turn the same shortcut into a meeting starter, study setup, design workspace, or another repeatable app-launch routine. To build your own routine through conversation, follow [How to Build Mac Automations with AI](https://www.rulr.app/posts/build-mac-automations-with-ai/).
 
-[Website preview and full setup](https://www.rulr.app/rules/open-work-apps-mac/) · [Download open-work-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-work-apps/open-work-apps.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-work-apps-mac/) · [Download open-work-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-work-apps/open-work-apps.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

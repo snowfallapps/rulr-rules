@@ -4,7 +4,7 @@ Group selected Finder files into a new named folder on Mac with Option + 3. The 
 
 Select items in one Finder folder first. The Rule keeps the new folder beside those items, rejects an existing destination name and reveals the resulting folder.
 
-[Website preview and full setup](https://www.rulr.app/rules/new-folder-hotkey-mac/) · [Download new-finder-folder.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/new-finder-folder/new-finder-folder.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/new-folder-hotkey-mac/) · [Download new-finder-folder.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/new-finder-folder/new-finder-folder.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

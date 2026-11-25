@@ -4,7 +4,7 @@ Quit open apps together on Mac with a keyboard shortcut and a confirmation. Opti
 
 Change Hotkey Pressed to an unused combination and review the script's exclusions. Apps can ask you to save documents or decline to quit; the Rule does not force termination.
 
-[Website preview and full setup](https://www.rulr.app/rules/quit-all-apps-mac/) · [Download quit-all-user-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/quit-all-user-apps/quit-all-user-apps.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/quit-all-apps-mac/) · [Download quit-all-user-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/quit-all-user-apps/quit-all-user-apps.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

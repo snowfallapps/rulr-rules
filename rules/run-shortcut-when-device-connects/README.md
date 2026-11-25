@@ -4,7 +4,7 @@ Run an Apple Shortcut automatically when a matching USB device connects to your 
 
 Choose the USB device match and Shortcut after importing the Rule. When that device connects, Rulr checks its name and runs the selected Shortcut.
 
-[Website preview and full setup](https://www.rulr.app/rules/run-shortcut-usb-device-mac/) · [Download run-shortcut-when-device-connects.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/run-shortcut-when-device-connects/run-shortcut-when-device-connects.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/run-shortcut-usb-device-mac/) · [Download run-shortcut-when-device-connects.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/run-shortcut-when-device-connects/run-shortcut-when-device-connects.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

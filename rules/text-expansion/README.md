@@ -4,7 +4,7 @@ Set up a text expander Rule on Mac to insert reusable replies, addresses, or sig
 
 The sample matches `;addr` and inserts your configured text into the frontmost app. It has no explicit step to delete the typed abbreviation; check how it behaves in your writing app before relying on automatic replacement.
 
-[Website preview and full setup](https://www.rulr.app/rules/text-expansion-mac/) · [Download text-expansion.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/text-expansion/text-expansion.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/text-expansion-mac/) · [Download text-expansion.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/text-expansion/text-expansion.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

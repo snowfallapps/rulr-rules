@@ -4,7 +4,7 @@ Use one keyboard shortcut to show or hide a selected running app on your Mac, ke
 
 Choose the application and hotkey after importing the Rule. The Action changes visibility without quitting the app or closing its windows.
 
-[Website preview and full setup](https://www.rulr.app/rules/toggle-app-visibility-mac/) · [Download toggle-app-visibility.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/toggle-app-visibility/toggle-app-visibility.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/toggle-app-visibility-mac/) · [Download toggle-app-visibility.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/toggle-app-visibility/toggle-app-visibility.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

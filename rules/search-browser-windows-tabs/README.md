@@ -4,7 +4,7 @@ Search open Chrome windows and tabs from one Mac keyboard shortcut, then switch 
 
 This starting point can be extended with Chrome Actions that open, close, or navigate tabs for research, focused reading, or client workflows.
 
-[Website preview and full setup](https://www.rulr.app/rules/search-chrome-windows-tabs/) · [Download search-browser-windows-tabs.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/search-browser-windows-tabs/search-browser-windows-tabs.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/search-chrome-windows-tabs/) · [Download search-browser-windows-tabs.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/search-browser-windows-tabs/search-browser-windows-tabs.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

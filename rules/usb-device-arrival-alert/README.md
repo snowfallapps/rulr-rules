@@ -4,7 +4,7 @@ Get a notification when a matching USB device connects to your Mac. The Rule che
 
 The sample matches names containing `USB`. Replace this broad substring with a distinctive part of your device name.
 
-[Website preview and full setup](https://www.rulr.app/rules/usb-device-connection-alert-mac/) · [Download usb-device-arrival-alert.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/usb-device-arrival-alert/usb-device-arrival-alert.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/usb-device-connection-alert-mac/) · [Download usb-device-arrival-alert.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/usb-device-arrival-alert/usb-device-arrival-alert.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Translate selected text on your Mac by typing a short trigger, then display the 
 
 The final display can give way to Insert Text, Set Clipboard to Text, or Write to File, extending the flow into inline translation, writing, or replies.
 
-[Website preview and full setup](https://www.rulr.app/rules/translate-selected-text-mac/) · [Download translate-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/translate-selected-text/translate-selected-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/translate-selected-text-mac/) · [Download translate-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/translate-selected-text/translate-selected-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

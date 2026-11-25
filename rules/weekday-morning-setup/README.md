@@ -4,7 +4,7 @@ Launch selected Mac apps automatically at a scheduled weekday time, with an opti
 
 The Rule runs on its weekly schedule, launches the configured application, opens the configured URL in Safari, and shows a notification. Choose the schedule, app, and URL before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/launch-apps-at-time-mac/) · [Download weekday-morning-setup.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/weekday-morning-setup/weekday-morning-setup.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/launch-apps-at-time-mac/) · [Download weekday-morning-setup.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/weekday-morning-setup/weekday-morning-setup.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

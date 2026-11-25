@@ -4,7 +4,7 @@ Save the current Chrome tab URL to a text file on Mac with a keyboard shortcut. 
 
 The sample uses Option-Space and a file in Downloads. Choose an unused shortcut and a writable log file after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/save-chrome-url-reading-log-mac/) · [Download save-current-page-reading-log.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/save-current-page-reading-log/save-current-page-reading-log.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/save-chrome-url-reading-log-mac/) · [Download save-current-page-reading-log.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/save-current-page-reading-log/save-current-page-reading-log.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

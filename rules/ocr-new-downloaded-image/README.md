@@ -4,7 +4,7 @@ Extract text from new images automatically on Mac. Watch a folder for PNG, JPEG,
 
 The sample watches Downloads, checks each arriving filename, and passes the matching file path to image OCR. Choose your image inbox after importing; this Rule displays the result without saving or copying it automatically.
 
-[Website preview and full setup](https://www.rulr.app/rules/extract-text-images-mac/) · [Download ocr-new-downloaded-image.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/ocr-new-downloaded-image/ocr-new-downloaded-image.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/extract-text-images-mac/) · [Download ocr-new-downloaded-image.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/ocr-new-downloaded-image/ocr-new-downloaded-image.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

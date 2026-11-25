@@ -4,7 +4,7 @@ Mute your Mac and close private apps automatically after a period of inactivity,
 
 Lock Screen or more Quit Application Actions can extend the idle flow into a fuller away mode or privacy cleanup routine.
 
-[Website preview and full setup](https://www.rulr.app/rules/mute-close-apps-mac-idle/) · [Download mute-and-close-private-apps-when-idle.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/mute-and-close-private-apps-when-idle/mute-and-close-private-apps-when-idle.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/mute-close-apps-mac-idle/) · [Download mute-and-close-private-apps-when-idle.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/mute-and-close-private-apps-when-idle/mute-and-close-private-apps-when-idle.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

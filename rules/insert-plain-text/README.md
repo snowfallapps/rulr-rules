@@ -1,10 +1,10 @@
-# Paste as Plain Text
+# Paste Without Formatting on Mac
 
-This Rulr Rule demo uses Option + V on Mac to convert the current clipboard item to plain text and insert it into the frontmost app. Import and enable the Rule to use this separate shortcut alongside normal Command + V paste.
+Paste as plain text on Mac with Option + V. This Rulr rule strips formatting from clipboard text before inserting it into the active app.
 
 The sample uses Option + V to run Convert to Plain Text on Current Clipboard Content, then passes its Plain Text output to Insert Text. Choose another shortcut if needed.
 
-[Website preview and full setup](https://www.rulr.app/rules/paste-without-formatting-mac/) · [Download insert-plain-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/insert-plain-text/insert-plain-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/paste-without-formatting-mac/) · [Download insert-plain-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/insert-plain-text/insert-plain-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -1,10 +1,10 @@
-# Rename New Files
+# Automatically Rename New Files on Mac
 
-Automatically rename new files added to a folder on Mac. Choose the watched folder and replacement name, with numbered filenames to handle name conflicts.
+Rename files automatically as they arrive in a Mac folder you choose. Set the replacement name in Rulr and use numbered filenames to handle name conflicts.
 
 Folder Contents Changed passes each new item's path to Rename File or Folder. The sample uses the literal name `Processed File`; replace it with your intended name before enabling the Rule.
 
-[Website preview and full setup](https://www.rulr.app/rules/rename-new-files-mac/) · [Download rename-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/rename-new-files/rename-new-files.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/rename-new-files-mac/) · [Download rename-new-files.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/rename-new-files/rename-new-files.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

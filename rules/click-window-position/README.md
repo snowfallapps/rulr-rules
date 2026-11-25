@@ -4,7 +4,7 @@ Automatically move the pointer and click a configured position when a selected a
 
 Choose the application, window-relative position, mouse button, and click type after importing the Rule. Coordinate-based clicks can break when the window layout or application interface changes.
 
-[Website preview and full setup](https://www.rulr.app/rules/click-window-position-mac/) · [Download click-window-position.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/click-window-position/click-window-position.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/click-window-position-mac/) · [Download click-window-position.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/click-window-position/click-window-position.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

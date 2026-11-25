@@ -1,10 +1,10 @@
-# Window Switcher
+# Mac Window Switcher with a Keyboard Shortcut
 
-Switch between open windows on Mac with a visual window picker. Press Option + Tab, choose the window you need, and bring it into focus with Rulr.
+Switch between open windows on your Mac with a visual picker. Press Option + Tab to open the picker, then select the window you want to bring forward.
 
 The sample opens a horizontal picker with no apps excluded. Choose your shortcut, layout, and app exclusions after importing to keep the list focused on the windows you use.
 
-[Website preview and full setup](https://www.rulr.app/rules/mac-window-switcher/) · [Download window-switcher.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/window-switcher/window-switcher.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/mac-window-switcher/) · [Download window-switcher.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/window-switcher/window-switcher.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

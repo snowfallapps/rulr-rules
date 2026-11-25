@@ -4,7 +4,7 @@ Automatically move new QuickTime Player windows to your presentation display on 
 
 Choose the video application in Window Created and your monitor in Move Window to Screen. Both Actions target the window supplied by the creation event, rather than whichever app later becomes focused.
 
-[Website preview and full setup](https://www.rulr.app/rules/full-screen-keyboard-shortcut-mac/) · [Download toggle-full-screen.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/toggle-full-screen/toggle-full-screen.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/full-screen-keyboard-shortcut-mac/) · [Download toggle-full-screen.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/toggle-full-screen/toggle-full-screen.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>Visual automation for your Mac.</strong><br>
-  Connect When, If, and Do to automate everyday tasks.
+  Download macOS automation rules for keyboard shortcuts, file organization, and everyday tasks.
 </p>
 
 <p align="center">
@@ -43,6 +43,7 @@ preview.
 
 ## A few rules to try
 
+- ⌨️ [Dark Mode Keyboard Shortcut for Mac](rules/turn-on-dark-mode-with-shortcut/) turns on Dark Mode with a key combination you choose.
 - 🎬 [Set Volume by Audio Device](rules/set-headphone-volume/) sets different volume levels for headphones and speakers when the audio output changes.
 - 💼 [Window Switcher](rules/window-switcher/) opens a visual picker for your open windows with a keyboard shortcut.
 - ✍️ [Paste as Plain Text](rules/insert-plain-text/) pastes clipboard text without its original formatting.
@@ -109,7 +110,7 @@ for its README and download, or choose **View** for the website.
 | [Scroll an App Automatically](rules/scroll-app-automatically/) | Scroll a configured distance when a selected application becomes frontmost. | [View](https://www.rulr.app/rules/scroll-app-automatically-mac/) |
 | [Sort Project Files](rules/sort-project-files/) | Route new project files to the right folders. | [View](https://www.rulr.app/rules/sort-project-files-by-type-mac/) |
 | [Trim Text](rules/trim-text/) | Clean up entered text and copy it for pasting anywhere. | [View](https://www.rulr.app/rules/trim-copy-text-mac/) |
-| [Window Switcher](rules/window-switcher/) | Switch between open Mac windows with a visual picker. | [View](https://www.rulr.app/rules/mac-window-switcher/) |
+| [Mac Window Switcher with a Keyboard Shortcut](rules/window-switcher/) | Switch between open Mac windows with a visual picker. | [View](https://www.rulr.app/rules/mac-window-switcher/) |
 
 <a id="study-research"></a>
 
@@ -120,7 +121,7 @@ for its README and download, or choose **View** for the website.
 | [Capture Image](rules/save-study-image/) | Capture an image, convert it to PNG, and save it to a folder. | [View](https://www.rulr.app/rules/capture-screen-png-typed-trigger-mac/) |
 | [Capture Reading Pages](rules/reading-page-log/) | Append each Chrome page you focus to a reading log. | [View](https://www.rulr.app/rules/log-chrome-url-window-title-changes-mac/) |
 | [Citation Capture](rules/citation-capture/) | Save the current page, URL, and selected quote as a citation. | [View](https://www.rulr.app/rules/save-chrome-citation-quote-mac/) |
-| [Copy Text from Your Screen](rules/copy-screen-text/) | Recognize and copy text from anywhere on your Mac screen. | [View](https://www.rulr.app/rules/copy-text-mac-screen/) |
+| [Copy Text from Images on Mac with OCR](rules/copy-screen-text/) | Recognize and copy text from anywhere on your Mac screen. | [View](https://www.rulr.app/rules/copy-text-mac-screen/) |
 | [Find Quartiles Word Candidates](rules/quartiles-word-candidates/) | Find local dictionary word candidates from 20 Quartiles tiles and open a report. | [View](https://www.rulr.app/rules/quartiles-word-candidates-mac/) |
 | [Focus Session](rules/study-session/) | Open a workspace, run a focused timer, and signal completion. | [View](https://www.rulr.app/rules/schedule-study-session-mac/) |
 | [Letters and Alphabet Positions](rules/letters-and-positions/) | Convert English letters to alphabet positions, or positions back to letters. | [View](https://www.rulr.app/rules/letters-to-numbers-mac/) |
@@ -143,7 +144,7 @@ for its README and download, or choose **View** for the website.
 | Rule | What it does | Website |
 | --- | --- | --- |
 | [Extract Line-End Number](rules/replace-text-newlines/) | Show a line-end number automatically when matching report text is copied. | [View](https://www.rulr.app/rules/remove-line-breaks-regex-mac/) |
-| [Paste as Plain Text](rules/insert-plain-text/) | Paste clipboard text without source formatting into the frontmost app with Option + V. | [View](https://www.rulr.app/rules/paste-without-formatting-mac/) |
+| [Paste Without Formatting on Mac](rules/insert-plain-text/) | Paste clipboard text without source formatting into the frontmost app with Option + V. | [View](https://www.rulr.app/rules/paste-without-formatting-mac/) |
 | [Paste URL-Encoded Text](rules/paste-as-plain-text/) | URL-encode clipboard text and paste the result into the frontmost app with one keyboard shortcut. | [View](https://www.rulr.app/rules/url-encode-paste-text-mac/) |
 | [Remove Emoji from Text](rules/remove-emoji-text/) | Automatically remove common emoji sequences when matching text is copied. | [View](https://www.rulr.app/rules/remove-emojis-from-text-mac/) |
 | [Save Selected Text](rules/save-selected-text/) | Append selected text to a notes file from any supported app. | [View](https://www.rulr.app/rules/save-selected-text-mac/) |
@@ -171,7 +172,7 @@ for its README and download, or choose **View** for the website.
 | [Run Shortcut for USB Device](rules/run-shortcut-when-device-connects/) | Run a selected Apple Shortcut when a matching USB device connects. | [View](https://www.rulr.app/rules/run-shortcut-usb-device-mac/) |
 | [Sync App Appearance](rules/sync-app-appearance/) | Keep another app aligned with system appearance. | [View](https://www.rulr.app/rules/run-applescript-appearance-change-mac/) |
 | [Toggle App Visibility](rules/toggle-app-visibility/) | Show or hide a selected application with the same shortcut. | [View](https://www.rulr.app/rules/toggle-app-visibility-mac/) |
-| [Turn On Dark Mode with a Shortcut](rules/turn-on-dark-mode-with-shortcut/) | Switch your Mac to Dark appearance with a keyboard shortcut. | [View](https://www.rulr.app/rules/mac-dark-mode-keyboard-shortcut/) |
+| [Dark Mode Keyboard Shortcut for Mac](rules/turn-on-dark-mode-with-shortcut/) | Switch your Mac to Dark appearance with a keyboard shortcut. | [View](https://www.rulr.app/rules/mac-dark-mode-keyboard-shortcut/) |
 | [USB App Launcher](rules/open-app-for-usb-device/) | Open the right app when a USB device connects. | [View](https://www.rulr.app/rules/open-app-usb-device-mac/) |
 | [USB Device Alert](rules/usb-device-arrival-alert/) | Get notified when a USB device connects. | [View](https://www.rulr.app/rules/usb-device-connection-alert-mac/) |
 
@@ -188,13 +189,13 @@ for its README and download, or choose **View** for the website.
 | [Group Selected Files](rules/new-finder-folder/) | Put selected Finder items into a new folder whose name you choose. | [View](https://www.rulr.app/rules/new-folder-hotkey-mac/) |
 | [Keep Current Finder Window](rules/close-finder-windows/) | Close other Finder windows while leaving the current one open. | [View](https://www.rulr.app/rules/close-all-finder-windows-mac/) |
 | [Open New Files](rules/open-new-files/) | Open files when they are added to a watched folder. | [View](https://www.rulr.app/rules/open-new-files-mac/) |
-| [Organize Downloaded Images](rules/organize-downloaded-images/) | Sort new image downloads automatically. | [View](https://www.rulr.app/rules/move-new-image-files-mac/) |
-| [Organize Downloaded PDFs](rules/organize-downloaded-pdfs/) | Sort new PDF downloads automatically. | [View](https://www.rulr.app/rules/organize-downloaded-pdfs-mac/) |
-| [Organize New Downloads](rules/organize-new-downloads/) | Move new downloads into the right folder. | [View](https://www.rulr.app/rules/move-new-files-to-folder-mac/) |
+| [Automatically Sort Downloaded Images on Mac](rules/organize-downloaded-images/) | Sort new image downloads automatically. | [View](https://www.rulr.app/rules/move-new-image-files-mac/) |
+| [Automatically Sort Downloaded PDFs on Mac](rules/organize-downloaded-pdfs/) | Sort new PDF downloads automatically. | [View](https://www.rulr.app/rules/organize-downloaded-pdfs-mac/) |
+| [Automatically Organize Downloads on Mac](rules/organize-new-downloads/) | Move new downloads into the right folder. | [View](https://www.rulr.app/rules/move-new-files-to-folder-mac/) |
 | [Process New Files](rules/process-new-files-shell-script/) | Send new watched files through a shell script. | [View](https://www.rulr.app/rules/run-shell-script-new-file-mac/) |
 | [Project Backup](rules/back-up-new-files/) | Back up matching project downloads to a separate folder. | [View](https://www.rulr.app/rules/copy-new-files-backup-mac/) |
 | [Project Drive](rules/open-mounted-project-drive/) | Open a project drive when it becomes available. | [View](https://www.rulr.app/rules/open-mounted-drive-mac/) |
-| [Rename New Files](rules/rename-new-files/) | Apply a consistent name to new watched files. | [View](https://www.rulr.app/rules/rename-new-files-mac/) |
+| [Automatically Rename New Files on Mac](rules/rename-new-files/) | Apply a consistent name to new watched files. | [View](https://www.rulr.app/rules/rename-new-files-mac/) |
 | [Reveal Renamed Files](rules/reveal-renamed-files/) | Find renamed files in Finder immediately. | [View](https://www.rulr.app/rules/reveal-new-files-in-finder-mac/) |
 | [Run Shortcut for Folder](rules/run-shortcut-when-folder-changes/) | Run a Shortcut when watched folder contents change. | [View](https://www.rulr.app/rules/watch-folder-run-shortcut-mac/) |
 | [Sort Downloads](rules/smart-download-router/) | Route images, PDFs, and archives from Downloads into the right folders. | [View](https://www.rulr.app/rules/sort-downloads-mac/) |
@@ -229,7 +230,7 @@ for its README and download, or choose **View** for the website.
 | [Mute Disconnected Headphones](rules/mute-headphones-disconnect/) | Mute audio when your headset disconnects. | [View](https://www.rulr.app/rules/audio-on-headphones-disconnect-mac/) |
 | [Set Up Headset Audio](rules/bluetooth-headset-routing/) | Switch audio output and set its volume. | [View](https://www.rulr.app/rules/switch-audio-when-bluetooth-connects-mac/) |
 | [Set Volume by Audio Device](rules/set-headphone-volume/) | Set volume by audio device and open your music app when needed. | [View](https://www.rulr.app/rules/set-volume-audio-device-mac/) |
-| [Switch Audio Output](rules/switch-audio-output/) | Switch Mac audio to a selected speaker or pair of headphones. | [View](https://www.rulr.app/rules/switch-audio-output-mac/) |
+| [Switch Audio Output on Mac with a Keyboard Shortcut](rules/switch-audio-output/) | Switch Mac audio to a selected speaker or pair of headphones. | [View](https://www.rulr.app/rules/switch-audio-output-mac/) |
 
 ## Updates and contributions
 

@@ -4,7 +4,7 @@ Copy the active Chrome tab's URL to your Mac clipboard with one keyboard shortcu
 
 The Rule gets the active Chrome tab and sends its URL to the clipboard without changing tabs. Choose a shortcut and allow the required Chrome automation access.
 
-[Website preview and full setup](https://www.rulr.app/rules/copy-current-chrome-url-mac/) · [Download copy-current-browser-url.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/copy-current-browser-url/copy-current-browser-url.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/copy-current-chrome-url-mac/) · [Download copy-current-browser-url.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/copy-current-browser-url/copy-current-browser-url.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

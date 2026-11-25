@@ -4,7 +4,7 @@ Get an audible alert when your Mac reports a network disconnection. The Rule sho
 
 The sample notification says the Rule ran successfully and the spoken message is `Offline Alert`. Edit them to suit your needs.
 
-[Website preview and full setup](https://www.rulr.app/rules/network-disconnection-alert-mac/) · [Download warn-when-offline.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/warn-when-offline/warn-when-offline.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/network-disconnection-alert-mac/) · [Download warn-when-offline.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/warn-when-offline/warn-when-offline.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

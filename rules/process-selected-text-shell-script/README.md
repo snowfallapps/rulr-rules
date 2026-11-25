@@ -4,7 +4,7 @@ Process text with AppleScript on your Mac from a keyboard shortcut, passing ente
 
 Another AppleScript can send its result through Set Clipboard to Text, Insert Text, or Write to File, creating a formatter, validator, converter, or other text-processing tool.
 
-[Website preview and full setup](https://www.rulr.app/rules/process-text-applescript-mac/) · [Download process-selected-text-shell-script.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/process-selected-text-shell-script/process-selected-text-shell-script.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/process-text-applescript-mac/) · [Download process-selected-text-shell-script.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/process-selected-text-shell-script/process-selected-text-shell-script.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

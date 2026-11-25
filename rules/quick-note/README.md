@@ -4,7 +4,7 @@ Take a quick note on Mac by typing a short trigger. Write your thought in a prom
 
 The sample listens for `;note`, asks what you want to remember, writes your answer to the notes file, and shows a notification. Choose your own typed trigger and destination after importing.
 
-[Website preview and full setup](https://www.rulr.app/rules/quick-note-text-file-mac/) · [Download quick-note.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/quick-note/quick-note.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/quick-note-text-file-mac/) · [Download quick-note.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/quick-note/quick-note.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Save selected text from a Mac app to a notes file with one keyboard shortcut, wi
 
 Choose the shortcut and destination text file after importing the Rule. Each run gets the current selection and appends it to the end of that file.
 
-[Website preview and full setup](https://www.rulr.app/rules/save-selected-text-mac/) · [Download save-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/save-selected-text/save-selected-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/save-selected-text-mac/) · [Download save-selected-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/save-selected-text/save-selected-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Start a work session on your Mac with one keyboard shortcut that activates Googl
 
 The Rule activates Google Chrome and opens each saved URL in a new tab. Choose the shortcut and tab URLs that make up your work or research workspace; this opens configured tabs rather than restoring a previous browser session.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-chrome-work-tabs-mac/) · [Download restore-browser-work-tabs.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/restore-browser-work-tabs/restore-browser-work-tabs.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-chrome-work-tabs-mac/) · [Download restore-browser-work-tabs.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/restore-browser-work-tabs/restore-browser-work-tabs.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

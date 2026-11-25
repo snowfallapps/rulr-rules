@@ -4,7 +4,7 @@ Automatically open a project folder when a selected editor, terminal, or other w
 
 Choose the application, project folder, and app used to open it. The Rule responds only to the selected application's launch event.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-project-folder-mac/) · [Download open-project-when-editor-starts.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-project-when-editor-starts/open-project-when-editor-starts.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-project-folder-mac/) · [Download open-project-when-editor-starts.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-project-when-editor-starts/open-project-when-editor-starts.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

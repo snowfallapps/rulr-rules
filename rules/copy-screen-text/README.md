@@ -1,10 +1,10 @@
-# Copy Text from Your Screen
+# Copy Text from Images on Mac with OCR
 
-Copy text from images, screenshots, or apps visible on your Mac screen with one keyboard shortcut. OCR reads the text and puts it on your clipboard.
+Extract text from images, screenshots, or apps visible on your Mac screen. Press your Rulr shortcut to run OCR on the screen and copy the recognized text to the clipboard.
 
 The sample recognizes the full screen, then copies the recognized Text output. Review the capture target and shortcut after importing; the result is ready to paste into your notes or document.
 
-[Website preview and full setup](https://www.rulr.app/rules/copy-text-mac-screen/) · [Download copy-screen-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/copy-screen-text/copy-screen-text.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/copy-text-mac-screen/) · [Download copy-screen-text.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/copy-screen-text/copy-screen-text.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

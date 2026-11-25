@@ -4,7 +4,7 @@ Start a focus timer on Mac with a keyboard shortcut. Confirm, close distracting 
 
 The sample uses a 50-minute delay after opening Documents and TextEdit. Choose which apps to quit, your working folder, and the session length before enabling it.
 
-[Website preview and full setup](https://www.rulr.app/rules/focus-session-timer-mac/) · [Download focus-session.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/focus-session/focus-session.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/focus-session-timer-mac/) · [Download focus-session.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/focus-session/focus-session.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

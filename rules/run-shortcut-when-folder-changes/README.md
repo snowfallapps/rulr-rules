@@ -4,7 +4,7 @@ Run an Apple Shortcut automatically when a new file is added to a watched folder
 
 The sample watches Downloads for added items and runs your chosen Shortcut with a 30-second timeout. Connect the event's Item Path as input if your Shortcut needs the arriving file.
 
-[Website preview and full setup](https://www.rulr.app/rules/watch-folder-run-shortcut-mac/) · [Download run-shortcut-when-folder-changes.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/run-shortcut-when-folder-changes/run-shortcut-when-folder-changes.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/watch-folder-run-shortcut-mac/) · [Download run-shortcut-when-folder-changes.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/run-shortcut-when-folder-changes/run-shortcut-when-folder-changes.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

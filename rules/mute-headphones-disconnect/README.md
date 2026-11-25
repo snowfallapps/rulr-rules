@@ -4,7 +4,7 @@ Run the Mac audio mute Action when a matching Bluetooth headset disconnects.
 
 The Bluetooth disconnect Trigger checks whether the device name contains AirPods, then runs Mute or Unmute Audio. Change the match to your headset name.
 
-[Website preview and full setup](https://www.rulr.app/rules/audio-on-headphones-disconnect-mac/) · [Download mute-headphones-disconnect.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/mute-headphones-disconnect/mute-headphones-disconnect.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/audio-on-headphones-disconnect-mac/) · [Download mute-headphones-disconnect.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/mute-headphones-disconnect/mute-headphones-disconnect.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

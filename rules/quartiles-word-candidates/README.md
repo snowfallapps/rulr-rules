@@ -4,7 +4,7 @@ Find Quartiles word candidates on Mac by entering the puzzle's 20 tiles. The Rul
 
 Ask for Input collects the tiles, an embedded script finds dictionary matches, and Open File or Folder opens the report in TextEdit. Results are candidate words, not a verified daily Apple News answer list.
 
-[Website preview and full setup](https://www.rulr.app/rules/quartiles-word-candidates-mac/) · [Download quartiles-word-candidates.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/quartiles-word-candidates/quartiles-word-candidates.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/quartiles-word-candidates-mac/) · [Download quartiles-word-candidates.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/quartiles-word-candidates/quartiles-word-candidates.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

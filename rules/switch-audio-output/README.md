@@ -1,10 +1,10 @@
-# Switch Audio Output
+# Switch Audio Output on Mac with a Keyboard Shortcut
 
-Switch audio output on Mac with a keyboard shortcut. Send sound to your chosen headphones, speakers, or display without opening Sound settings each time.
+Use a keyboard shortcut to switch your Mac audio output to a chosen speaker, pair of headphones, or display without opening Sound settings.
 
 Select one connected output device and choose the hotkey after importing. Each press requests that device; the sample does not cycle between devices or change the volume.
 
-[Website preview and full setup](https://www.rulr.app/rules/switch-audio-output-mac/) · [Download switch-audio-output.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/switch-audio-output/switch-audio-output.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/switch-audio-output-mac/) · [Download switch-audio-output.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/switch-audio-output/switch-audio-output.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Automatically press a configured key or keyboard shortcut after a selected appli
 
 Choose the app and recorded key sequence after importing the Rule. It brings the application forward before sending the keys, so the result depends on the app's active window and current keyboard shortcuts.
 
-[Website preview and full setup](https://www.rulr.app/rules/press-keys-app-launch-mac/) · [Download press-keys-when-app-launches.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/press-keys-when-app-launches/press-keys-when-app-launches.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/press-keys-app-launch-mac/) · [Download press-keys-when-app-launches.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/press-keys-when-app-launches/press-keys-when-app-launches.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

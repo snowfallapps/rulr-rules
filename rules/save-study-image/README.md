@@ -4,7 +4,7 @@ Capture the screen as a PNG on Mac by typing a trigger. The Rule captures the fu
 
 The sample uses the exact typed phrase `;screenshot` and a Screenshots folder in Documents. Choose a phrase and destination that suit your workflow.
 
-[Website preview and full setup](https://www.rulr.app/rules/capture-screen-png-typed-trigger-mac/) · [Download save-study-image.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/save-study-image/save-study-image.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/capture-screen-png-typed-trigger-mac/) · [Download save-study-image.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/save-study-image/save-study-image.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

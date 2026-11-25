@@ -4,7 +4,7 @@ Open a link from your Mac clipboard in Safari after reviewing the URL. Copy a co
 
 The Rule snapshots and trims the current clipboard text, checks for a single HTTP or HTTPS link and asks for confirmation. It opens that same captured link without rereading the clipboard.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-clipboard-link-mac/) · [Download open-clipboard-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-clipboard-link/open-clipboard-link.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-clipboard-link-mac/) · [Download open-clipboard-link.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-clipboard-link/open-clipboard-link.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

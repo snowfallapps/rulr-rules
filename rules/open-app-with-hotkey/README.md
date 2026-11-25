@@ -4,7 +4,7 @@ Open an app with a keyboard shortcut on Mac and bring it to the front. Pick your
 
 The sample launches Google Chrome and then makes it frontmost. Select the same app in both Actions and choose a shortcut that fits your keyboard setup.
 
-[Website preview and full setup](https://www.rulr.app/rules/launch-app-keyboard-shortcut-mac/) · [Download open-app-with-hotkey.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-app-with-hotkey/open-app-with-hotkey.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/launch-app-keyboard-shortcut-mac/) · [Download open-app-with-hotkey.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-app-with-hotkey/open-app-with-hotkey.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

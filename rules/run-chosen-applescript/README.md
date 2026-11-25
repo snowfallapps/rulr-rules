@@ -4,7 +4,7 @@ Run a saved .scpt AppleScript file on a Mac schedule, such as a report-preparati
 
 Configure the trusted file path in the Run AppleScript Action's Arguments, then choose your schedule. The sample is disabled and scheduled for weekdays at 09:00; it includes no report-processing script of its own.
 
-[Website preview and full setup](https://www.rulr.app/rules/run-scpt-file-mac/) · [Download run-chosen-applescript.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/run-chosen-applescript/run-chosen-applescript.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/run-scpt-file-mac/) · [Download run-chosen-applescript.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/run-chosen-applescript/run-chosen-applescript.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

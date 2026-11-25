@@ -4,7 +4,7 @@ Save copied text to a research notes file on Mac whenever the clipboard changes.
 
 The sample monitors clipboard changes continuously and writes to `~/Documents/Research Notes.txt`. Select a writable file and enable it only when you want this collection behavior.
 
-[Website preview and full setup](https://www.rulr.app/rules/save-clipboard-research-notes-mac/) · [Download research-capture.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/research-capture/research-capture.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/save-clipboard-research-notes-mac/) · [Download research-capture.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/research-capture/research-capture.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Automatically quit a selected Mac application at a scheduled time, such as closi
 
 Choose the application and schedule after importing the Rule. The Rule checks that the app is running before asking it to quit normally.
 
-[Website preview and full setup](https://www.rulr.app/rules/quit-app-on-schedule-mac/) · [Download quit-app-on-schedule.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/quit-app-on-schedule/quit-app-on-schedule.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/quit-app-on-schedule-mac/) · [Download quit-app-on-schedule.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/quit-app-on-schedule/quit-app-on-schedule.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

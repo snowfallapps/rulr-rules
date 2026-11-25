@@ -1,10 +1,10 @@
-# Turn On Dark Mode with a Shortcut
+# Dark Mode Keyboard Shortcut for Mac
 
-Turn on Dark Mode on your Mac with a keyboard shortcut, changing the system appearance immediately without opening System Settings.
+Set up a keyboard shortcut to turn on Dark Mode on your Mac without opening System Settings. Import this Rulr rule and choose the key combination you want to use.
 
 Launch Application Actions can follow Set System Appearance, extending the shortcut into an evening routine or an app workspace that opens in Dark appearance.
 
-[Website preview and full setup](https://www.rulr.app/rules/mac-dark-mode-keyboard-shortcut/) · [Download turn-on-dark-mode-with-shortcut.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/turn-on-dark-mode-with-shortcut/turn-on-dark-mode-with-shortcut.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/mac-dark-mode-keyboard-shortcut/) · [Download turn-on-dark-mode-with-shortcut.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/turn-on-dark-mode-with-shortcut/turn-on-dark-mode-with-shortcut.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

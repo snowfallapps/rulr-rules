@@ -4,7 +4,7 @@ Automatically show a report number when you copy text containing slash-digits at
 
 Extract Text reads the event's text and returns capture group 1. Ordinary copied text is skipped, and the Rule leaves the clipboard unchanged.
 
-[Website preview and full setup](https://www.rulr.app/rules/remove-line-breaks-regex-mac/) · [Download replace-text-newlines.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/replace-text-newlines/replace-text-newlines.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/remove-line-breaks-regex-mac/) · [Download replace-text-newlines.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/replace-text-newlines/replace-text-newlines.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

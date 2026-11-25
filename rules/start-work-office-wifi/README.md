@@ -4,7 +4,7 @@ Open apps and websites automatically when your Mac joins a chosen Wi-Fi network.
 
 Set your network name, apps, URLs, and working hours after importing. The sample checks the connected SSID, then opens the tools for the matching time window.
 
-[Website preview and full setup](https://www.rulr.app/rules/open-apps-wifi-mac/) · [Download start-work-office-wifi.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/start-work-office-wifi/start-work-office-wifi.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/open-apps-wifi-mac/) · [Download start-work-office-wifi.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/start-work-office-wifi/start-work-office-wifi.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

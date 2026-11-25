@@ -4,7 +4,7 @@ Quit companion apps automatically when a selected Mac app closes. The sample rea
 
 Choose the main app and companion apps after importing. Review any unsaved work before trying the Rule.
 
-[Website preview and full setup](https://www.rulr.app/rules/quit-companion-apps-mac/) · [Download close-companion-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/close-companion-apps/close-companion-apps.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/quit-companion-apps-mac/) · [Download close-companion-apps.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/close-companion-apps/close-companion-apps.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

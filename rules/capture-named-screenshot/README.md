@@ -4,7 +4,7 @@ Capture a Mac screen region, name it and save it to your chosen folder with Opti
 
 Choose the destination in Move File or Folder after importing; it initially uses Downloads. The flow uses native capture, input, rename, move and reveal Actions, without watching a screenshots folder.
 
-[Website preview and full setup](https://www.rulr.app/rules/screenshot-macro-mac/) · [Download capture-named-screenshot.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/capture-named-screenshot/capture-named-screenshot.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/screenshot-macro-mac/) · [Download capture-named-screenshot.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/capture-named-screenshot/capture-named-screenshot.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

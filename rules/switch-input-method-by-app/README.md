@@ -4,7 +4,7 @@ Automatically switch your Mac input method or input source by app, such as using
 
 Choose the applications and installed keyboard input source after importing the Rule. Add or replace application Conditions when different apps should switch the Mac keyboard language automatically.
 
-[Website preview and full setup](https://www.rulr.app/rules/switch-input-method-by-app-mac/) · [Download switch-input-method-by-app.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/switch-input-method-by-app/switch-input-method-by-app.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/switch-input-method-by-app-mac/) · [Download switch-input-method-by-app.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/switch-input-method-by-app/switch-input-method-by-app.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

@@ -4,7 +4,7 @@ Show a notification and speak a warning when your Mac battery falls to or below 
 
 When the battery level reaches the configured threshold, the Rule shows a notification and speaks the warning aloud. Adjust the threshold and notification behavior to fit how you work away from power.
 
-[Website preview and full setup](https://www.rulr.app/rules/low-battery-alert-mac/) · [Download low-battery-warning.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/low-battery-warning/low-battery-warning.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/low-battery-alert-mac/) · [Download low-battery-warning.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/low-battery-warning/low-battery-warning.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before

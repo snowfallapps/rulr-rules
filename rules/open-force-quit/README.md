@@ -4,7 +4,7 @@ Recover a stuck Mac app with Option + 1: confirm its name, force quit that speci
 
 The Rule snapshots the frontmost application before showing a confirmation. It keeps Finder, Rulr and Script Editor out of the recovery path and never force quits without confirmation.
 
-[Website preview and full setup](https://www.rulr.app/rules/force-quit-shortcut-mac/) · [Download open-force-quit.rulr](https://github.com/snowfallapps/rulr-rules/raw/refs/heads/main/rules/open-force-quit/open-force-quit.rulr) · [All rules](../../README.md)
+[Website preview and full setup](https://www.rulr.app/rules/force-quit-shortcut-mac/) · [Download open-force-quit.rulr](https://github.com/snowfallapps/rulr-rules/raw/HEAD/rules/open-force-quit/open-force-quit.rulr) · [All rules](../../README.md)
 
 Download the `.rulr` file and open it with Rulr, or use **Open this Rule in Rulr**
 on the linked website page. Review permissions and app-specific settings before
