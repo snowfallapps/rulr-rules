@@ -106,18 +106,73 @@ def table_text(text: str) -> str:
 
 
 def repository_readme(catalog: dict) -> str:
-    lines = ["# Rulr rules", "", "Official rule samples for [Rulr](https://www.rulr.app/), a Mac automation app built around **When → If → Do**.",
-             "", "[Browse the interactive Rule Gallery](https://www.rulr.app/rules/) · [Download Rulr](https://www.rulr.app/download/Rulr.dmg)",
-             "", "## Use a rule", "", "1. Choose a sample below and read its setup and limitations.",
-             "2. Download the `.rulr` file from its folder and open it with Rulr. You can also use **Open this Rule in Rulr** on its website detail page.",
-             "3. Select your own apps, folders, devices, and shortcuts where required. Grant only the permissions needed by the sample, then enable it.",
-             "", "Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; each linked detail page explains the requirements. The `.rulr` files are JSON rule configurations, not the Rulr app's source code.",
-             "", "## Rule directory", "", f"{len(catalog['rules'])} samples. Each has a stable folder containing `README.md` and a same-named `.rulr` file. Categories below use each sample's primary Gallery category."]
+    count = len(catalog["rules"])
+    lines = [f'''<p align="center">
+  <a href="https://www.rulr.app/">
+    <img src="assets/rulr-icon.png" alt="Rulr" width="88" height="88">
+  </a>
+</p>
+
+<h1 align="center">Rulr Rule Gallery</h1>
+
+<p align="center">
+  <strong>Visual automation for your Mac.</strong><br>
+  Connect When, If, and Do to automate everyday tasks.
+</p>
+
+<p align="center">
+  <a href="https://www.rulr.app/">Website</a> ·
+  <a href="https://www.rulr.app/rules/">Interactive gallery</a> ·
+  <a href="https://www.rulr.app/posts/">Guides</a> ·
+  <a href="https://www.rulr.app/download/Rulr.dmg">Download Rulr</a>
+</p>
+
+<p align="center">macOS 26+ · {count} official rules · MIT-licensed examples</p>
+
+<p align="center">
+  <a href="https://www.rulr.app/rules/mac-window-switcher/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/rulr-rule-dark.png">
+      <img src="assets/rulr-rule-light.png" alt="Rulr rule editor showing a keyboard shortcut connected to the Window Switcher action" width="880" height="609">
+    </picture>
+  </a>
+</p>
+
+## About Rulr
+
+[Rulr](https://www.rulr.app/) is a Mac automation app for building visual Rules:
+choose **when** a task starts, add **if** conditions when needed, and connect the
+actions to **do**. Use Rules for apps, windows, files, text, browser tasks, and
+system settings. You can build a Rule yourself or describe a task to the optional
+AI Builder, then review and adjust the result.
+
+This is the official collection of rule examples and setup guides. Each example
+includes an importable `.rulr` file, configuration instructions, and a link to its
+interactive preview on the website. The Rulr application is developed separately;
+its source code is not included here.
+
+## Get started
+
+1. [Download Rulr](https://www.rulr.app/download/Rulr.dmg) for macOS 26 or later.
+2. Choose a rule in the [directory below](#rule-directory). Open its website preview and select **Open in Rulr**, or download the `.rulr` file from its folder and open it with the app.
+3. Review the rule, select your own apps, folders, devices, or shortcut where needed, and grant the required permissions before enabling it.
+
+Some Triggers and Actions require Rulr Pro. Each rule's detail page explains its
+setup and limitations. Importing the examples does not require an AI provider;
+using AI Builder requires your own supported provider connection.
+
+## Rule directory
+
+{count} rules, organized by their primary Gallery category. Open a rule's name
+for its README and download, or choose **Preview and setup** for the website.''']
+    category_links = [f"[{c['label']}](#{c['id']})" for c in catalog["categories"]
+                      if any(r["primaryCategory"] == c["id"] for r in catalog["rules"])]
+    lines += ["", " · ".join(category_links)]
     for category in catalog["categories"]:
         entries = sorted((r for r in catalog["rules"] if r["primaryCategory"] == category["id"]), key=lambda r: (r["title"].casefold(), r["slug"]))
         if not entries:
             continue
-        lines += ["", f"### {category['label']}", "", "| Rule and instructions | What it does | Website preview |", "| --- | --- | --- |"]
+        lines += ["", f'<a id="{category["id"]}"></a>', "", f"### {category['label']}", "", "| Rule | What it does | Website |", "| --- | --- | --- |"]
         for rule in entries:
             lines.append(f"| [{table_text(rule['title'])}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [Preview and setup]({SITE}{rule['page']}) |")
     lines += ["", "## Updates and contributions", "", "The website is the source of truth for rule configurations and setup text. This repository mirrors the published catalog daily and supports manual synchronization. It uses only public website URLs, without access to the private website or app repositories.",

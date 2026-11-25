@@ -1,24 +1,69 @@
-# Rulr rules
+<p align="center">
+  <a href="https://www.rulr.app/">
+    <img src="assets/rulr-icon.png" alt="Rulr" width="88" height="88">
+  </a>
+</p>
 
-Official rule samples for [Rulr](https://www.rulr.app/), a Mac automation app built around **When → If → Do**.
+<h1 align="center">Rulr Rule Gallery</h1>
 
-[Browse the interactive Rule Gallery](https://www.rulr.app/rules/) · [Download Rulr](https://www.rulr.app/download/Rulr.dmg)
+<p align="center">
+  <strong>Visual automation for your Mac.</strong><br>
+  Connect When, If, and Do to automate everyday tasks.
+</p>
 
-## Use a rule
+<p align="center">
+  <a href="https://www.rulr.app/">Website</a> ·
+  <a href="https://www.rulr.app/rules/">Interactive gallery</a> ·
+  <a href="https://www.rulr.app/posts/">Guides</a> ·
+  <a href="https://www.rulr.app/download/Rulr.dmg">Download Rulr</a>
+</p>
 
-1. Choose a sample below and read its setup and limitations.
-2. Download the `.rulr` file from its folder and open it with Rulr. You can also use **Open this Rule in Rulr** on its website detail page.
-3. Select your own apps, folders, devices, and shortcuts where required. Grant only the permissions needed by the sample, then enable it.
+<p align="center">macOS 26+ · 100 official rules · MIT-licensed examples</p>
 
-Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; each linked detail page explains the requirements. The `.rulr` files are JSON rule configurations, not the Rulr app's source code.
+<p align="center">
+  <a href="https://www.rulr.app/rules/mac-window-switcher/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/rulr-rule-dark.png">
+      <img src="assets/rulr-rule-light.png" alt="Rulr rule editor showing a keyboard shortcut connected to the Window Switcher action" width="880" height="609">
+    </picture>
+  </a>
+</p>
+
+## About Rulr
+
+[Rulr](https://www.rulr.app/) is a Mac automation app for building visual Rules:
+choose **when** a task starts, add **if** conditions when needed, and connect the
+actions to **do**. Use Rules for apps, windows, files, text, browser tasks, and
+system settings. You can build a Rule yourself or describe a task to the optional
+AI Builder, then review and adjust the result.
+
+This is the official collection of rule examples and setup guides. Each example
+includes an importable `.rulr` file, configuration instructions, and a link to its
+interactive preview on the website. The Rulr application is developed separately;
+its source code is not included here.
+
+## Get started
+
+1. [Download Rulr](https://www.rulr.app/download/Rulr.dmg) for macOS 26 or later.
+2. Choose a rule in the [directory below](#rule-directory). Open its website preview and select **Open in Rulr**, or download the `.rulr` file from its folder and open it with the app.
+3. Review the rule, select your own apps, folders, devices, or shortcut where needed, and grant the required permissions before enabling it.
+
+Some Triggers and Actions require Rulr Pro. Each rule's detail page explains its
+setup and limitations. Importing the examples does not require an AI provider;
+using AI Builder requires your own supported provider connection.
 
 ## Rule directory
 
-100 samples. Each has a stable folder containing `README.md` and a same-named `.rulr` file. Categories below use each sample's primary Gallery category.
+100 rules, organized by their primary Gallery category. Open a rule's name
+for its README and download, or choose **Preview and setup** for the website.
+
+[Work & Productivity](#work-productivity) · [Study & Research](#study-research) · [Writing & Communication](#writing-communication) · [Daily Life & Personal](#daily-life-personal) · [Files & Organization](#files-organization) · [Web & Browsing](#web-browsing) · [Entertainment & Media](#entertainment-media)
+
+<a id="work-productivity"></a>
 
 ### Work & Productivity
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Click a Window Position](rules/click-window-position/) | Move the pointer and click a configured position when a matching window opens. | [Preview and setup](https://www.rulr.app/rules/click-window-position-mac/) |
 | [Close Work Apps](rules/close-companion-apps/) | Close related tools when the main work app quits. | [Preview and setup](https://www.rulr.app/rules/quit-companion-apps-mac/) |
@@ -43,9 +88,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [Trim Text](rules/trim-text/) | Clean up entered text and copy it for pasting anywhere. | [Preview and setup](https://www.rulr.app/rules/trim-copy-text-mac/) |
 | [Window Switcher](rules/window-switcher/) | Switch between open Mac windows with a visual picker. | [Preview and setup](https://www.rulr.app/rules/mac-window-switcher/) |
 
+<a id="study-research"></a>
+
 ### Study & Research
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Capture Image](rules/save-study-image/) | Capture an image, convert it to PNG, and save it to a folder. | [Preview and setup](https://www.rulr.app/rules/capture-screen-png-typed-trigger-mac/) |
 | [Capture Reading Pages](rules/reading-page-log/) | Append each Chrome page you focus to a reading log. | [Preview and setup](https://www.rulr.app/rules/log-chrome-url-window-title-changes-mac/) |
@@ -66,9 +113,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [Translate and Copy](rules/translate-and-copy-selection/) | Translate selected text and place the result on the clipboard. | [Preview and setup](https://www.rulr.app/rules/translate-selected-text-copy-mac/) |
 | [Translate Screen Text](rules/translate-screenshot/) | Capture, recognize, and translate text anywhere on your Mac screen. | [Preview and setup](https://www.rulr.app/rules/translate-screen-text-mac/) |
 
+<a id="writing-communication"></a>
+
 ### Writing & Communication
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Extract Line-End Number](rules/replace-text-newlines/) | Show a line-end number automatically when matching report text is copied. | [Preview and setup](https://www.rulr.app/rules/remove-line-breaks-regex-mac/) |
 | [Paste as Plain Text](rules/insert-plain-text/) | Paste clipboard text without source formatting into the frontmost app with Option + V. | [Preview and setup](https://www.rulr.app/rules/paste-without-formatting-mac/) |
@@ -81,9 +130,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [Translate Selected Text](rules/translate-selected-text/) | Translate selected text on your Mac and show the result. | [Preview and setup](https://www.rulr.app/rules/translate-selected-text-mac/) |
 | [Uppercase Selected Text](rules/uppercase-selected-text/) | Convert selected text to uppercase and replace it. | [Preview and setup](https://www.rulr.app/rules/uppercase-selected-text-mac/) |
 
+<a id="daily-life-personal"></a>
+
 ### Daily Life & Personal
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Clear Clipboard When Away](rules/clear-current-clipboard/) | Replace the clipboard with an innocuous marker after five minutes of system inactivity. | [Preview and setup](https://www.rulr.app/rules/clear-clipboard-mac/) |
 | [Confirm Before Shutdown](rules/safe-shutdown-hotkey/) | Prevent accidental shutdowns with confirmation. | [Preview and setup](https://www.rulr.app/rules/confirm-shutdown-keyboard-shortcut-mac/) |
@@ -101,9 +152,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [USB App Launcher](rules/open-app-for-usb-device/) | Open the right app when a USB device connects. | [Preview and setup](https://www.rulr.app/rules/open-app-usb-device-mac/) |
 | [USB Device Alert](rules/usb-device-arrival-alert/) | Get notified when a USB device connects. | [Preview and setup](https://www.rulr.app/rules/usb-device-connection-alert-mac/) |
 
+<a id="files-organization"></a>
+
 ### Files & Organization
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Archive Screenshots](rules/archive-new-screenshots/) | Keep new screenshots organized in an archive. | [Preview and setup](https://www.rulr.app/rules/archive-screenshots-mac/) |
 | [Batch Prefix Files](rules/batch-prefix-files/) | Preview or add a prefix to matching files in a folder on a schedule. | [Preview and setup](https://www.rulr.app/rules/batch-rename-files-mac/) |
@@ -123,9 +176,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [Run Shortcut for Folder](rules/run-shortcut-when-folder-changes/) | Run a Shortcut when watched folder contents change. | [Preview and setup](https://www.rulr.app/rules/watch-folder-run-shortcut-mac/) |
 | [Sort Downloads](rules/smart-download-router/) | Route images, PDFs, and archives from Downloads into the right folders. | [Preview and setup](https://www.rulr.app/rules/sort-downloads-mac/) |
 
+<a id="web-browsing"></a>
+
 ### Web & Browsing
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Chrome Research Workspace](rules/browser-research-flow/) | Open the right Chrome research workspace for each work session. | [Preview and setup](https://www.rulr.app/rules/chrome-research-workspace/) |
 | [Chrome Window Manager](rules/search-browser-windows-tabs/) | Search and switch between open Chrome windows and tabs. | [Preview and setup](https://www.rulr.app/rules/search-chrome-windows-tabs/) |
@@ -139,9 +194,11 @@ Rulr requires macOS 26 or later. Some Triggers and Actions require Rulr Pro; eac
 | [Search Selected Text](rules/search-selected-text/) | Search the web using text selected in any supported Mac app. | [Preview and setup](https://www.rulr.app/rules/search-selected-text-mac/) |
 | [Show Current Tab](rules/show-current-chrome-tab/) | View the active browser tab's URL. | [Preview and setup](https://www.rulr.app/rules/show-current-chrome-url-mac/) |
 
+<a id="entertainment-media"></a>
+
 ### Entertainment & Media
 
-| Rule and instructions | What it does | Website preview |
+| Rule | What it does | Website |
 | --- | --- | --- |
 | [Import Media](rules/media-import-pipeline/) | Sort new images and videos into separate media folders. | [Preview and setup](https://www.rulr.app/rules/sort-photos-videos-mac/) |
 | [Media Manager](rules/media-manager/) | Open a panel of detected media sources and play or pause eligible players. | [Preview and setup](https://www.rulr.app/rules/control-media-playback-mac/) |
