@@ -69,6 +69,8 @@ for its README and download, or choose **Preview and setup** for the website.
 
 ### 💼 Work & Productivity
 
+[Browse Work & Productivity on rulr.app](https://www.rulr.app/rules/)
+
 | Rule | What it does | Website |
 | --- | --- | --- |
 | [Click a Window Position](rules/click-window-position/) | Move the pointer and click a configured position when a matching window opens. | [Preview and setup](https://www.rulr.app/rules/click-window-position-mac/) |
@@ -98,6 +100,8 @@ for its README and download, or choose **Preview and setup** for the website.
 
 ### 📚 Study & Research
 
+[Browse Study & Research on rulr.app](https://www.rulr.app/rules/study-research/)
+
 | Rule | What it does | Website |
 | --- | --- | --- |
 | [Capture Image](rules/save-study-image/) | Capture an image, convert it to PNG, and save it to a folder. | [Preview and setup](https://www.rulr.app/rules/capture-screen-png-typed-trigger-mac/) |
@@ -123,6 +127,8 @@ for its README and download, or choose **Preview and setup** for the website.
 
 ### ✍️ Writing & Communication
 
+[Browse Writing & Communication on rulr.app](https://www.rulr.app/rules/writing-communication/)
+
 | Rule | What it does | Website |
 | --- | --- | --- |
 | [Extract Line-End Number](rules/replace-text-newlines/) | Show a line-end number automatically when matching report text is copied. | [Preview and setup](https://www.rulr.app/rules/remove-line-breaks-regex-mac/) |
@@ -139,6 +145,8 @@ for its README and download, or choose **Preview and setup** for the website.
 <a id="daily-life-personal"></a>
 
 ### 🌱 Daily Life & Personal
+
+[Browse Daily Life & Personal on rulr.app](https://www.rulr.app/rules/daily-life-personal/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -161,6 +169,8 @@ for its README and download, or choose **Preview and setup** for the website.
 <a id="files-organization"></a>
 
 ### 📁 Files & Organization
+
+[Browse Files & Organization on rulr.app](https://www.rulr.app/rules/files-organization/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |
@@ -186,6 +196,8 @@ for its README and download, or choose **Preview and setup** for the website.
 
 ### 🌐 Web & Browsing
 
+[Browse Web & Browsing on rulr.app](https://www.rulr.app/rules/web-browsing/)
+
 | Rule | What it does | Website |
 | --- | --- | --- |
 | [Chrome Research Workspace](rules/browser-research-flow/) | Open the right Chrome research workspace for each work session. | [Preview and setup](https://www.rulr.app/rules/chrome-research-workspace/) |
@@ -203,6 +215,8 @@ for its README and download, or choose **Preview and setup** for the website.
 <a id="entertainment-media"></a>
 
 ### 🎬 Entertainment & Media
+
+[Browse Entertainment & Media on rulr.app](https://www.rulr.app/rules/entertainment-media/)
 
 | Rule | What it does | Website |
 | --- | --- | --- |

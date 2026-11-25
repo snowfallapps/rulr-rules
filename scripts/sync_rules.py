@@ -178,7 +178,19 @@ for its README and download, or choose **Preview and setup** for the website.'''
         entries = sorted((r for r in catalog["rules"] if r["primaryCategory"] == category["id"]), key=lambda r: (r["title"].casefold(), r["slug"]))
         if not entries:
             continue
-        lines += ["", f'<a id="{category["id"]}"></a>', "", f"### {category['emoji']} {category['label']}", "", "| Rule | What it does | Website |", "| --- | --- | --- |"]
+        category_id = category["id"]
+        category_path = "/rules/" if category_id == "work-productivity" else f"/rules/{category_id}/"
+        lines += [
+            "",
+            f'<a id="{category_id}"></a>',
+            "",
+            f"### {category['emoji']} {category['label']}",
+            "",
+            f"[Browse {category['label']} on rulr.app]({SITE}{category_path})",
+            "",
+            "| Rule | What it does | Website |",
+            "| --- | --- | --- |",
+        ]
         for rule in entries:
             lines.append(f"| [{table_text(rule['title'])}](rules/{rule['slug']}/) | {table_text(rule['description'])} | [Preview and setup]({SITE}{rule['page']}) |")
     lines += ["", "## Updates and contributions", "", "The website is the source of truth for rule configurations and setup text. This repository mirrors the published catalog daily and supports manual synchronization. It uses only public website URLs, without access to the private website or app repositories.",
