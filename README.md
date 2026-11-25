@@ -58,6 +58,12 @@ preview.
 The setup guide lists any Rulr Pro requirements. You can import examples without
 connecting an AI provider. AI Builder uses your own supported provider connection.
 
+## Feedback & support
+
+- 💡 **Share a rule or suggest one.** [Open a GitHub issue](https://github.com/snowfallapps/rulr-rules/issues/new) and explain what the rule does and how to set it up. If you have a `.rulr` file, share it after removing private data and credentials.
+- 🐛 **Report a rule or app bug.** [Open a GitHub issue](https://github.com/snowfallapps/rulr-rules/issues/new) with your Rulr version, macOS version, and steps to reproduce the problem.
+- ✉️ **Contact support privately.** Email [support@rulr.app](mailto:support@rulr.app) for billing, license questions, or reports that need private logs or screenshots.
+
 ## Rule directory
 
 100 rules, organized by their primary Gallery category. Open a rule's name
@@ -228,8 +234,6 @@ for its README and download, or choose **View** for the website.
 ## Updates and contributions
 
 The website is the source of truth for rule configurations and setup text. This repository mirrors the published catalog daily and supports manual synchronization. It uses only public website URLs, without access to the private website or app repositories.
-
-If you find a problem or want another rule, [open an issue](https://github.com/snowfallapps/rulr-rules/issues). Include the rule name, macOS and Rulr versions, expected result, and what happened. Remove private text, file paths, device identifiers, and credentials before sharing a custom rule.
 
 Pull requests with fixes or new examples are welcome. Mirrored files may be replaced by synchronization, so rule and documentation changes must also be incorporated into the website source. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
